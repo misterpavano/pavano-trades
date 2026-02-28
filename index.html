@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pavano Trades</title>
   <style>
-    :root { --bg:#0d0d0d;--surface:#161616;--surface2:#1e1e1e;--border:#2a2a2a;--accent:#f59e0b;--text:#f0f0f0;--muted:#888; }
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+    :root{--bg:#000;--surface:#0a0a0a;--surface2:#111;--border:#1c1c1c;--green:#00ff41;--green-dim:#003d0f;--red:#ff3131;--amber:#ffb300;--blue:#00b4d8;--text:#d4d4d4;--muted:#555;}
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:'Inter','Helvetica Neue',sans-serif;padding:0 0 80px;}
-    header{border-bottom:1px solid var(--border);padding:32px 40px 24px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-    header .logo{font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--muted);margin-bottom:6px;}
-    header h1{font-size:clamp(28px,5vw,48px);font-weight:700;letter-spacing:-0.03em;line-height:1;}
-    header h1 span{color:var(--accent);}
-    .date-badge{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:13px;color:var(--muted);white-space:nowrap;}
-    .container{max-width:1100px;margin:0 auto;padding:48px 40px 0;}
-    .section-label{font-size:10px;text-transform:uppercase;letter-spacing:0.25em;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
-    .section-label::after{content:'';flex:1;height:1px;background:var(--border);}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-bottom:56px;}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:inherit;display:block;}
-    .card:hover{border-color:var(--accent);transform:translateY(-2px);}
-    .card-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:10px;color:var(--accent);}
-    .card h3{font-size:16px;font-weight:600;line-height:1.35;margin-bottom:10px;letter-spacing:-0.01em;}
-    .card p{font-size:13px;line-height:1.65;color:#bbb;}
-    .source-link{display:inline-block;margin-top:14px;font-size:11px;color:#38bdf8;text-decoration:none;}
-    .pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ade80;margin-right:6px;animation:pulse 2s infinite;}
-    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
-    footer{text-align:center;margin-top:64px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:24px;}
-    @media(max-width:600px){header,.container{padding-left:20px;padding-right:20px;}}
+    body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;padding-bottom:80px;}
+    header{background:var(--surface);border-bottom:1px solid var(--green-dim);padding:20px 40px;}
+    .ticker-bar{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--green);overflow:hidden;white-space:nowrap;margin-bottom:16px;border:1px solid var(--green-dim);padding:6px 12px;background:#000;}
+    .header-main{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;}
+    h1{font-family:'IBM Plex Mono',monospace;font-size:clamp(20px,3vw,32px);font-weight:700;color:var(--amber);letter-spacing:0.05em;}
+    .header-stats{display:flex;gap:24px;}
+    .stat{text-align:right;}
+    .stat-label{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;}
+    .stat-value{font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:700;}
+    .up{color:var(--green);} .down{color:var(--red);}
+    .container{max-width:1200px;margin:0 auto;padding:32px 40px 0;}
+    .section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:var(--amber);margin-bottom:12px;display:flex;align-items:center;gap:10px;border-left:3px solid var(--amber);padding-left:10px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;margin-bottom:40px;}
+    .card{background:var(--surface);border:1px solid var(--border);padding:20px;text-decoration:none;color:inherit;display:block;transition:border-color 0.15s;}
+    .card:hover{border-color:var(--amber);}
+    .card-type{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--amber);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px;}
+    .card h3{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;line-height:1.3;margin-bottom:8px;}
+    .card p{font-size:13px;line-height:1.6;color:#999;}
+    .card-price{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:700;margin:10px 0 4px;}
+    .card-change{font-family:'IBM Plex Mono',monospace;font-size:12px;}
+    .source{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--blue);margin-top:12px;}
+    footer{text-align:center;margin-top:60px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px;}
+    @media(max-width:600px){header,.container{padding-left:20px;padding-right:20px;}.header-stats{display:none;}}
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <div class="logo">Pavano Trades</div>
-      <h1>Today's <span>market</span> brief.</h1>
+    <div class="ticker-bar">PAVANO TRADES TERMINAL &nbsp;|&nbsp; <span id="ts"></span> &nbsp;|&nbsp; WALLY-HQ &nbsp;|&nbsp; MARKET DATA LOADING...</div>
+    <div class="header-main">
+      <h1>PAVANO // TRADES</h1>
+      <div class="header-stats">
+        <div class="stat"><div class="stat-label">SPY</div><div class="stat-value">—</div></div>
+        <div class="stat"><div class="stat-label">QQQ</div><div class="stat-value">—</div></div>
+        <div class="stat"><div class="stat-label">GME</div><div class="stat-value up">—</div></div>
+      </div>
     </div>
-    <div class="date-badge"><span class="pulse"></span> Initializing...</div>
   </header>
   <div class="container">
-    <p style="color:#888;padding:40px 0;">First report coming soon.</p>
+    <div class="section-label">Market Brief</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-type">Status</div>
+        <h3>REPORT LOADING...</h3>
+        <p>Wally is pulling market data. First report coming shortly.</p>
+      </div>
+    </div>
   </div>
-  <footer>Pavano Trades &nbsp;·&nbsp; Powered by Wally</footer>
+  <footer>PAVANO TRADES &nbsp;|&nbsp; POWERED BY WALLY-HQ &nbsp;|&nbsp; NOT FINANCIAL ADVICE</footer>
+  <script>document.getElementById('ts').textContent=new Date().toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' EST';</script>
 </body>
 </html>
