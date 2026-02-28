@@ -1,93 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pavano Trades</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
     body{background:#000;color:#d4d4d4;font-family:'IBM Plex Sans',sans-serif;padding-bottom:80px;}
-
     header{background:#000;border-bottom:1px solid #1c1c1c;padding:20px 40px;}
-    .ticker{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#39ff14;border:1px solid #003d0f;background:#000;padding:5px 12px;margin-bottom:14px;white-space:nowrap;overflow:hidden;}
+    .ticker{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#39ff14;border:1px solid #003d0f;background:#000;padding:5px 12px;margin-bottom:14px;}
     .header-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;}
     h1{font-family:'IBM Plex Mono',monospace;font-size:clamp(18px,3vw,28px);font-weight:700;color:#ffb300;letter-spacing:0.05em;}
     .header-stats{display:flex;gap:20px;}
     .stat .label{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#555;text-transform:uppercase;letter-spacing:0.1em;}
     .stat .val{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:700;}
     .up{color:#00ff41;} .dn{color:#ff3131;} .neu{color:#ffb300;}
-
-    /* DISTINCT ZONE TREATMENTS */
     .zone-gme{background:#0a0000;border-top:3px solid #ff3131;padding:32px 40px;}
     .zone-market{background:#000a00;border-top:3px solid #00ff41;padding:32px 40px;}
     .zone-macro{background:#00001a;border-top:3px solid #00b4d8;padding:32px 40px;}
-    .zone-movers{background:#0a0800;border-top:3px solid #ffb300;padding:32px 40px;}
-
     .zone-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:16px;padding:8px 12px;display:inline-flex;align-items:center;gap:8px;}
     .zone-gme .zone-label{background:#200000;color:#ff3131;border-left:3px solid #ff3131;}
     .zone-market .zone-label{background:#002000;color:#00ff41;border-left:3px solid #00ff41;}
     .zone-macro .zone-label{background:#00003a;color:#00b4d8;border-left:3px solid #00b4d8;}
-    .zone-movers .zone-label{background:#1a1200;color:#ffb300;border-left:3px solid #ffb300;}
-
     .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;}
-    .card{padding:18px;border:1px solid;text-decoration:none;color:inherit;display:block;transition:filter 0.15s;}
-    .card:hover{filter:brightness(1.2);}
+    .card{padding:18px;border:1px solid;text-decoration:none;color:inherit;display:block;}
     .zone-gme .card{background:#120000;border-color:#3d0000;}
     .zone-market .card{background:#001200;border-color:#003d00;}
     .zone-macro .card{background:#00002a;border-color:#00003d;}
-    .zone-movers .card{background:#120e00;border-color:#3d2e00;}
-
     .card-type{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px;}
-    .zone-gme .card-type{color:#ff3131;}
-    .zone-market .card-type{color:#00ff41;}
-    .zone-macro .card-type{color:#00b4d8;}
-    .zone-movers .card-type{color:#ffb300;}
-
-    .card-price{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:700;margin:6px 0 2px;}
-    .card-change{font-family:'IBM Plex Mono',monospace;font-size:12px;margin-bottom:8px;}
+    .zone-gme .card-type{color:#ff3131;} .zone-market .card-type{color:#00ff41;} .zone-macro .card-type{color:#00b4d8;}
+    .card-price{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;margin:6px 0 2px;}
+    .card-change{font-family:'IBM Plex Mono',monospace;font-size:13px;margin-bottom:10px;}
     .card h3{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;line-height:1.3;margin-bottom:6px;}
     .card p{font-size:12px;line-height:1.6;color:#777;}
-    .card-src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#00b4d8;margin-top:10px;}
-
     footer{text-align:center;padding:20px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#333;border-top:1px solid #1c1c1c;}
-    @media(max-width:768px){header,.zone-gme,.zone-market,.zone-macro,.zone-movers{padding:16px;}.header-stats{display:none;}.cards{grid-template-columns:1fr;}}
+    @media(max-width:768px){header,.zone-gme,.zone-market,.zone-macro{padding:16px;}.header-stats{display:none;}.cards{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
   <header>
-    <div class="ticker">PAVANO TRADES TERMINAL &nbsp;|&nbsp; <span id="ts"></span> &nbsp;|&nbsp; EST &nbsp;|&nbsp; WALLY-HQ</div>
+    <div class="ticker">PAVANO TRADES TERMINAL &nbsp;|&nbsp; Saturday, February 28, 2026 &nbsp;|&nbsp; EST &nbsp;|&nbsp; WALLY-HQ</div>
     <div class="header-row">
       <h1>PAVANO // TRADES</h1>
       <div class="header-stats">
-        <div class="stat"><div class="label">SPY</div><div class="val neu" id="spy">—</div></div>
-        <div class="stat"><div class="label">QQQ</div><div class="val neu" id="qqq">—</div></div>
-        <div class="stat"><div class="label">GME</div><div class="val up" id="gme">—</div></div>
+        <div class="stat"><div class="label">SPY</div><div class="val dn">↓ Feb Low</div></div>
+        <div class="stat"><div class="label">QQQ</div><div class="val dn">↓ Red</div></div>
+        <div class="stat"><div class="label">GME</div><div class="val neu">Watch</div></div>
       </div>
     </div>
   </header>
 
   <div class="zone-gme">
     <div class="zone-label">🔴 GME Watch</div>
-    <div class="cards"><div class="card"><div class="card-type">Status</div><h3>Data loading...</h3><p>First report generating shortly.</p></div></div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-type">GameStop Corp</div>
+        <div class="card-price neu">$GME</div>
+        <div class="card-change neu">Monitoring — market closed Saturday</div>
+        <p>No major catalysts reported today. Watch for any Roaring Kitty social activity or unusual options flow heading into next week. Iran conflict could create broad risk-off sentiment affecting meme stocks.</p>
+      </div>
+    </div>
   </div>
+
   <div class="zone-market">
     <div class="zone-label">🟢 Market Overview</div>
-    <div class="cards"></div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-type">February Close</div>
+        <h3>All Indices Red to End February</h3>
+        <p>Dow, S&P 500, and Nasdaq all fell Friday to close out the month. AI spending sustainability fears and now a major geopolitical escalation (US/Israel striking Iran) set up a risk-off open for Monday.</p>
+      </div>
+      <div class="card">
+        <div class="card-type">Geopolitical Risk</div>
+        <h3>US &amp; Israel Strike Iran — Market Impact Watch</h3>
+        <p>Major escalation over the weekend. Expect oil prices to spike, defense stocks up, tech/growth potentially sold Monday. Risk-off tone likely. Watch crude and VIX futures Sunday night.</p>
+      </div>
+    </div>
   </div>
+
   <div class="zone-macro">
     <div class="zone-label">🔵 Macro</div>
-    <div class="cards"></div>
-  </div>
-  <div class="zone-movers">
-    <div class="zone-label">🟡 Movers</div>
-    <div class="cards"></div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-type">AI Bubble Watch</div>
+        <h3>AI Infrastructure Spending Under Scrutiny</h3>
+        <p>Wall Street increasingly asking whether AI capex translates to revenue. NVDA fell despite record results. Block cutting 50% of staff citing AI — raises questions about sector-wide AI narrative.</p>
+      </div>
+      <div class="card">
+        <div class="card-type">OpenAI</div>
+        <h3>$110B Raise at $730B Valuation</h3>
+        <p>Largest private fundraise in tech history. Amazon leads. Signals continued institutional conviction in AI even as public markets wobble. Sets floor for AI valuations heading into Q2.</p>
+      </div>
+    </div>
   </div>
 
   <footer>PAVANO TRADES &nbsp;|&nbsp; WALLY-HQ &nbsp;|&nbsp; NOT FINANCIAL ADVICE</footer>
-  <script>
-    document.getElementById('ts').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit'});
-    document.getElementById('ts').closest('.ticker').innerHTML += ' | ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-  </script>
 </body>
 </html>
