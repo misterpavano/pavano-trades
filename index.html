@@ -30,7 +30,17 @@
     .card-change{font-family:'IBM Plex Mono',monospace;font-size:12px;}
     .source{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--blue);margin-top:12px;}
     footer{text-align:center;margin-top:60px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px;}
-    @media(max-width:600px){header,.container{padding-left:20px;padding-right:20px;}.header-stats{display:none;}}
+    .header-stats{display:none;}}
+  
+    @media(max-width:768px){
+      header,.container{padding-left:16px;padding-right:16px;}
+      .ticker-bar{font-size:9px;white-space:normal;word-break:break-all;}
+      h1{font-size:20px;}
+      .header-stats{display:none;}
+      .grid{grid-template-columns:1fr;}
+      .card h3{font-size:13px;}
+      .card-price{font-size:18px;}
+    }
   </style>
 </head>
 <body>
