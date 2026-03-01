@@ -39,57 +39,89 @@
 </head>
 <body>
   <header>
-    <div class="ticker">PAVANO TRADES TERMINAL &nbsp;|&nbsp; Saturday, February 28, 2026 &nbsp;|&nbsp; EST &nbsp;|&nbsp; WALLY-HQ</div>
+    <div class="ticker">PAVANO TRADES TERMINAL &nbsp;|&nbsp; Sunday, March 1, 2026 &nbsp;|&nbsp; EST &nbsp;|&nbsp; WALLY-HQ</div>
     <div class="header-row">
       <h1>PAVANO // TRADES</h1>
       <div class="header-stats">
-        <div class="stat"><div class="label">SPY</div><div class="val dn">↓ Feb Low</div></div>
-        <div class="stat"><div class="label">QQQ</div><div class="val dn">↓ Red</div></div>
-        <div class="stat"><div class="label">GME</div><div class="val neu">Watch</div></div>
+        <div class="stat">
+          <div class="label">SPY</div>
+          <div id="spy" class="val dn">↓ $685.99</div>
+        </div>
+        <div class="stat">
+          <div class="label">QQQ</div>
+          <div id="qqq" class="val dn">↓ $602.98</div>
+        </div>
+        <div class="stat">
+          <div class="label">GME</div>
+          <div id="gme" class="val neu">$24.03</div>
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- GME ZONE -->
   <div class="zone-gme">
     <div class="zone-label">🔴 GME Watch</div>
     <div class="cards">
       <div class="card">
-        <div class="card-type">GameStop Corp</div>
-        <div class="card-price neu">$GME</div>
-        <div class="card-change neu">Monitoring — market closed Saturday</div>
-        <p>No major catalysts reported today. Watch for any Roaring Kitty social activity or unusual options flow heading into next week. Iran conflict could create broad risk-off sentiment affecting meme stocks.</p>
+        <div class="card-type">GameStop Corp — Fri Close</div>
+        <div class="card-price neu">$24.03</div>
+        <div class="card-change neu">YTD +19.67% &nbsp;|&nbsp; Mkt Cap $10.76B</div>
+        <p>GME closed flat with no major catalyst Friday. Earnings estimated March 24, 2026. EPS $0.88, PE 27.31. Iran-driven risk-off tone may pressure meme names at Monday open — watch for any options flow spike or Roaring Kitty activity over the weekend.</p>
+      </div>
+      <div class="card">
+        <div class="card-type">Bull / Bear Battle</div>
+        <h3>Reddit Bull Thesis vs. "GME Looks Broken" Bears</h3>
+        <p>A bullish r/GME thesis is circulating, citing retail re-engagement and balance sheet strength. Countered by a bearish MarketBeat note arguing GME's core business continues to deteriorate. Key test will be March 24 earnings.</p>
+      </div>
+      <div class="card">
+        <div class="card-type">Burry Watch</div>
+        <h3>Michael Burry Warns on Potential BBBY-Style Deal</h3>
+        <p>"If Ryan has GME buy any version of BBBY, I am out," Burry said on X. The comment resurfaced this week as GME's cash hoard ($4B+) fuels M&A speculation. Market sees both upside optionality and risk from a poorly received acquisition.</p>
       </div>
     </div>
   </div>
 
+  <!-- MARKET OVERVIEW ZONE -->
   <div class="zone-market">
     <div class="zone-label">🟢 Market Overview</div>
     <div class="cards">
       <div class="card">
         <div class="card-type">February Close</div>
-        <h3>All Indices Red to End February</h3>
-        <p>Dow, S&P 500, and Nasdaq all fell Friday to close out the month. AI spending sustainability fears and now a major geopolitical escalation (US/Israel striking Iran) set up a risk-off open for Monday.</p>
+        <h3>S&amp;P 500 &amp; Nasdaq End February in the Red</h3>
+        <p>SPY closed at $685.99 Friday — down on the day and the week. S&P 500 and Nasdaq both posted negative monthly returns for February. Weak economic data and tech-led selling drove the tape. Barchart reports ES futures down -0.41% Sunday morning.</p>
       </div>
       <div class="card">
         <div class="card-type">Geopolitical Risk</div>
-        <h3>US &amp; Israel Strike Iran — Market Impact Watch</h3>
-        <p>Major escalation over the weekend. Expect oil prices to spike, defense stocks up, tech/growth potentially sold Monday. Risk-off tone likely. Watch crude and VIX futures Sunday night.</p>
+        <h3>US &amp; Israel Strike Iran — Risk-Off Monday Looms</h3>
+        <p>Weekend escalation: U.S. and Israeli strikes on Iran triggered Gulf market selloffs, with Boursa Kuwait suspending trading. Oil jumped ~3% in both NY and London. Wall Street pivoting to "haven-first" strategies heading into Monday open. Watch VIX, crude, and defense names.</p>
+      </div>
+      <div class="card">
+        <div class="card-type">Tech Sector</div>
+        <h3>Nvidia-Led Tech Selloff Drags QQQ Below $603</h3>
+        <p>QQQ opened at $602.98 Friday, down from the prior close of $609.24. AI spending sustainability concerns — despite NVDA posting record revenue — continue to weigh on tech. Consumer discretionary also under pressure from rising oil prices and higher inflation outlook.</p>
       </div>
     </div>
   </div>
 
+  <!-- MACRO ZONE -->
   <div class="zone-macro">
     <div class="zone-label">🔵 Macro</div>
     <div class="cards">
       <div class="card">
-        <div class="card-type">AI Bubble Watch</div>
-        <h3>AI Infrastructure Spending Under Scrutiny</h3>
-        <p>Wall Street increasingly asking whether AI capex translates to revenue. NVDA fell despite record results. Block cutting 50% of staff citing AI — raises questions about sector-wide AI narrative.</p>
+        <div class="card-type">Safe Haven</div>
+        <h3>Gold Surges Past $5,200 on Iran War Fears</h3>
+        <p>Gold cleared the $5,200–$5,240 consolidation zone and is pushing toward $5,300/oz. Central bank demand plus geopolitical shock from US-Iran conflict are the twin drivers. Analysts warn a prolonged conflict could add 0.6–0.7pp to global inflation and send oil toward $100/bbl.</p>
       </div>
       <div class="card">
-        <div class="card-type">OpenAI</div>
-        <h3>$110B Raise at $730B Valuation</h3>
-        <p>Largest private fundraise in tech history. Amazon leads. Signals continued institutional conviction in AI even as public markets wobble. Sets floor for AI valuations heading into Q2.</p>
+        <div class="card-type">Buffett Era Ends</div>
+        <h3>Warren Buffett Retired Dec 31 — $187B Cash Warning Stands</h3>
+        <p>Greg Abel delivered Berkshire's first shareholder letter without Buffett. The Oracle's parting shot: Berkshire sold a net $187B in equities over 13 quarters, unable to find value. Buffett Indicator hit all-time high in January 2026, signaling stretched valuations. A "very hard act to follow," says Abel.</p>
+      </div>
+      <div class="card">
+        <div class="card-type">Economic Data</div>
+        <h3>Weak Reports + Higher Inflation — Stagflation Signal?</h3>
+        <p>US stocks drifted lower after weak economic prints showing slowing growth alongside sticky inflation. February 2026 AAII survey shows individual investors increasingly bearish. Oil spike from Iran conflict risks compounding inflationary pressure at the worst possible time.</p>
       </div>
     </div>
   </div>
