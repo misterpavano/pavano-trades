@@ -28,56 +28,104 @@
     .card{padding:20px;border:1px solid;text-decoration:none;color:inherit;display:block;}
     .zone-gme .card{background:#1a0000;border-color:#4d0000;}
     .zone-market .card{background:#001a00;border-color:#004d00;}
-    .zone-macro .card{background:#00002e;border-color:#00004d;}
-    .zone-bot .card{background:#110028;border-color:#3d2266;}
-    .card-type{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px;}
-    .zone-gme .card-type{color:#ff5555;} .zone-market .card-type{color:#4dff6e;} .zone-macro .card-type{color:#33c9f0;}
-    .zone-bot .card-type{color:#ffc933;}
-    .card-price{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;margin:6px 0 2px;}
-    .card-change{font-family:'IBM Plex Mono',monospace;font-size:14px;margin-bottom:10px;}
-    .card h3{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;line-height:1.4;margin-bottom:8px;color:#f0f0f0;}
-    .card p{font-size:14px;line-height:1.7;color:#c0c0c0;}
-    .card-meaning{font-size:13px!important;line-height:1.7!important;color:#a8a8a8!important;margin-top:10px!important;border-top:1px solid #2a2a2a;padding-top:8px;}
-    .zone-bot .card-meaning{color:#c8b060!important;}
-    .wrap-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.15em;background:#0d1a0d;border:1px solid #4dff6e66;color:#4dff6e;padding:3px 10px;margin-left:12px;vertical-align:middle;}
-    footer{text-align:center;padding:20px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#777;border-top:1px solid #2a2a2a;}
-    @media(max-width:768px){header,.zone-gme,.zone-market,.zone-macro,.zone-bot{padding:16px;}.header-stats{display:none;}.cards{grid-template-columns:1fr;}}
+    .zone-macro .card{background:#00001a;border-color:#00004d;}
+    .zone-bot .card{background:#100030;border-color:#2a1060;}
+    .card-type{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin-bottom:8px;}
+    .card-price{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:700;margin-bottom:4px;}
+    .card-change{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#888;margin-bottom:14px;}
+    h3{font-size:14px;font-weight:600;line-height:1.4;margin-bottom:10px;color:#e8e8e8;}
+    p{font-size:13px;line-height:1.6;color:#b0b0b0;margin-bottom:10px;}
+    .card-meaning{font-size:13px;line-height:1.6;color:#999;border-top:1px solid #333;padding-top:10px;margin-top:10px;}
+    footer{position:fixed;bottom:0;left:0;right:0;background:#0d0d0d;border-top:1px solid #2a2a2a;padding:12px 40px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#555;letter-spacing:0.1em;text-transform:uppercase;}
+    .scoreboard{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px;padding:16px;background:#111;border:1px solid #222;}
+    .sb-item{text-align:center;min-width:80px;}
+    .sb-item .sb-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
+    .sb-item .sb-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;}
+    .sb-item .sb-chg{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:2px;}
   </style>
 </head>
 <body>
+
   <header>
-    <div class="ticker">PAVANO TRADES TERMINAL &nbsp;|&nbsp; Thursday, March 5, 2026 &nbsp;|&nbsp; OPEN BRIEF &#8212; 8:30 AM EST &nbsp;|&nbsp; WALLY-HQ</div>
+    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; EVENING WRAP &nbsp;&#9679;&nbsp; THURSDAY, MARCH 5, 2026 &nbsp;&#9679;&nbsp; MARKET CLOSED</div>
     <div class="header-row">
-      <h1>PAVANO // TRADES <span class="wrap-badge">AT THE OPEN</span></h1>
+      <h1>&#128202; Evening Wrap</h1>
       <div class="header-stats">
         <div class="stat">
           <div class="label">SPY</div>
-          <div id="spy" class="val dn">&#8595; $684.45</div>
+          <div class="val dn">&#8595; $681.31</div>
         </div>
         <div class="stat">
           <div class="label">QQQ</div>
-          <div id="qqq" class="val dn">&#8595; $610.10</div>
+          <div class="val dn">&#8595; $608.91</div>
         </div>
         <div class="stat">
           <div class="label">GME</div>
-          <div id="gme" class="val dn">&#8595; $23.84</div>
+          <div class="val up">&#8596; $23.88</div>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- MARKET SCOREBOARD -->
+  <div style="background:#111;border-bottom:1px solid #1e1e1e;padding:20px 40px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Final Close &#8212; March 5, 2026</div>
+    <div class="scoreboard">
+      <div class="sb-item">
+        <div class="sb-label">DIA</div>
+        <div class="sb-val dn">$479.84</div>
+        <div class="sb-chg dn">&#8595; -1.62%</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">SPY</div>
+        <div class="sb-val dn">$681.31</div>
+        <div class="sb-chg dn">&#8595; -0.56%</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">QQQ</div>
+        <div class="sb-val dn">$608.91</div>
+        <div class="sb-chg dn">&#8595; -0.30%</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">IWM</div>
+        <div class="sb-val dn">$256.76</div>
+        <div class="sb-chg dn">&#8595; -1.91%</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">VIX</div>
+        <div class="sb-val neu">23.75</div>
+        <div class="sb-chg neu">Elevated</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">WTI</div>
+        <div class="sb-val dn">$78.87</div>
+        <div class="sb-chg dn">&#8595; -2.64%</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">10Y</div>
+        <div class="sb-val dn">4.15%</div>
+        <div class="sb-chg dn">Yields up</div>
+      </div>
+      <div class="sb-item">
+        <div class="sb-label">XLI</div>
+        <div class="sb-val dn">$172.06</div>
+        <div class="sb-chg dn">&#8595; -2.22%</div>
+      </div>
+    </div>
+  </div>
+
   <!-- GME ZONE -->
   <div class="zone-gme">
-    <div class="zone-label">&#128308; GME Watch &#8212; Open</div>
+    <div class="zone-label">&#128308; GME Watch &#8212; Close</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">Smart Money &#8212; Flow Alert</div>
-        <div class="card-price dn">$23.84</div>
-        <div class="card-change dn">&#8595; -$0.03 (-0.13%) &nbsp;|&nbsp; Pre-Market</div>
-        <h3>GME Drifts Into Open &#8212; No Institutional Presence, One Cheap Call Sweep</h3>
-        <p>GME is drifting into the open at $23.84, essentially unchanged from Wednesday's $23.87 close. The single options signal in the EOD scan was a call sweep at the $15 strike (March 13 expiry, 264 contracts, $244K notional) &#8212; a deep in-the-money roll, not a fresh directional bet. Options market is showing zero put premium on the book. No news catalysts. Ryan Cohen's rumored "transformative acquisition" speculation remains just that &#8212; speculation.</p>
-        <p class="card-meaning">&#128204; What This Means: GME is a holding pattern until March 24 earnings. Retail is the only real price driver here. Watch for any volume surge above 8M shares/day or unusual activity in the $25&#8211;$28 strike calls &#8212; that would signal institutions starting to price in a pre-earnings catalyst. Today, it's a spectator stock.</p>
+        <div class="card-type">Close Summary &#8212; Flat</div>
+        <div class="card-price neu">$23.88</div>
+        <div class="card-change neu">&#8596; +$0.01 (+0.04%) &nbsp;|&nbsp; Volume: Normal</div>
+        <h3>GME Closes Flat in a Down Market &#8212; Relative Strength Nobody Asked For</h3>
+        <p>In a session where the Dow lost 784 points and small caps got crushed (-1.91% IWM), GME finished basically unchanged at $23.88. That's technically relative strength &#8212; but context matters. GME doesn't trade on macro. It trades on retail attention. The fact that it didn't sell off with everything else just means the meme crowd wasn't scared out today. Volume was unexceptional. No notable options activity to report from the close.</p>
+        <p class="card-meaning">&#128204; What This Means: GME is still in a holding pattern heading into March 24 earnings. The only price-moving catalysts left are: (1) Ryan Cohen actually announces something, (2) a short squeeze trigger from unusual volume, or (3) a market-wide fear spike that forces margin liquidation across retail accounts. None of those happened today. Earnings in 19 days is the real event. Until then, GME is dead money.</p>
       </div>
 
     </div>
@@ -85,34 +133,34 @@
 
   <!-- MARKET ZONE -->
   <div class="zone-market">
-    <div class="zone-label">&#128200; Market Overview &#8212; Open</div>
+    <div class="zone-label">&#128200; Market Close &#8212; Thursday Wrap</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price dn">SPY &#8595; -0.10%</div>
-        <div class="card-change dn">$684.45 pre-open &nbsp;|&nbsp; QQQ &#8595; $610.10 (-0.11%)</div>
-        <h3>Broad Market Slips on Two Colliding Forces &#8212; Tariffs vs. AI Beats</h3>
-        <p>Futures are leaking lower at the open. Two forces are pinching the tape in opposite directions: Treasury Secretary Bessent confirmed 15% global tariffs land this week, a direct headwind for consumer, retail, and import-heavy names. Simultaneously, Broadcom's blowout Q1 &#8212; AI revenue up 106% YoY with a path to $100B by 2027 &#8212; is keeping tech partially bid. Institutional money is rotating, not fleeing: out of tariff-exposed names, into AI infrastructure and defense. The net result is a flat-to-slightly-negative open before Jobless Claims data hits.</p>
-        <p class="card-meaning">&#128204; What This Means: Don't read a -0.10% open as broad weakness &#8212; it's sector rotation in real time. Money is moving out of XLY (consumer discretionary) and AMZN-adjacent retail, and into AI infrastructure (AVGO, MRVL, ANET) and defense (RTX, LMT). The Jobless Claims print at 8:30 AM is the first clean read &#8212; above 230K softens the tape further; below 205K triggers a relief bounce that gets sold.</p>
+        <div class="card-type">Close Summary</div>
+        <div class="card-price dn">DIA &#8595; -1.62%</div>
+        <div class="card-change dn">$479.84 close &nbsp;|&nbsp; Dow: -784 pts &nbsp;|&nbsp; ALL 2026 gains erased</div>
+        <h3>The Dow Erased Every 2026 Gain in a Single Session &#8212; Oil Did It</h3>
+        <p>The headline of the day: the Dow Jones Industrial Average dropped 784.67 points (&#8209;1.6%) to close at 47,954.74, wiping out all of its 2026 gains in one session. At the intraday low, the damage was worse &#8212; a 1,160-point crash before a late partial recovery. The culprit was oil spiking toward $80 on renewed Iran conflict fears, which ignited inflation worry and crushed industrials. DIA holds large weights in Boeing, Caterpillar, and other industrial names that are direct casualties of an energy-driven cost shock. Financials (XLF &#8209;0.52%) and industrials (XLI &#8209;2.22%) led the damage.</p>
+        <p class="card-meaning">&#128204; What This Means: The 2026 gains being wiped out is a psychological level that matters for retail investors. Institutional money was positioned for this &#8212; those put sweeps from Wednesday's open brief were right on target. The key question for tomorrow: does the Dow bounce off 47,954 or does the Iran narrative push it below 47,500? Watch oil at the open. WTI above $80 means another ugly day. Below $76 means the fear is fading.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price up">AVGO &#8593; +7.27%</div>
-        <div class="card-change up">Pre-market $340.60 &nbsp;|&nbsp; Q1 AI Revenue +106% YoY</div>
-        <h3>Broadcom Confirms the AI Infrastructure Trade Is Real &#8212; Not Hype</h3>
-        <p>Broadcom reported Q1 2026: EPS $2.05 (beat $2.02), revenue $19.31B (beat $19.10B). The headline that moved institutional money: CEO Hock Tan guided toward $100B in AI chip revenue by 2027 &#8212; a 5x from current levels. AVGO makes custom AI chips for Google, Meta, and Apple's internal AI programs, giving it direct hyperscaler revenue that NVDA doesn't have. Smart money had been quietly accumulating AVGO ahead of earnings. The stock is trading +7.27% pre-market at $340.60. This is money validating the capex cycle, not chasing a headline.</p>
-        <p class="card-meaning">&#128204; What This Means: AVGO's beat is a green light for second-derivative AI plays: MRVL, ANET, SMCI all serve the same hyperscaler capex cycle and should see sympathy flow at the open. This also sets the table for NVDA's GTC conference (March 16&#8211;19) &#8212; the market now expects a strong showing. Don't chase AVGO at the open gap &#8212; wait for sympathy names that haven't moved yet.</p>
+        <div class="card-type">Close Summary</div>
+        <div class="card-price dn">IWM &#8595; -1.91%</div>
+        <div class="card-change dn">$256.76 close &nbsp;|&nbsp; Small caps crushed</div>
+        <h3>Small Caps Were Today's Biggest Losers &#8212; Rate + Oil Double Punch</h3>
+        <p>IWM (Russell 2000) dropped 1.91%, the worst of the major indexes. Small caps are uniquely exposed right now: they carry more variable-rate debt (hurt by elevated 10Y yields at 4.15%), they have less pricing power to absorb oil/tariff cost spikes, and they don't have the AI narrative to prop them up. While tech held relatively firm (QQQ &#8209;0.30%, XLK +0.24%), small caps got hit from both sides &#8212; rising rates and rising input costs. The XLI (industrials) &#8209;2.22% print confirms the same story: old economy names are bearing the brunt of the oil/tariff combo.</p>
+        <p class="card-meaning">&#128204; What This Means: The IWM/QQQ spread widening (&#8209;1.91% vs &#8209;0.30%) is the clearest signal of where institutional money is hiding. Tech/AI is the bunker; small caps and industrials are in the open. This rotation trade has legs as long as Iran stays hot and rates stay elevated. If you're looking for a sector to avoid over the next week: XLI and IWM. If you need a shelter: XLK and mega-cap tech.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Macro Move</div>
-        <div class="card-price neu">8:30 AM</div>
-        <div class="card-change neu">Initial Jobless Claims &nbsp;|&nbsp; Prior: 212K &nbsp;|&nbsp; Expected: ~215K</div>
-        <h3>Jobless Claims Print Hits Now &#8212; The Market's First Real Tell of the Day</h3>
-        <p>Initial Jobless Claims are releasing at this exact moment. Prior reading was 212K &#8212; historically tight, signaling a still-resilient labor market. In the current tariff environment, the interpretation is inverted: a low print (&lt;205K) suggests the labor market hasn't yet felt tariff-driven cuts, giving the Fed cover to stay higher-for-longer. A high print (&gt;225K) would validate that Bessent's tariff escalation is already starting to bite. Institutions loaded SPY and QQQ puts into Wednesday's rally &#8212; a soft claims number gives those trades momentum.</p>
-        <p class="card-meaning">&#128204; What This Means: This is the first binary data point of the day. Claims above 230K = put flow in SPY/QQQ accelerates. Claims below 205K = brief relief bounce, then the tariff/Iran narrative takes back over. The range 205K&#8211;225K is noise &#8212; market trades on geopolitics. Either way, institutional positioning (6 SPY put sweeps, 10 QQQ put sweeps) is already set for downside.</p>
+        <div class="card-type">Close Summary</div>
+        <div class="card-price up">XLE &#8593; +0.52%</div>
+        <div class="card-change neu">$56.48 close &nbsp;|&nbsp; WTI settled $78.87 (-2.64% from intraday high)</div>
+        <h3>Energy Held Green Despite Oil Giving Back Intraday Gains &#8212; Cautious Long Signal</h3>
+        <p>WTI crude spiked to a session high of $79-80 on Iran tanker attack reports, then gave back those gains to close at $78.87 (&#8209;2.64%). Despite that reversal, XLE closed +0.52% &#8212; energy equities didn't sell off with oil because the underlying thesis (Strait of Hormuz risk, Iran supply disruption) remained intact even as the specific data point cooled. XLE holding green while the broad market bled is exactly the kind of energy outperformance that signals sustained institutional positioning, not a one-day trade.</p>
+        <p class="card-meaning">&#128204; What This Means: XLE is the cleanest Iran hedge in the market right now. The fact that it held up when oil pulled back suggests institutions aren't trading the WTI tick &#8212; they're holding for the geopolitical premium. If Iran escalates further, XLE is the first responder. If peace signals emerge, that's your exit. The current setup: long XLE as a geopolitical hedge with a stop below $54.50.</p>
       </div>
 
     </div>
@@ -120,34 +168,34 @@
 
   <!-- MACRO ZONE -->
   <div class="zone-macro">
-    <div class="zone-label">&#127758; Macro &amp; Geopolitical &#8212; Thursday Open</div>
+    <div class="zone-label">&#127758; Macro &amp; Geopolitical &#8212; Evening Update</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">Macro Move</div>
-        <div class="card-price dn">TARIFFS</div>
-        <div class="card-change dn">15% Global &nbsp;|&nbsp; Bessent Confirmed &#8212; This Week</div>
-        <h3>Bessent Confirms 15% Global Tariffs Land This Week &#8212; Smart Money Already Repositioned</h3>
-        <p>Treasury Secretary Bessent made it official Wednesday: Trump's 15% global import tariff &#8212; up from 10% after the Supreme Court limited IEEPA authority &#8212; hits "sometime this week." The EU expects a partial carve-out at 5%. But the damage math is ugly: KBB estimates +$6,000 per car under $40K for autos; retail importers face margin compression that can't be absorbed without price hikes. Bessent added rates return to prior IEEPA levels "within 5 months" &#8212; that 5-month runway is a tactical signal, not reassurance. It means institutions have a clock.</p>
-        <p class="card-meaning">&#128204; What This Means: Institutional distribution from XLY, XLP (import-exposed staples), and auto names is already underway &#8212; yesterday's data confirmed it. Rotation targets: domestic industrials (XLI), defense (ITA, XAR), and energy (XLE). The 5-month clock means the tariff trade has a defined lifespan. Hedge the consumer exposure now; position for domestic beneficiaries on any dip.</p>
+        <div class="card-type">Geopolitical</div>
+        <div class="card-price dn">IRAN</div>
+        <div class="card-change dn">No peace signals &nbsp;|&nbsp; Tanker attack confirmed</div>
+        <h3>Iran Tanker Attack Confirmed &#8212; The Market Priced It and Then Some</h3>
+        <p>Iran's Tasnim News Agency confirmed the IRGC attacked a tanker in the Strait of Hormuz region. WTI initially spiked past $79, pushing the Dow down more than 1,100 points at the intraday low. By the close, oil gave back most of its session gains but the equity damage was done. Trump's statement that the US can fight "forever" removes any near-term resolution catalyst. The market is now pricing a prolonged conflict with no clear exit, which means the inflation premium from energy stays baked into bond yields and keeps the Fed on hold longer.</p>
+        <p class="card-meaning">&#128204; What This Means: The Iran trade has moved from "binary event risk" to "prolonged premium" territory. This changes the playbook: instead of positioning for a peace spike or war shock, you position for sustained energy prices, elevated VIX (23.75 tonight), and Fed paralysis. The winners in this environment are energy, defense, and domestic industrials. The losers are rate-sensitive names, consumer discretionary, and anything with global supply chain exposure.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">News Catalyst</div>
-        <div class="card-price dn">OIL &#8593;</div>
-        <div class="card-change dn">WTI pushing toward $78 &nbsp;|&nbsp; Iran peace window closed</div>
-        <h3>Iran Peace Window Snaps Shut &#8212; Oil Bid Comes Back, Defense Flows Resume</h3>
-        <p>Wednesday's brief optimism on Iran-CIA back-channel reports has fully reversed. Reuters reports: "Iran reveals stretched Trump tariff trades" &#8212; assets that outperformed on peace hope are underperforming, and vice versa. WTI is pushing back toward $78 as Strait of Hormuz tail risk reprices back in. Asian markets got rocked overnight (CNN). Trump says the US can fight "forever" &#8212; which means the market can't price a quick resolution. Institutions that trimmed defense and energy on Wednesday's hope bounce are rebuilding those positions right now.</p>
-        <p class="card-meaning">&#128204; What This Means: Energy (XLE) and defense (ITA, RTX, LMT) are the clean trades out of Iran escalation. WTI above $78 starts pressuring airlines, shipping, and consumer discretionary margins. Watch the Bloomberg "Sell America, Buy Asia" reversal story &#8212; that trade is being unwound because Iran punctures the Asia-safe-haven thesis. Oil is the war's stock market proxy. Track WTI, not the news cycle.</p>
+        <div class="card-type">Macro</div>
+        <div class="card-price neu">VIX 23.75</div>
+        <div class="card-change dn">Elevated &nbsp;|&nbsp; Fear bid intact into Friday</div>
+        <h3>VIX at 23.75 &#8212; The Options Market Is Pricing a Rough Friday</h3>
+        <p>A VIX of 23.75 is not panic territory (that's 30+) but it's meaningful fear. At this level, the options market is pricing ~1.5% daily moves in the S&P 500 as the expected range. That's nearly double the long-run average. The elevated VIX means put premiums are expensive &#8212; if you're trying to buy downside protection now, you're paying up. It also means any positive resolution to Iran would trigger a sharp vol crush and sharp equity bounce. The VIX closed up today and is the one number that summarizes everything else: Iran + tariffs + elevated yields = the market is not comfortable.</p>
+        <p class="card-meaning">&#128204; What This Means: At VIX 23.75, the risk/reward for buying puts has deteriorated (you're paying for fear that's already priced). Better plays in elevated vol environments: (1) sell put spreads if you're bullish &#8212; collect the premium, (2) buy call spreads instead of outright calls to reduce cost, (3) watch for a VIX spike above 27 as a potential bounce signal &#8212; those extremes historically mark short-term capitulation. Tonight's overnight level in VIX futures will set tomorrow's tone.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price neu">MACRO HEDGE</div>
-        <div class="card-change neu">SPY: 6 put sweeps · $25.4M &nbsp;|&nbsp; QQQ: 10 put sweeps · $9.1M</div>
-        <h3>Institutions Bought Protection Into Wednesday's Rally &#8212; The Bounce Was a Gift</h3>
-        <p>EOD options data is unambiguous: institutions used Wednesday's Nasdaq-led comeback rally to buy broad market protection at better prices. SPY: 6 put sweeps vs 2 call sweeps, $25.4M put premium vs $16M calls &#8212; strike concentration at $682&#8211;$684, March 11 expiry. QQQ: 10 put sweeps vs 7 calls, $9.1M puts. In plain language: whoever was buying puts on Wednesday's green day was betting the bounce wouldn't hold into next week. With tariffs landing, Iran fading peace hopes, and Jobless Claims hitting now, they may be collecting.</p>
-        <p class="card-meaning">&#128204; What This Means: The institutional line in the sand is $682 on SPY. Below that, the March 11 put positions become directionally profitable and you'll see accelerated selling. Above $686 would force short-covering. Current positioning (6 put sweeps vs 2 calls) means the smart money is leaning short. Trade with the institutional flow: the $682&#8211;$684 zone is the battleground today.</p>
+        <div class="card-type">Macro</div>
+        <div class="card-price neu">10Y: 4.15%</div>
+        <div class="card-change dn">Yields rising &nbsp;|&nbsp; Fed patience confirmed</div>
+        <h3>10-Year at 4.15% and Rising &#8212; The Rate Ceiling Keeps Getting Higher</h3>
+        <p>The 10-year Treasury yield ticked higher to 4.15% as the dual pressures of oil-driven inflation expectations and tariff-driven cost concerns pushed bonds lower (yields higher). This is the macro lock: the Fed can't cut while oil is spiking and tariffs are landing. The labor market (Jobless Claims held steady at ~212K) gave no relief signal. Essentially, the Fed is watching a stagflationary setup develop in slow motion &#8212; rising costs, stable employment, falling market confidence &#8212; and has very limited room to maneuver. Every day of elevated yields is another day of pressure on rate-sensitive sectors.</p>
+        <p class="card-meaning">&#128204; What This Means: Higher-for-longer rates are now the base case through at least Q2 2026. That kills the bull case for: regional banks (rate spread compression), REITs (cost of capital), homebuilders (mortgage rates follow), and growth stocks with high P/E multiples. It supports: short-duration value, dividend payers in energy/defense, and anything that benefits from staying power in a higher-rate world. Rotate accordingly.</p>
       </div>
 
     </div>
@@ -155,49 +203,59 @@
 
   <!-- BOT ZONE -->
   <div class="zone-bot">
-    <div class="zone-label">&#129302; Bot Watchlist &#8212; Smart Money Signals</div>
+    <div class="zone-label">&#129302; Bot Watchlist &#8212; Close Review</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 8/10 &middot; $306M premium</div>
-        <h3>MSFT &#8212; $306M Put Flow Bets Against the Retail "Buy the Dip" Story</h3>
-        <p>8 put sweeps vs 2 call sweeps. Put premium: $305.9M. Call premium: $1.9M. Current price: $408.04. Strikes: March 11 expiry cluster. The retail narrative says MSFT is "down 20% in 2026, buy hand over fist" &#8212; but $305M in institutional put flow is the opposite bet. MSFT spent Wednesday at the Morgan Stanley Tech conference &#8212; no major new announcements, no AI upside surprise. On the same day Broadcom printed a 106% AI revenue beat, MSFT's AI story looks relatively thin. Options flow had 850K contracts trading on March 4, with the largest single position: a $465 strike put (6,750 contracts) expiring March 20 &#8212; deep out of the money bearish protection.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: $305M in put premium isn't a hedge &#8212; it's a directional short. The setup: MSFT opens below $406 and fails to reclaim it. If $400 breaks, the put flow accelerates. The March 11 expiry means resolution in 6 trading days. Watch open price action carefully &#8212; a gap down that holds below $406 is the entry signal for anyone leaning short.</p>
+        <div class="card-type">CLOSE REVIEW &middot; LONG &middot; Outperformed</div>
+        <div class="card-price up">MSFT &#8593; +1.35%</div>
+        <div class="card-change up">$410.68 close &nbsp;|&nbsp; +$5.48 &nbsp;|&nbsp; Beat the tape hard</div>
+        <h3>MSFT Defied the Morning Put Flow &#8212; Closed +1.35% on a Brutal Day</h3>
+        <p>This morning's brief flagged $306M in MSFT put premium as a directional short signal. MSFT closed +1.35% at $410.68 &#8212; the put flow was wrong, or at least early. In a session where the Dow lost 784 points, MSFT gained $5.48. This is a signal worth paying attention to: when a stock with heavy put flow outperforms on a down day, it means buyers absorbed the selling and came out ahead. Morgan Stanley Tech conference may have delivered more than expected behind the scenes. MSFT is now pushing back toward the $415 range it needs to reclaim to change the 2026 narrative.</p>
+        <p class="card-meaning">&#128204; What This Means: The morning put signal didn't play out today. That doesn't invalidate it &#8212; put sweeps with March 11 expiry have 4 trading days left. But MSFT holding green on a red day changes the probability. If MSFT opens above $412 tomorrow, the put thesis is losing momentum. Reassess: either the puts were a hedge (not directional) or the catalyst wasn't today. Watch $412 at the open as the line between "put thesis lives" and "squeeze risk."</p>
       </div>
 
       <div class="card">
-        <div class="card-type">BULLISH CALL &middot; 8/10 &middot; $9.7M sweeps</div>
-        <h3>META &#8212; Three Consecutive OTM Call Sweeps Point to $675&#8211;$680 by March 11</h3>
-        <p>4 aggressive call sweeps: $672.50 (1,094 contracts), $675 (2,139 contracts &#8212; largest), $680 (1,133 contracts). All March 11 expiry. All out-of-the-money. Call premium: $9.74M. Put premium: $13.74M. Current price: $666.80. The sweep ladder structure &#8212; three consecutive OTM strikes getting hit in sequence &#8212; is a classic institutional accumulation pattern. META's ad business is largely domestic (tariff-resistant), and Broadcom's AI capex beat directly validates META's Llama/AI infrastructure spending thesis. Score: 8/10 LONG.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: The anchor is the $675 sweep (2,139 contracts at SWEEP designation) &#8212; someone needs META above $675 by March 11. Confirm the thesis if META opens above $668 on volume. The Broadcom AI tailwind is the catalyst that gives this sweep a real fundamental backing. Target: $675&#8211;$680 over the next 6 trading days. Below $662 at open invalidates.</p>
+        <div class="card-type">CLOSE REVIEW &middot; SHORT &middot; Played out</div>
+        <div class="card-price dn">META &#8595; -1.07%</div>
+        <div class="card-change dn">$660.57 close &nbsp;|&nbsp; -$7.16 &nbsp;|&nbsp; Failed to hold $672 target</div>
+        <h3>META Couldn't Hold &#8212; Failed the $672 Call Sweep Target on First Attempt</h3>
+        <p>The morning brief highlighted three consecutive OTM call sweeps targeting $672-$680 by March 11. META closed at $660.57, down 1.07% &#8212; actually moving further from the targets, not toward them. The broad market selloff overwhelmed the individual call flow thesis. META's ad business may be tariff-resistant but it's not red-market-resistant &#8212; when the Dow drops 784 points, even good stories go down. The $675 sweep (2,139 contracts) is now significantly OTM with 4 trading days left.</p>
+        <p class="card-meaning">&#128204; What This Means: The call sweep thesis is under pressure but not dead. META needs to recover to at least $668 by tomorrow to keep the March 11 target in play. If tomorrow opens below $658, the sweep may not make it. The risk/reward has shifted: the calls are now cheaper (OTM, vol-inflated) but the time window is shorter. This is now a binary: either the market recovers and pulls META with it, or the sweep expires worthless. Watch the open.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 8/10 &middot; $57.7M premium</div>
-        <h3>AMZN &#8212; $427M Campus Deal Can't Paper Over $58M in Institutional Put Flow</h3>
-        <p>10 put sweeps vs 4 call sweeps. Put premium: $57.7M. Call premium: $9.1M. Current price: $216.77. Put/call ratio: 10:4 sweeps. The retail narrative &#8212; "Amazon stock rises after $427M campus deal" &#8212; is being faded hard by institutions. AMZN is 18% off its 2025 highs and faces a dual tariff problem: AWS hardware components (import costs up) and potential consumer pullback in the retail segment (discretionary spending hit). The 10:4 put sweep ratio is one of the most lopsided in the watchlist. This is a conflict signal: positive news, heavy downside flow.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: The mismatch between positive headline and heavy put flow is a flag. If AMZN gaps up on the campus deal news, watch for a fade below $215 &#8212; that's the tell that institutions are using retail buying to distribute. Gap-and-fade below $215 = put flow activating. Hold above $218 = put thesis needs more time. The $57M in premium doesn't lie about where institutional conviction sits.</p>
+        <div class="card-type">CLOSE REVIEW &middot; NEUTRAL &middot; Surprising</div>
+        <div class="card-price up">AMZN &#8593; +0.98%</div>
+        <div class="card-change up">$218.94 close &nbsp;|&nbsp; +$2.12 &nbsp;|&nbsp; Faded the put flow too</div>
+        <h3>AMZN Closed Green Despite $57M Put Flow &#8212; The Campus Deal Won the Day</h3>
+        <p>Morning put flow signal: 10 put sweeps, $57.7M premium, put/call ratio 10:4. AMZN closed +0.98% at $218.94. The $427M campus deal story absorbed the put pressure and then some. Similar to MSFT, this is a case of bullish price action contradicting bearish options flow &#8212; possible explanations: (1) the puts are hedges against existing long AMZN positions, not directional shorts; (2) the catalyst (campus deal) triggered retail buying that absorbed institutional selling; (3) AWS's relative immunity to tariff headwinds is getting re-priced by the market.</p>
+        <p class="card-meaning">&#128204; What This Means: Two consecutive sessions of AMZN outperforming on put-heavy days starts to look like the market is fading the put flow narrative. The $215 breakdown level from the morning brief held &#8212; AMZN never touched it. Reassess: the $218-220 range is now support. If AMZN holds above $218 at tomorrow's open, the bear thesis needs to be rebuilt from scratch. The institutional put flow may genuinely be a hedge against the AWS cost exposure, not a directional short.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 7/10 &middot; $364M premium</div>
-        <h3>TSLA &#8212; $364M Short Position Fades the Wall Street Upgrade at Current Levels</h3>
-        <p>8 put sweeps vs 5 call sweeps. Put premium: $364.3M (largest single-name bet in watchlist). Call premium: $50.2M. Current price: $406.83. Unusual options activity from optioncharts.io confirms: PUT $405 and PUT $402.50 (March 4 expiry) trading with heavy volume. Retail headline says "TSLA gets a new vote of confidence from Wall Street" &#8212; but $364M in institutional put premium is voting the other way, hard. Musk's DOGE involvement, European sales boycott activity, and the stock near its highs after a massive run all support the bear case. Score: 7/10 SHORT.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: $364M in put premium is a conviction short &#8212; not a hedge. Watch $400 at the open: that's the institutional line. Below $400 with broad market weakness (Iran + tariffs) = puts accelerate. Below $395 is the accelerant where cover-forced selling kicks in. The "Wall Street confidence" upgrade is likely distribution cover &#8212; institutions use positive press to exit into retail buying.</p>
+        <div class="card-type">CLOSE REVIEW &middot; FLAT &middot; Inconclusive</div>
+        <div class="card-price neu">TSLA &#8596; -0.10%</div>
+        <div class="card-change neu">$405.55 close &nbsp;|&nbsp; -$0.39 &nbsp;|&nbsp; $400 level held</div>
+        <h3>TSLA Held $400 &#8212; The Put Thesis Needs a Catalyst It Didn't Get Today</h3>
+        <p>Morning signal: $364M in put premium, 8 put sweeps vs 5 calls, bearish lean. TSLA closed at $405.55, barely down. The $400 line in the sand from the morning brief held &#8212; TSLA never closed below it. In a session where IWM fell 1.91% and the Dow lost 784 points, TSLA essentially flatlined. That's either relative strength (unlikely given the European boycott narrative) or the put holders didn't have a catalyst to press the short. Elon/DOGE headline noise continues but isn't moving the stock today.</p>
+        <p class="card-meaning">&#128204; What This Means: The $364M put flow has about 4 trading days left on March 11 expiry. TSLA needs to break below $400 for those puts to become directionally profitable at most strikes. If it doesn't happen by Friday, this becomes a time-decay problem for the put holders. Watch: a TSLA open below $400 tomorrow is the trigger. Above $408 and the put thesis is losing. The $400 level is the entire battle for the next four days.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 7/10 &middot; $17.2M premium</div>
-        <h3>NVDA &#8212; $200 Put Is a Ceiling Warning Ahead of GTC &#8212; Not a Crash Bet</h3>
-        <p>1 put sweep: PUT $200 exp March 11, 411 contracts. Put premium: $17.2M. 1 call sweep: SWEEP CALL $145 exp March 13, 1,201 contracts (deep ITM &#8212; existing holders rolling). Call premium: $5.7M. Current price: $183.03. The flow interpretation: institutions own NVDA (the deep ITM call sweep confirms it) but are hedging against a move above $200 getting sold into. Broadcom's 106% AI revenue beat is a direct positive read-through for NVDA's GTC conference (March 16&#8211;19). The $200 strike puts are not a crash bet &#8212; they're a ceiling bet. Someone expects $200 to be resistance, not support.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: Stay long for the GTC narrative run &#8212; the Broadcom beat gives NVDA bulls a catalyst. But the $200 put is a real warning at that level. Strategy: ride the GTC hype to $195&#8211;$198, then watch for institutional selling signals above $200. Don't hold through GTC without a defined exit at $200. The deep ITM call confirms bulls own the stock; the $200 put confirms there's a ceiling. Trade the range.</p>
+        <div class="card-type">CLOSE REVIEW &middot; LONG &middot; On track</div>
+        <div class="card-price up">NVDA &#8593; +0.16%</div>
+        <div class="card-change up">$183.34 close &nbsp;|&nbsp; +$0.30 &nbsp;|&nbsp; GTC setup building</div>
+        <h3>NVDA Eked Out Green &#8212; The $200 Ceiling Trade Has 11 Days to Play Out</h3>
+        <p>Morning signal: long bias with $200 put acting as a ceiling hedge. NVDA closed +0.16% at $183.34 on a day the broader market bled. The Broadcom AI read-through (106% AI revenue) is the tailwind keeping NVDA bid while everything else sells. The GTC conference (March 16-19) is 11 days away &#8212; institutional money is building toward that catalyst. The $200 put (March 11 expiry) is actually in better shape than expected given only 4 trading days remain: NVDA at $183 vs $200 target means that put likely expires worthless, leaving the bull path clear for GTC.</p>
+        <p class="card-meaning">&#128204; What This Means: NVDA is executing on plan. Holding green on a red day with the GTC catalyst 11 days out is the setup. The $200 put threat (March 11 expiry) is looking toothless at current levels &#8212; NVDA would need a 9% rip in 4 days to even reach that strike. Focus shifts to the GTC range trade: $183 entry, $195-198 target before the event, hard exit at $200. The Broadcom beat gave NVDA an early tailwind. Don't overthink it &#8212; ride GTC.</p>
       </div>
 
     </div>
   </div>
 
   <footer>
-    PAVANO TRADES &nbsp;&#9679;&nbsp; Open Brief &nbsp;&#9679;&nbsp; Thursday, March 5, 2026 &nbsp;&#9679;&nbsp; Not financial advice. Paper trading only.
+    PAVANO TRADES &nbsp;&#9679;&nbsp; Evening Wrap &nbsp;&#9679;&nbsp; Thursday, March 5, 2026 &nbsp;&#9679;&nbsp; Not financial advice. Paper trading only.
   </footer>
 </body>
 </html>
