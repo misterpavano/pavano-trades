@@ -27,7 +27,9 @@
     .zone-market .card{background:#001a00;border-color:#004d00;}
     .zone-macro .card{background:#00001a;border-color:#00004d;}
     .zone-bot .card{background:#100030;border-color:#2a1060;}
-    .card-open{background:#101500 !important;border-color:#2a3500 !important;}
+    .card-open{background:#101500 !important;border-color:#ffc933 !important;}
+    .card-win{background:#001a00 !important;border-color:#004d00 !important;}
+    .card-loss{background:#1a0000 !important;border-color:#4d0000 !important;}
     .card-type{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin-bottom:8px;}
     .card-price{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:700;margin-bottom:4px;}
     .card-change{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#888;margin-bottom:14px;}
@@ -35,7 +37,7 @@
     p{font-size:13px;line-height:1.6;color:#b0b0b0;margin-bottom:10px;}
     .card-meaning{font-size:13px;line-height:1.6;color:#999;border-top:1px solid #333;padding-top:10px;margin-top:10px;}
     footer{position:fixed;bottom:0;left:0;right:0;background:#0d0d0d;border-top:1px solid #2a2a2a;padding:12px 40px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#555;letter-spacing:0.1em;text-transform:uppercase;}
-    .scoreboard{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px;padding:16px;background:#111;border:1px solid #222;}
+    .scoreboard{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:0;padding:16px;background:#111;border:1px solid #222;}
     .sb-item{text-align:center;min-width:80px;}
     .sb-item .sb-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
     .sb-item .sb-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;}
@@ -45,206 +47,171 @@
 <body>
 
   <header>
-    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; MONDAY OPEN BRIEF &nbsp;&#9679;&nbsp; MARCH 9, 2026 &nbsp;&#9679;&nbsp; OIL $116 +28% OVERNIGHT &nbsp;&#9679;&nbsp; IRAN WAR WK3 &nbsp;&#9679;&nbsp; CPI MAR 12</div>
+    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; EOD WRAP &nbsp;&#9679;&nbsp; MARCH 9, 2026 &nbsp;&#9679;&nbsp; MANIC MONDAY: SPY -1.6% OPEN &#8594; +0.87% CLOSE &nbsp;&#9679;&nbsp; TRUMP: &ldquo;WAR IS VERY COMPLETE&rdquo; &nbsp;&#9679;&nbsp; OIL CRASHED FROM $120 TO $101</div>
     <div class="header-row">
-      <h1>&#128165; Monday Open Brief</h1>
+      <h1>&#128200; EOD Wrap &mdash; March 9, 2026</h1>
       <div class="header-stats">
         <div class="stat">
           <div class="label">SPY</div>
-          <div class="val dn" id="spy">&#8595; ~$661 (-1.6%)</div>
+          <div class="val up">&#8593; $678.26 (+0.87%)</div>
         </div>
         <div class="stat">
           <div class="label">QQQ</div>
-          <div class="val dn" id="qqq">&#8595; ~$588 (-2.0%)</div>
+          <div class="val up">&#8593; $607.71 (+1.31%)</div>
         </div>
         <div class="stat">
           <div class="label">GME</div>
-          <div class="val neu" id="gme">&#8212; $24.37</div>
+          <div class="val up">&#8593; $24.80 (+1.76%)</div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SCOREBOARD — MONDAY PREMARKET -->
+  <!-- SCOREBOARD -->
   <div style="background:#111;border-bottom:1px solid #1e1e1e;padding:20px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Monday Premarket &#8212; March 9, 2026 &nbsp;|&nbsp; WTI +28% OVERNIGHT TO $116 &#9679; DOW FUTURES -860 PTS &#9679; S&amp;P FUTURES -1.61% &#9679; TRUMP: "$100 OIL IS A SMALL PRICE FOR PEACE"</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Market Close &mdash; March 9, 2026 &nbsp;|&nbsp; TRUMP &ldquo;WAR VERY COMPLETE&rdquo; &#9679; S&amp;P ERASED FULL OPEN LOSS &#9679; DOW +239 PTS &#9679; NASDAQ +1.4% &#9679; OIL $101 FROM $120</div>
     <div class="scoreboard">
       <div class="sb-item">
         <div class="sb-label">SPY</div>
-        <div class="sb-val dn">~$661</div>
-        <div class="sb-chg dn">&#8595; -1.61% fut</div>
+        <div class="sb-val up">$678.26</div>
+        <div class="sb-chg up">&#8593; +0.87%</div>
       </div>
       <div class="sb-item">
         <div class="sb-label">QQQ</div>
-        <div class="sb-val dn">~$588</div>
-        <div class="sb-chg dn">&#8595; ~-2.0% fut</div>
+        <div class="sb-val up">$607.71</div>
+        <div class="sb-chg up">&#8593; +1.31%</div>
       </div>
       <div class="sb-item">
         <div class="sb-label">GME</div>
-        <div class="sb-val neu">$24.37</div>
-        <div class="sb-chg neu">&#8212; Acq. tease</div>
+        <div class="sb-val up">$24.80</div>
+        <div class="sb-chg up">&#8593; +1.76%</div>
       </div>
       <div class="sb-item">
-        <div class="sb-label">WTI</div>
-        <div class="sb-val dn">$116+</div>
-        <div class="sb-chg dn">&#8593; +28% O/N</div>
+        <div class="sb-label">S&amp;P 500</div>
+        <div class="sb-val up">6,795.95</div>
+        <div class="sb-chg up">&#8593; +0.83%</div>
       </div>
       <div class="sb-item">
-        <div class="sb-label">Dow Fut</div>
-        <div class="sb-val dn">-860 pts</div>
-        <div class="sb-chg dn">&#8595; -1.82%</div>
+        <div class="sb-label">Dow Jones</div>
+        <div class="sb-val up">+239 pts</div>
+        <div class="sb-chg up">&#8593; +0.50%</div>
       </div>
       <div class="sb-item">
-        <div class="sb-label">VIX</div>
-        <div class="sb-val dn">28.40+</div>
-        <div class="sb-chg dn">&#8593; 12-Mo High</div>
+        <div class="sb-label">NFLX</div>
+        <div class="sb-val dn">$98.32</div>
+        <div class="sb-chg dn">&#8595; -0.72%</div>
       </div>
       <div class="sb-item">
-        <div class="sb-label">Brent</div>
-        <div class="sb-val dn">$119+</div>
-        <div class="sb-chg dn">&#8593; War Prem.</div>
+        <div class="sb-label">NVDA</div>
+        <div class="sb-val up">$182.64</div>
+        <div class="sb-chg up">&#8593; +2.79%</div>
       </div>
       <div class="sb-item">
-        <div class="sb-label">10Y</div>
-        <div class="sb-val neu">4.14%</div>
-        <div class="sb-chg neu">Risk-off bid</div>
+        <div class="sb-label">WTI Oil</div>
+        <div class="sb-val neu">~$101</div>
+        <div class="sb-chg dn">&#8595; From $120 high</div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION A: MACRO / SMART MONEY -->
+  <!-- SECTION A: WHAT MOVED TODAY -->
   <div class="zone-macro">
-    <div class="zone-label">&#128200; Macro Flow &#8212; March 9, 2026 | Where Institutional Money Is Moving</div>
+    <div class="zone-label">&#128200; What Moved Today &mdash; March 9, 2026 | The Stories Behind the Numbers</div>
     <div class="cards">
 
       <div class="card">
         <div class="card-type">Macro Move</div>
-        <div class="card-price dn">WTI $116</div>
-        <div class="card-change dn">+28% overnight &nbsp;|&nbsp; Gasoline fut +17% &nbsp;|&nbsp; $6T global equity wipeout &nbsp;|&nbsp; Brent $119+</div>
-        <h3>Oil Spiked 28% Overnight &#8212; Trump Says Widening the War Is "A Small Price to Pay," Institutions Are Rotating Into Energy Now</h3>
-        <p>WTI crude surged 28% overnight to $116 per barrel. Gasoline futures jumped 17%. Trump posted Sunday evening that $100 oil is "a very small price to pay" for destroying Iran's nuclear threat, and explicitly signaled parts of Iran had "yet to be attacked." Bloomberg documented $6 trillion in global equity market value wiped out since the conflict began. Asian stocks plunged. US futures opened deep in the red. The only beneficiaries: energy names and gold. XLE was one of the only green sectors Friday and opened Monday with institutional accumulation.</p>
-        <p class="card-meaning">&#128204; What This Means: Trump's statement is not a gaffe &#8212; it's a policy signal. The Iran war is intentional and indefinite. Institutions rotating into energy and gold are not making a trade, they're repositioning for a structurally different macro environment. Every day oil stays above $100, rate-cut expectations get pushed further out, and high-multiple growth stocks compress further. Energy long / tech short is the institutional consensus trade right now.</p>
+        <div class="card-price up">Full Reversal</div>
+        <div class="card-change">SPY: -1.6% open &#8594; +0.87% close &nbsp;|&nbsp; Dow -860 pts &#8594; +239 pts &nbsp;|&nbsp; Nasdaq +1.4%</div>
+        <h3>Trump Told CBS &ldquo;War Is Very Complete&rdquo; &mdash; Markets Did a 2.5% Intraday U-Turn in Under an Hour</h3>
+        <p>Monday was one of the most violent intraday reversals in years. Dow futures had been -860 points at the open. Oil touched near $120. The S&amp;P opened down over 1%. Then around 2pm ET, Trump called into CBS News and told reporter Weijia Jiang the Iran war was &ldquo;very complete, pretty much.&rdquo; Oil collapsed back toward $100-101. Stocks ripped from deep red into the green. Dow finished +239 points. S&amp;P closed at 6,795.95, up 0.83%. Nasdaq led at +1.4%.</p>
+        <p class="card-meaning">&#128204; Bottom line: The entire day was one trade. The reversal was not driven by fundamentals &mdash; it was a pure news-catalyst snap. Tomorrow&apos;s question: was Trump serious, or is this a 48-hour rally before another escalation? The CPI print Wednesday is the next detonator regardless of Iran.</p>
       </div>
 
       <div class="card">
         <div class="card-type">News Catalyst</div>
-        <div class="card-price dn">Stagflation Trade</div>
-        <div class="card-change dn">Bloomberg: stagflation trades sweeping markets &nbsp;|&nbsp; Jobs -92K &nbsp;|&nbsp; Oil $116 &nbsp;|&nbsp; Fed trapped</div>
-        <h3>Bloomberg Calls It: Stagflation Trades Are Sweeping Markets &#8212; $6T Erased, Fed Has No Good Moves Left</h3>
-        <p>Bloomberg ran a headline this morning: "Stagflation Trades Sweep Markets as Trump Signals Widening War." The math is simple and brutal &#8212; February jobs came in at -92K last week (recessionary), and now oil is at $116 (inflationary). The Fed cannot cut into $116 oil without risking a 1970s-style price spiral. It cannot hike into -92K jobs without crushing the economy. The CTA systematic selling BofA flagged last week is continuing &#8212; trend-following funds don't need conviction, they just follow the momentum signal, which is now firmly negative on equities.</p>
-        <p class="card-meaning">&#128204; What This Means: The put heavy positioning across AMZN ($85.9M), NFLX ($100M), PLTR ($123.6M), and AVGO ($70.6M) that the bot caught at EOD Friday was smart money pre-positioning for exactly this Monday open. The institutional thesis is: stagflation = growth multiple compression = tech sells off for weeks. Wednesday's CPI print is the next catalyst &#8212; a hot number confirms the thesis and accelerates the selling.</p>
+        <div class="card-price dn">Oil $120 &#8594; $101</div>
+        <div class="card-change dn">Brent briefly near $120 &nbsp;|&nbsp; WTI +11% intraday high &nbsp;|&nbsp; Collapsed ~16% on Trump comment &nbsp;|&nbsp; Still elevated vs pre-war</div>
+        <h3>Oil Had One of Its Most Violent Intraday Swings in Years &mdash; Staged, Then Collapsed on a Presidential Phone Call</h3>
+        <p>Brent crude came within a hair of $120 overnight as Gulf Arab nations cut production with ships unable to move through the Strait of Hormuz. WTI surged more than 11% intraday. Then Trump&apos;s CBS interview triggered one of the sharpest single-session reversals in recent memory. WTI fell from $120 back toward $101. Still elevated historically &mdash; $101 oil is not &ldquo;normal&rdquo; &mdash; but the acute war premium largely came out.</p>
+        <p class="card-meaning">&#128204; Bottom line: If Iran tensions truly de-escalate, oil has room to fall back toward $85-90. If this is a false dawn, expect $120 again fast. The CPI print Wednesday will show how much of the pre-war oil price is already baked into inflation data &mdash; which determines how much pressure stays on the Fed.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price dn">CPI &#8212; Mar 12</div>
-        <div class="card-change dn">Feb CPI Wednesday &nbsp;|&nbsp; Oil already embedded in Feb prices &nbsp;|&nbsp; Stagflation read incoming</div>
-        <h3>Wednesday CPI Is the Detonator &#8212; Feb Energy Prices Already Baked In, Hot Print Locks In the Sell Thesis</h3>
-        <p>February CPI prints Wednesday morning. The catch: February energy prices were already elevated when the data was collected. WTI was trading in the $85-90 range in February before the Iran war escalated oil to $90+ last week and now $116 Monday. The February CPI will likely show energy inflation already built in &#8212; and March CPI (due April) will show $116 oil. Institutions are not waiting for confirmation. The put positioning across the high-multiple tech names is the pre-CPI trade. They don't need to see the print &#8212; the math already works for them.</p>
-        <p class="card-meaning">&#128204; What This Means: Hot CPI Wednesday + -92K jobs is the perfect stagflation confirmation. If that print comes in above expectations, expect a second wave of institutional selling that makes Monday's open look mild. The smart play is to have downside positioned before Wednesday morning, not after. The bot's heavy SHORT signals from Friday EOD are the right directional bet into this catalyst.</p>
+        <div class="card-type">Sector Move</div>
+        <div class="card-price up">Tech Leads Bounce</div>
+        <div class="card-change up">Nasdaq +1.4% &nbsp;|&nbsp; NVDA +2.79% &nbsp;|&nbsp; TSLA +0.47% &nbsp;|&nbsp; BAC -1.52% (underperformed)</div>
+        <h3>When Oil Fell, the Stagflation Trade Unwound Instantly &mdash; Growth Got Bid, Financials Lagged</h3>
+        <p>Morning session: textbook stagflation trade &mdash; sell growth, buy energy and defense. After Trump&apos;s comment: the entire sector rotation inverted. Lower oil means less inflation pressure, which means more Fed flexibility, which means growth multiples expand. NVDA jumped +2.79% to $182.64. Nasdaq led at +1.4%. BAC underperformed at -1.52% despite its strong EOD bullish signal &mdash; financials usually benefit from rate stability but lagged this specific bounce.</p>
+        <p class="card-meaning">&#128204; Bottom line: The market is in a binary regime. Iran escalation = sell growth / buy energy. Ceasefire signals = buy growth / sell energy. Every Trump statement and oil tick is a potential full sector rotation catalyst. This will continue until the war has a definitive resolution.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">News Catalyst</div>
-        <div class="card-price neu">GME $24.37</div>
-        <div class="card-change neu">Holding Friday's close &nbsp;|&nbsp; Acquisition teaser narrative &nbsp;|&nbsp; $21.9M insider purchases Jan 20-23</div>
-        <h3>GME Holds While Everything Else Sells &#8212; Ryan Cohen's "Way More Compelling Than Bitcoin" Acquisition Tease Is Still Running</h3>
-        <p>GameStop closed Friday at $24.37 (+2.05%) in a tape where most things were down. In the premarket Monday, GME appears to be holding its level even as broad markets drop sharply &#8212; the macro selloff hasn't caught GME yet, likely because the acquisition narrative acts as a floor. GameStop insiders purchased $21.9 million worth of stock between January 20-23, 2026. Ryan Cohen teased an acquisition "way more compelling than Bitcoin" in early February. At $24, GME sits mid-range in its $19.93-$35.81 52-week band. Earnings are due March 24.</p>
-        <p class="card-meaning">&#128204; What This Means: GME is not an options flow story &#8212; the bot has no unusual flow on it. It's a pure narrative play on the acquisition tease and insider conviction. The $21.9M in insider buying is real signal that Cohen is positioning for something. But without a concrete announcement, GME in a -1.6% market will eventually follow everything lower. Watch whether GME holds $23.50 on the Monday sell-off &#8212; if it does, the narrative floor is intact and March 24 earnings are the real catalyst.</p>
+        <div class="card-type">Sector Move</div>
+        <div class="card-price dn">NFLX $98.32</div>
+        <div class="card-change dn">-0.72% vs Nasdaq +1.4% &nbsp;|&nbsp; 2.1pt underperformance &nbsp;|&nbsp; 16 sweep puts still outstanding from Friday</div>
+        <h3>Netflix Refused to Participate in the Rally &mdash; Down While Everything Else Bounced</h3>
+        <p>In a session where the Nasdaq gained +1.4%, Netflix closed -0.72%. That&apos;s a 2.1-percentage-point underperformance on a day when &ldquo;buy growth&rdquo; was the dominant trade. Wells Fargo resumed coverage and Warner Bros. Discovery bidding dynamics added narrative noise. But the Friday options flow had spoken: 16 sweep puts, $100M in premium. That flow read the Monday tape correctly &mdash; even in a broad tech bounce, NFLX didn&apos;t follow.</p>
+        <p class="card-meaning">&#128204; Bottom line: NFLX lagging a 1.4% Nasdaq day is confirmed relative weakness. The institutional put flow from Friday had it right. The bot&apos;s PUT position is still open &mdash; and NFLX&apos;s inability to participate in a broad rally is exactly the kind of divergence that validates a short thesis heading into CPI Wednesday.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION B: BOT WATCHLIST -->
+  <!-- SECTION B: BOT POSITIONS TODAY -->
   <div class="zone-bot">
-    <div class="zone-label">&#129302; Bot Watchlist &#8212; Smart Money Signals | EOD March 6, 2026</div>
+    <div class="zone-label">&#129302; Bot Positions Today &mdash; March 9, 2026 | How the Trade Played Out</div>
     <div class="cards">
 
-      <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&#183;&nbsp; 10/10 &nbsp;&#183;&nbsp; $123.6M premium</div>
-        <div class="card-price dn">PLTR $157.94</div>
-        <div class="card-change dn">6 sweep puts &nbsp;|&nbsp; Put/call: 4:1 by premium &nbsp;|&nbsp; No earnings 59d</div>
-        <h3>PLTR &#8212; $123.6M Institutional Put Positioning Entered Friday, Highest Score in Scan</h3>
-        <p>Six put sweeps with $123.6M in put premium against $30.5M in calls &#8212; a 4:1 ratio that signals coordinated directional conviction, not hedging. Palantir has no earnings for 59 days, which means this put positioning isn't event-driven protection. With WTI at $116 and macro risk-off dominating Monday's open, the high-multiple AI/government software names are the first to get sold. Key detail: the CALL $160 strike saw 21,463 contracts &#8212; likely being sold against the put position to finance it. Key options: CALL 152.5/155/160 exp Mar 13.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: Cleanest short in the scan. Someone committed $123M to PLTR downside before the weekend &#8212; and they woke up Monday to WTI at $116 and futures down 1.6%. That bet is already working. The play: short or puts on any open bounce toward $155-157. Confirms on a break below $152 on volume. What kills it: Iran ceasefire announcement ripping the whole growth tape.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&#183;&nbsp; 9/10 &nbsp;&#183;&nbsp; $85.9M premium | HIGH CONVICTION</div>
-        <div class="card-price dn">AMZN $213.44</div>
-        <div class="card-change dn">8 sweep puts &nbsp;|&nbsp; PUT $200 (47,234 vol) &nbsp;|&nbsp; HIGH_CONVICTION_SHORT</div>
-        <h3>AMZN &#8212; Someone Bet $85.9M on Amazon Below $200 by March 13 &#8212; 60:1 Put-to-Call Ratio</h3>
-        <p>Eight put sweeps with $85.9M in put premium vs. $1.4M in calls &#8212; a 60:1 put-to-call ratio by premium. The anchor: PUT $200 strike, 47,234 contracts expiring March 13. From Friday's close of $213.44, that's a 6.3% downside bet expiring in one week. With Dow futures down 860+ points Monday morning, that target is a lot closer. Consumer spending slowdown (weak jobs) hits Amazon's e-commerce business. Enterprise cost-cutting hits AWS. The macro headwinds are stacking against AMZN from both sides of its business model simultaneously.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: $85.9M in put premium at a 60:1 ratio is the loudest directional signal in the scan after PLTR. If Monday opens -1.5% to -2%, AMZN likely opens around $209-210. The $200 put target for March 13 becomes a live possibility. Watch for capitulation volume on AMZN Monday morning. Break of $207 opens the path to $200. This is the bot's second-highest conviction short.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&#183;&nbsp; 9/10 &nbsp;&#183;&nbsp; $100M premium | HIGH CONVICTION</div>
-        <div class="card-price dn">NFLX $99.07</div>
-        <div class="card-change dn">16 sweep puts &nbsp;|&nbsp; SWEEP PUT $94 (5,321 vol) &nbsp;|&nbsp; Earnings 41d</div>
-        <h3>NFLX &#8212; 16 Put Sweeps and $100M in Premium &#8212; Most Active Sweep Count in the Entire Scan</h3>
-        <p>Sixteen put sweeps with $100M in put premium &#8212; the highest sweep count of any ticker scanned Friday. NFLX closed at $99.07 and the sweep targets are $94-$95. With Nasdaq futures down roughly 2% Monday morning, NFLX likely opens around $97. That puts the $95 put target within reach in the first day of trading. NFLX earnings are 41 days out &#8212; far enough that this isn't pre-earnings hedging. It's a directional bet that Netflix continues to compress as consumer discretionary spending gets crushed by $116 oil and a slowing job market.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: 16 sweeps + $100M premium + the highest sweep count in the scan is hard to ignore. NFLX at $99 with $94 sweep puts outstanding and a -2% Nasdaq open is a high-probability short setup. Target $95 by end of week. Stops above $102. Earnings in 41d is the eventual recovery catalyst &#8212; but that's a month away. The flow says get short now.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&#183;&nbsp; 10/10 &nbsp;&#183;&nbsp; $70.6M premium</div>
-        <div class="card-price dn">AVGO $329.63</div>
-        <div class="card-change dn">8 sweep puts &nbsp;|&nbsp; CNBC pump used as exit &nbsp;|&nbsp; 7:1 put-to-call premium ratio</div>
-        <h3>AVGO &#8212; CNBC Used as a Distribution Event, $70.6M Puts Loaded While Retail Watched the Pump</h3>
-        <p>CNBC ran a bullish segment Friday: "Broadcom Just Did What Nvidia Couldn't Explain." Retail attention went to the headline. Institutions used the attention spike to load $70.6M in put premium (8 sweeps, 7:1 put-to-call ratio by premium). This is a classic institutional distribution pattern &#8212; sell the narrative headline, buy the downside protection. AVGO shares AI chip export control risk with NVDA, and with WTI at $116 and the macro environment deteriorating, the AI chip sector faces headwinds from both export policy and risk-off sentiment. No earnings for 89 days.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: The CNBC-pump-as-distribution setup is one of the most reliable institutional tells. Smart money used retail excitement to exit AVGO while simultaneously loading puts. With a -1.6% market open Monday, the pump reversal thesis plays out fast. First target $320-325. The 89d earnings runway means there's no fundamental catalyst to stop the bleed near-term. Follow the $70.6M of put premium, not the CNBC chyron.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BULLISH CALL &nbsp;&#183;&nbsp; 10/10 &nbsp;&#183;&nbsp; $337K premium | CONTRARIAN</div>
-        <div class="card-price up">RKT $14.98</div>
-        <div class="card-change up">5 sweep calls vs 1 sweep put &nbsp;|&nbsp; 6:1 call-to-put ratio &nbsp;|&nbsp; Beat 4/4 qtrs</div>
-        <h3>RKT &#8212; 5 Sweep Calls Bought Into Negative Headlines &#8212; Contrarian Bet That Bad Jobs Data Forces Fed Pivot</h3>
-        <p>The press was negative Friday ("Rocket Companies shares are falling") but the options flow contradicted it completely: 5 sweep calls vs. 1 sweep put, call premium 6:1 over puts. The SWEEP CALL $15 (1,752 vol) and SWEEP CALL $16 (3,710 vol) expiring March 13 are fresh positioning. Rocket Companies is the most rate-sensitive housing name &#8212; mortgage origination volumes move directly with Fed rate decisions. Someone read Friday's -92K jobs print not as "economy is bad" but as "this forces the Fed to cut, mortgage rates fall, RKT explodes." That's the bet.</p>
-        <p class="card-meaning">&#128204; What I'm thinking: This is the contrarian long in a sea of shorts. The thesis is: bad jobs + bad economy = Fed pivot = mortgage rates fall = RKT rips. The problem is oil at $116 makes the Fed pivot thesis harder to sell &#8212; they can't cut into this inflation. This is a multi-week thesis with real risk if oil stays elevated. Small position, tight stop below $14. The sweep call flow is real, but the macro timing is hard. Watch for mid-week if Iran cools at all.</p>
+      <div class="card card-open">
+        <div class="card-type">OPEN &nbsp;&#183;&nbsp; NFLX PUT 96 &nbsp;&#183;&nbsp; Exp 3/20 &nbsp;&#183;&nbsp; 11 DTE &nbsp;&#183;&nbsp; Signal: Open Scan (options + news)</div>
+        <div class="card-price neu">$1.76 Entry</div>
+        <div class="card-change">Entry underlying $98.62 &nbsp;|&nbsp; EOD underlying $98.32 &nbsp;|&nbsp; Strike $96.00 &nbsp;|&nbsp; OTM by $2.32 &nbsp;|&nbsp; Stop $0.88 / Target $3.52</div>
+        <h3>NFLX &mdash; Bot Entered PUT at Open on 16-Sweep Signal &mdash; Thesis Intact, Position Alive, Needs More Downside</h3>
+        <p>Bot entered NFLX PUT 96 (exp 3/20) at open for $1.76 per contract ($176 total). Signal: 16 sweep puts, $100M in put premium, HIGH_CONVICTION_SHORT from Friday EOD scan. Entry at $98.62 underlying, EOD close $98.32. The stock moved $0.30 in the right direction &mdash; not enough yet. The $96 strike is $2.32 OTM at close. Stop is $0.88 (50% of premium). Target is $3.52 (2x). 11 days remain to expiration (March 20).</p>
+        <p>Did the EOD signal hold up? Yes &mdash; NFLX fell -0.72% while the Nasdaq gained +1.4%. That&apos;s 2.1 points of relative underperformance on a day designed to rip shorts. The flow read the name correctly. The market gave every tech stock a free bounce today and NFLX still couldn&apos;t rally. That&apos;s confirmation of structural weakness, not noise.</p>
+        <p class="card-meaning">&#128204; Lesson: Reversal days are the hardest sessions to hold a short. When the whole tape rips +1.3%, even a correct thesis gets whipsawed in P&amp;L. The right move was to hold &mdash; NFLX&apos;s relative weakness on a green day is signal, not coincidence. CPI Wednesday is the next catalyst. A hot print re-introduces stagflation and gives the NFLX short its next leg lower.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION C: MONDAY OPEN SETUP -->
+  <!-- SECTION C: TOMORROW'S SETUP -->
   <div class="zone-market">
-    <div class="zone-label">&#128268; Monday Open Setup &#8212; March 9, 2026 | Key Flow Setups and Catalysts</div>
+    <div class="zone-label">&#128268; Tomorrow&apos;s Setup &mdash; March 10, 2026 | What EOD Flow Says Smart Money Is Already Positioned For</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price dn">MRVL $88.99</div>
-        <div class="card-change dn">9/10 &nbsp;|&nbsp; 14 sweep calls + 19 sweep puts &nbsp;|&nbsp; $17.6M call / $6.9M put &nbsp;|&nbsp; Post-earnings soar</div>
-        <h3>MRVL &#8212; 33 Total Sweeps Signal Maximum Institutional Attention &#8212; Both Sides Loading Simultaneously</h3>
-        <p>Marvell had the most two-sided options activity in the scan: 14 sweep calls AND 19 sweep puts, with both call premium ($17.6M) and put premium ($6.9M) elevated. The headline was bullish &#8212; "Why Are Marvell Technology Shares Soaring Today" &#8212; but institutions are hedging aggressively. This is not conviction &#8212; it's volatility positioning. Post-earnings momentum names get hammered when macro turns risk-off, and MRVL has been soaring on AI data center tailwinds that are now competing with a $116 oil macro headwind. The put score (39.36) exceeded the call score (34.3) &#8212; slight lean short despite the headline.</p>
-        <p class="card-meaning">&#128204; What This Means: The 33 total sweeps suggest MRVL is actively owned by large institutions who are now hedging into the macro uncertainty. Bot flags it SHORT on score differential. In a -2% Nasdaq open, post-earnings momentum names like MRVL tend to give back gains fast. Watch if MRVL breaks below $87 &#8212; that's where the put flow positioned.</p>
+        <div class="card-type">Flow Watch &nbsp;&#183;&nbsp; 10/10 &nbsp;&#183;&nbsp; HIGH CONVICTION SHORT</div>
+        <div class="card-price dn">NVDA $182.64</div>
+        <div class="card-change dn">$82.2M put premium &nbsp;|&nbsp; 3 sweep puts &nbsp;|&nbsp; 14:1 put-to-call by premium &nbsp;|&nbsp; No earnings 72d</div>
+        <h3>NVDA &mdash; $82M in Put Premium at Close Says Institutions Faded Today&apos;s +2.79% Bounce</h3>
+        <p>NVDA closed up +2.79% on the Iran ceasefire relief trade. The EOD scan tells a different story: $82.2M in put premium against $5.85M in calls &mdash; a 14:1 ratio. Three put sweeps at 172.5, 177.5, and 187.5 strikes (all exp 3/16) suggest institutions used today&apos;s bounce to buy downside. The thesis: today&apos;s NVDA rally was pure macro Iran relief, not fundamental accumulation. With 72 days to earnings and no company-specific catalyst, $82M bet says the bounce doesn&apos;t hold.</p>
+        <p class="card-meaning">&#128204; Setup: If ceasefire narrative holds overnight, NVDA could push toward $185-186 &mdash; that&apos;s the ideal short entry the flow is positioning for. Any doubt about the ceasefire (Trump reversal, oil ticking back up, CPI hot Wednesday) and NVDA gives back today&apos;s gain fast. Watch $182 as the key floor &mdash; break below and $175 opens up.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price up">SOFI $18.93</div>
-        <div class="card-change up">9/10 HIGH CONVICTION LONG &nbsp;|&nbsp; Mastercard stablecoin deal &nbsp;|&nbsp; Beat 4/4 qtrs</div>
-        <h3>SOFI &#8212; Mastercard Stablecoin Integration Is a Sector-Specific Catalyst That Disconnects From the Macro Tape</h3>
-        <p>SOFI's CALL $21 (22,639 contracts vs. 8,496 open interest) shows fresh institutional accumulation &#8212; the 2.7x volume-to-OI ratio means new money entering, not existing positions rolling. The catalyst: SoFi's stablecoin (SoFiUSD) is getting Mastercard's global payment rails integration. This is not a speculative rumor &#8212; it's a product announcement with a named financial partner. In a market where everything is being sold on macro fears, a genuine fintech-crypto cross-sector catalyst gives SOFI independent legs. SOFI beat earnings 4 of 4 recent quarters. High conviction long flag from the bot.</p>
-        <p class="card-meaning">&#128204; What This Means: SOFI is the one name in the scan with a sector-specific catalyst that doesn't depend on the macro environment turning. The Mastercard stablecoin integration opens SOFI to a global payments narrative &#8212; a different investor base than traditional fintech. If it holds $18.50 on Monday's open sell-off, that's the floor confirmation. Watch for volume above $19.50 as the confirmation print for accumulation continuing.</p>
+        <div class="card-type">Flow Watch &nbsp;&#183;&nbsp; 10/10 &nbsp;&#183;&nbsp; HIGH CONVICTION LONG</div>
+        <div class="card-price up">BAC $47.90</div>
+        <div class="card-change up">$24.6M call premium &nbsp;|&nbsp; 6 sweep calls &nbsp;|&nbsp; Zero puts &nbsp;|&nbsp; Earnings 37d</div>
+        <h3>BAC &mdash; 6 Sweep Calls, $24.6M Premium, Zero Put Pressure &mdash; Buy-the-Dip Setup After Today&apos;s Underperformance</h3>
+        <p>BAC closed -1.52% today despite being a HIGH_CONVICTION_LONG in the EOD scan. That gap between the flow signal and today&apos;s price action is the setup. Six sweep calls with $24.6M in premium and literally zero put premium. SWEEP CALL 28, 35, and 39 all exp March 20. BAC&apos;s &ldquo;funding shift from floating to fixed&rdquo; story suggests management is positioning for a specific rate trajectory. The options flow is front-running that thesis. Earnings in 37 days gives the trade room to develop.</p>
+        <p class="card-meaning">&#128204; Setup: BAC at $47.90 after -1.52% on a green day with 6 sweep calls outstanding is a buy-the-dip signal. If Iran de-escalation continues and rate expectations stabilize, financials rotate back in. Watch for BAC to reclaim $48.50-49 as confirmation. Stop: break below $47.00.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price dn">ORCL $152.44</div>
-        <div class="card-change dn">7/10 HIGH CONVICTION SHORT &nbsp;|&nbsp; &#9889; Earnings in 4d &nbsp;|&nbsp; $258.5M put premium &nbsp;|&nbsp; CAUTION</div>
-        <h3>ORCL &#8212; $258.5M in Put Premium with Earnings in 4 Days &#8212; IV Elevated, Pre-Earnings Short Setup</h3>
-        <p>Oracle has earnings in 4 days (Thursday) and $258.5M in put premium has accumulated with HIGH_CONVICTION_SHORT flagging. The SWEEP PUT $123 (1,010 contracts, exp Mar 13) is notable &#8212; that's a $30 downside bet on a $152 stock, expiring the same week as earnings. The "Is Oracle Stock the New King of Cloud Growth?" headline suggests bullish retail sentiment that institutions may be fading. Important caution: earnings in 4 days means implied volatility is extremely elevated. Option premiums are inflated on both sides. This is a pre-earnings directional bet with high IV premium decay risk.</p>
-        <p class="card-meaning">&#128204; What This Means: The ORCL setup is high risk / high reward. $258.5M in put premium into earnings with a broad macro sell-off is a powerful combo &#8212; but IV crush post-earnings can destroy the P&amp;L even if the stock moves your way. The bot flags it tradeable despite the earnings caution. If playing this: use spreads to reduce IV exposure, not naked puts. Watch the post-open price action &#8212; if ORCL gaps down Monday morning on the futures sell-off and holds below $150, the pre-earnings short thesis strengthens.</p>
+        <div class="card-type">Flow Watch &nbsp;&#183;&nbsp; 10/10 &nbsp;&#183;&nbsp; HIGH CONVICTION SHORT</div>
+        <div class="card-price dn">PLTR $156.42</div>
+        <div class="card-change dn">$111.8M put premium &nbsp;|&nbsp; Sweep PUT 310 (5,000 contracts) &nbsp;|&nbsp; Zero calls &nbsp;|&nbsp; Earnings 56d</div>
+        <h3>PLTR &mdash; $111.8M in Puts Says the Defense AI Boom Is Being Sold Into &mdash; Ceasefire Is the Bear Catalyst</h3>
+        <p>Palantir was flat -0.47% today while headlines screamed &ldquo;PLTR Up 17% in 1 Month as Iran Tensions Ignite Defense AI Boom.&rdquo; The EOD scan shows $111.8M in put premium with zero calls. SWEEP PUT 310 (5,000 contracts, exp 3/20). The thesis is direct: PLTR&apos;s recent run is war-premium. If Trump&apos;s &ldquo;war is very complete&rdquo; holds into tomorrow, the entire defense/geopolitical AI premium in PLTR comes out. The ceasefire trade IS the PLTR short trade. $111.8M positioned for exactly that.</p>
+        <p class="card-meaning">&#128204; Setup: PLTR is the most direct Iran de-escalation play. Institutions who bought $111.8M in puts are betting the war-driven premium unwinds. Watch for PLTR to underperform tech peers if ceasefire holds. Break below $152 confirms the short. Risk: another Iran escalation headline rips PLTR back to $170+ fast.</p>
       </div>
 
     </div>
   </div>
 
-  <footer>Pavano Trades &nbsp;&#9679;&nbsp; Monday Open Brief &nbsp;&#9679;&nbsp; March 9, 2026 &nbsp;&#9679;&nbsp; Paper account. Not financial advice. &nbsp;&#9679;&nbsp; misterpavano.github.io/pavano-trades</footer>
+  <footer>Pavano Trades &nbsp;&#9679;&nbsp; EOD Wrap &nbsp;&#9679;&nbsp; March 9, 2026 &nbsp;&#9679;&nbsp; Paper account. Not financial advice. &nbsp;&#9679;&nbsp; misterpavano.github.io/pavano-trades</footer>
 
 </body>
 </html>
