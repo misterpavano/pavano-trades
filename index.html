@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavano Trades</title>
+  <title>Pavano Trades -- EOD Wrap March 10, 2026</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -18,19 +18,21 @@
     .zone-macro{background:#00001f;border-top:3px solid #33c9f0;padding:32px 40px;}
     .zone-bot{background:#0d0018;border-top:3px solid #ffc933;padding:32px 40px;}
     .zone-market{background:#001100;border-top:3px solid #4dff6e;padding:32px 40px;}
+    .zone-eod{background:#1a0010;border-top:3px solid #ff5599;padding:32px 40px;}
     .zone-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:16px;padding:8px 14px;display:inline-flex;align-items:center;gap:8px;}
     .zone-market .zone-label{background:#002a00;color:#4dff6e;border-left:3px solid #4dff6e;}
     .zone-macro .zone-label{background:#00004a;color:#33c9f0;border-left:3px solid #33c9f0;}
     .zone-bot .zone-label{background:#1f1040;color:#ffc933;border-left:3px solid #ffc933;}
+    .zone-eod .zone-label{background:#2a0020;color:#ff5599;border-left:3px solid #ff5599;}
     .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;}
     .card{padding:20px;border:1px solid;text-decoration:none;color:inherit;display:block;}
     .zone-market .card{background:#001a00;border-color:#004d00;}
     .zone-macro .card{background:#00001a;border-color:#00004d;}
     .zone-bot .card{background:#100030;border-color:#2a1060;}
+    .zone-eod .card{background:#1a0018;border-color:#4d0030;}
     .card-open{background:#101500 !important;border-color:#ffc933 !important;}
     .card-win{background:#001a00 !important;border-color:#004d00 !important;}
     .card-loss{background:#1a0000 !important;border-color:#4d0000 !important;}
-    .card-conflict{background:#1a0a00 !important;border-color:#ff8c00 !important;}
     .card-type{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin-bottom:8px;}
     .card-price{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:700;margin-bottom:4px;}
     .card-change{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#888;margin-bottom:14px;}
@@ -43,176 +45,150 @@
     .sb-item .sb-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
     .sb-item .sb-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;}
     .sb-item .sb-chg{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:2px;}
+    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5599;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
   </style>
 </head>
 <body>
 
   <header>
-    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; PRE-MARKET BRIEF &nbsp;&#9679;&nbsp; MARCH 10, 2026 &nbsp;&#9679;&nbsp; TRUMP: &ldquo;WAR ENDS VERY SOON&rdquo; &nbsp;&#9679;&nbsp; OIL -16% OFF $120 HIGHS &nbsp;&#9679;&nbsp; SPY CALLS +24,000% OVERNIGHT &nbsp;&#9679;&nbsp; CPI WEDNESDAY</div>
+    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; EOD WRAP &nbsp;&#9679;&nbsp; MARCH 10, 2026 &nbsp;&#9679;&nbsp; SPY +0.71% &nbsp;&#9679;&nbsp; QQQ +1.34% &nbsp;&#9679;&nbsp; SEMIS SURGE: INTC +7.7% MU +8.9% &nbsp;&#9679;&nbsp; CPI TOMORROW 8:30 AM &nbsp;&#9679;&nbsp; PLTR -3.8% &nbsp;&#9679;&nbsp; OIL SLIDE CONTINUES</div>
     <div class="header-row">
-      <h1>&#128200; Pre-Market Brief &mdash; March 10, 2026</h1>
+      <div>
+        <div class="edition-badge">&#127760; Evening Edition</div>
+        <h1>&#128200; EOD Wrap &mdash; March 10, 2026</h1>
+      </div>
       <div class="header-stats">
         <div class="stat">
-          <div class="label">SPY</div>
-          <div class="val up" id="spy">&#8596; ~$679 flat</div>
+          <div class="label">SPY Close</div>
+          <div class="val up">$677.18 <span style="font-size:13px">+0.71%</span></div>
         </div>
         <div class="stat">
-          <div class="label">QQQ</div>
-          <div class="val up" id="qqq">&#8593; ~$607.89 (+0.03%)</div>
+          <div class="label">QQQ Close</div>
+          <div class="val up">$607.77 <span style="font-size:13px">+1.34%</span></div>
         </div>
         <div class="stat">
-          <div class="label">GME</div>
-          <div class="val neu" id="gme">&#8596; ~$24.57 pre-mkt</div>
+          <div class="label">GME Close</div>
+          <div class="val neu">$24.37 <span style="font-size:13px">flat</span></div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SCOREBOARD -->
+  <!-- SECTION A: MARKET CLOSE SCOREBOARD -->
   <div style="background:#111;border-bottom:1px solid #1e1e1e;padding:20px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Yesterday&apos;s Close &mdash; March 9, 2026 &nbsp;|&nbsp; IRAN WAR REVERSAL DAY &#9679; SPY -1.6% OPEN &#8594; +0.87% CLOSE &#9679; DOW +239 PTS &#9679; NASDAQ +1.4% &#9679; OIL $101 FROM $120</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Market Close &mdash; March 10, 2026 &nbsp;|&nbsp; QQQ LEADS &nbsp;&#9679;&nbsp; SEMIS RIP &nbsp;&#9679;&nbsp; PLTR FADES &nbsp;&#9679;&nbsp; OIL BELOW $80 &nbsp;&#9679;&nbsp; CPI AT 8:30 TOMORROW</div>
     <div class="scoreboard">
-      <div class="sb-item">
-        <div class="sb-label">SPY</div>
-        <div class="sb-val up">$678.26</div>
-        <div class="sb-chg up">&#8593; +0.87% close</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">QQQ</div>
-        <div class="sb-val up">$607.71</div>
-        <div class="sb-chg up">&#8593; +1.31% close</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">GME</div>
-        <div class="sb-val up">$24.80</div>
-        <div class="sb-chg up">&#8593; +1.76% close</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">NVDA</div>
-        <div class="sb-val up">$181.98</div>
-        <div class="sb-chg up">&#8593; +2.79% close</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">TSLA</div>
-        <div class="sb-val neu">$399.90</div>
-        <div class="sb-chg dn">&#8595; Under probe</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">PLTR</div>
-        <div class="sb-val neu">$156.77</div>
-        <div class="sb-chg neu">War premium</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">WTI Oil</div>
-        <div class="sb-val neu">~$101</div>
-        <div class="sb-chg dn">&#8595; From $120 high</div>
-      </div>
-      <div class="sb-item">
-        <div class="sb-label">CPI</div>
-        <div class="sb-val neu">WED</div>
-        <div class="sb-chg neu">Next detonator</div>
-      </div>
+      <div class="sb-item"><div class="sb-label">SPY</div><div class="sb-val up">$677.18</div><div class="sb-chg up">&#8593; +0.71%</div></div>
+      <div class="sb-item"><div class="sb-label">QQQ</div><div class="sb-val up">$607.77</div><div class="sb-chg up">&#8593; +1.34%</div></div>
+      <div class="sb-item"><div class="sb-label">GME</div><div class="sb-val neu">$24.37</div><div class="sb-chg neu">&#8596; flat</div></div>
+      <div class="sb-item"><div class="sb-label">NVDA</div><div class="sb-val up">$184.77</div><div class="sb-chg up">&#8593; +3.91%</div></div>
+      <div class="sb-item"><div class="sb-label">PLTR</div><div class="sb-val dn">$151.14</div><div class="sb-chg dn">&#8595; -3.83%</div></div>
+      <div class="sb-item"><div class="sb-label">MU</div><div class="sb-val up">$403.11</div><div class="sb-chg up">&#8593; +8.86%</div></div>
+      <div class="sb-item"><div class="sb-label">INTC</div><div class="sb-val up">$46.78</div><div class="sb-chg up">&#8593; +7.74%</div></div>
+      <div class="sb-item"><div class="sb-label">BAC</div><div class="sb-val dn">$48.56</div><div class="sb-chg dn">&#8595; -0.16%</div></div>
+      <div class="sb-item"><div class="sb-label">NFLX</div><div class="sb-val dn">$96.94</div><div class="sb-chg dn">&#8595; -2.10%</div></div>
+      <div class="sb-item"><div class="sb-label">TSLA</div><div class="sb-val up">$399.24</div><div class="sb-chg up">&#8593; +0.63%</div></div>
     </div>
   </div>
 
-  <!-- SECTION A: WHAT'S MOVING PRE-MARKET -->
+  <!-- SECTION B: WHAT MOVED TODAY -->
   <div class="zone-macro">
-    <div class="zone-label">&#128200; What&apos;s Moving Pre-Market &mdash; March 10, 2026 | Where the Institutional Money Is Going and Why</div>
+    <div class="zone-label">&#9660; What Moved Today</div>
     <div class="cards">
 
       <div class="card">
         <div class="card-type">Macro Move</div>
-        <div class="card-price up">Futures Stabilize</div>
-        <div class="card-change">QQQ pre-mkt +0.03% &nbsp;|&nbsp; Oil ~$101 &nbsp;|&nbsp; SPY calls +24,000% overnight &nbsp;|&nbsp; CPI prints Wednesday</div>
-        <h3>Trump&apos;s &ldquo;War Ends Very Soon&rdquo; Keeps Futures Bid &mdash; But the SPY Call Surge Says Someone Is Betting Big on Peace</h3>
-        <p>Trump repeated this morning that the Iran war will end &ldquo;very soon,&rdquo; and markets are buying it &mdash; cautiously. Yesterday&apos;s CBS call (&ldquo;war is very complete&rdquo;) triggered one of the most violent intraday reversals in recent memory: Dow went from -860 points to +239. SPY calls soared 24,000% overnight as institutional players front-ran the ceasefire trade. Oil dropped from $120 to ~$101 and futures are holding the gains this morning. The binary regime is clear: every Trump statement is a full sector rotation catalyst.</p>
-        <p class="card-meaning">&#128204; What This Means: The market is priced for &ldquo;peace is coming.&rdquo; Futures staying green means the ceasefire narrative held overnight. The risk is Trump reversal or another Iranian escalation headline &mdash; that snaps oil back to $115+ and the entire growth trade unwinds in minutes. CPI Wednesday is the next detonator regardless. A hot print re-introduces stagflation and chips away at everything yesterday&apos;s relief rally priced in.</p>
+        <div class="card-price neu">QQQ +1.34%</div>
+        <div class="card-change">Semis carry the index; SPY underperforms by 63bps</div>
+        <h3>Tech Leads, Semis Rip &mdash; INTC +7.7%, MU +8.9%</h3>
+        <p>QQQ outperformed SPY by 63 bps today, driven almost entirely by semiconductor strength. INTC surged on short-squeeze dynamics (it is the most shorted Dow stock) while MU added 8.86% ahead of earnings in 8 days &mdash; analysts revamping price targets ahead of the print. NVDA added another 3.91% as the AI agent narrative ran hot.</p>
+        <p class="card-meaning">The "AI is dead" trade got smoked again. Institutions are covering semi shorts into CPI. Watch tomorrow's print &mdash; hot CPI could reverse all of this fast.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price dn">TSLA $399.90</div>
-        <div class="card-change dn">$755.8M put premium &nbsp;|&nbsp; 14 sweep puts &nbsp;|&nbsp; Fed probe + exec departure &nbsp;|&nbsp; Score: 7/10 SHORT</div>
-        <h3>NHTSA Opened a Federal Probe Into Tesla FSD &mdash; Then the Finance VP of 17 Years Walked Out the Door</h3>
-        <p>The NHTSA is investigating 58 reported FSD incidents including 14 crashes and 23 injuries, with Tesla under a March 9 deadline to provide full timelines. Same day: Finance VP Sendil Palani resigned after 17 years. Separately, Ross Gerber publicly called Tesla&apos;s FSD &ldquo;Mad Max mode&rdquo; and tied it to the $240M liability verdict Tesla just paid. The EOD scan logged $755.8M in put premium against $47.4M in calls &mdash; a 16:1 ratio. Even with 19 call sweeps, the dollar conviction is overwhelmingly bearish.</p>
-        <p class="card-meaning">&#128204; What This Means: Two things are quietly compounding on TSLA &mdash; regulatory risk on the core FSD story and executive brain drain. Institutions are not buying this dip. $755M in puts says they&apos;re positioning for the probe to widen. Watch TSLA&apos;s open: if it can&apos;t reclaim $405 on a day when the broad market is green, the relative weakness confirms the thesis.</p>
+        <div class="card-type">Macro Move</div>
+        <div class="card-price dn">Oil &lt; $80</div>
+        <div class="card-change">Iran de-escalation deflation continues &mdash; risk-on holds</div>
+        <h3>Oil Slide Extension &mdash; War Premium Fully Exiting</h3>
+        <p>Oil extended its drop below $80, continuing the unwind from the $120 spike last week. Trump's "war ends very soon" comments removed most of the geopolitical premium. Markets read this as deflationary &mdash; lower oil means lower CPI, which gives the Fed cover to stay patient. Airlines got a tailwind but struggled to follow through (AAL -0.63% on the day despite the setup).</p>
+        <p class="card-meaning">The war premium is gone. The question now is whether de-escalation is fully priced or there is more oil downside. Oil below $75 would be a macro gift for equities.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price dn">NVDA $181.98</div>
-        <div class="card-change dn">$82.2M put premium &nbsp;|&nbsp; 3 put sweeps &nbsp;|&nbsp; 14:1 put-to-call dollar ratio &nbsp;|&nbsp; Score: 10/10 SHORT</div>
-        <h3>NVDA Bounced +2.79% on Iran Relief &mdash; Institutions Used That Bounce to Load $82M in Puts Before GTC</h3>
-        <p>Yesterday&apos;s NVDA bounce had nothing to do with fundamentals &mdash; it was pure macro Iran relief. The EOD scan tells you what smart money did with that bounce: $82.2M in put premium with three put sweeps at 172.5, 177.5, and 187.5 strikes (all expiring March 16 &mdash; the week GTC 2026 opens). UBS analyst Timothy Arcuri maintained Buy with &ldquo;upside bias&rdquo; into the conference. Prediction markets disagree: only 46.5% probability NVDA closes above $180 by month-end.</p>
-        <p class="card-meaning">&#128204; What This Means: If NVDA drifts higher pre-market on continued ceasefire sentiment, that&apos;s the entry the put buyers are waiting for. GTC is March 16-19 &mdash; the same week these puts expire. Institutions are betting the conference underwhelms relative to hype, or that the macro deteriorates before it starts. Any hot CPI print Wednesday kills the multiple expansion trade that&apos;s holding NVDA at these levels.</p>
+        <div class="card-type">Sector Move</div>
+        <div class="card-price dn">PLTR -3.83%</div>
+        <div class="card-change">Defense AI fades as conflict premium exits</div>
+        <h3>PLTR Breaks Down &mdash; $134M Put Flow Was Right</h3>
+        <p>Palantir fell 3.83% as the Iran war narrative that was fueling defense AI demand cooled. The stock had run 17% in the prior month on defense contract enthusiasm. Yesterday's EOD scan caught $134M in put premium sweeping the tape at $290 and $310 strikes &mdash; those sweepers knew the unwind was coming. Stock closed at $151.14, down from the $156.77 entry the signal flagged yesterday.</p>
+        <p class="card-meaning">When $134M in puts sweep at strikes far above market, the money that owns this name is hedging hard. That flow does not lie. The PLTR short thesis is playing out clean.</p>
       </div>
 
       <div class="card">
         <div class="card-type">News Catalyst</div>
-        <div class="card-price dn">HIMS $23.12</div>
-        <div class="card-change neu">Soared yesterday on Novo deal &nbsp;|&nbsp; 9 put sweeps vs 5 call sweeps &nbsp;|&nbsp; Score: 9/10 SHORT &nbsp;|&nbsp; &#9888; Conflict Flag</div>
-        <h3>Novo Nordisk Settled With Hims &mdash; Stock Soared &mdash; But 9 Sweep Puts Say Someone Is Selling That News Hard</h3>
-        <p>Yesterday&apos;s headline: Hims &amp; Hers inked a deal with Novo Nordisk to sell branded Wegovy and Ozempic, and Novo dropped its lawsuit over compounded semaglutide. The stock soared on the news. The EOD scan: 9 put sweeps vs 5 call sweeps, $1.2M in put premium vs $4M in calls. The bot scores this SHORT. The conflict: bullish news with bearish options positioning. This either means: (a) institutions think the deal terms are worse than headlines suggest, or (b) retail bought the news while smart money sold into the move.</p>
-        <p class="card-meaning">&#128204; What This Means: Hims stopping compounded semaglutide is actually a revenue headwind, not a win &mdash; they were printing money on the markup. The Novo deal limits that upside while adding compliance overhead. If HIMS gaps higher at open, that&apos;s a potential fade. Watch for it to give back gains in the first hour. The 9 sweep puts suggest someone with size agrees.</p>
+        <div class="card-price neu">CPI Tomorrow</div>
+        <div class="card-change">Feb CPI 8:30 AM ET &mdash; consensus 2.4% YoY</div>
+        <h3>Everything Hedged Into Wednesday Morning</h3>
+        <p>Short positioning in U.S. macro products hit a 3-year high today. Traders are not sleeping well tonight. CPI at 8:30 AM could erase or amplify today's moves. January was 2.4% YoY (down from 2.7%). If tariff costs are starting to bleed into prices, expect a hawkish surprise that hits semis first. If the number holds flat, the oil deflation gives the Fed cover and the rally continues. Oracle also reported after the bell &mdash; bot correctly flagged it untradeable (earnings IV crush).</p>
+        <p class="card-meaning">Tonight is a risk-off positioning window. Sizing matters more than direction going into 8:30 AM.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION B: BOT WATCHLIST -->
+  <!-- SECTION C: BOT POSITIONS TODAY -->
   <div class="zone-bot">
-    <div class="zone-label">&#129302; Bot Watchlist &mdash; Smart Money Signals | EOD Scan March 9, 2026 &mdash; Top Signals for Today</div>
+    <div class="zone-label">&#9654; Bot Positions Today</div>
     <div class="cards">
 
       <div class="card card-open">
-        <div class="card-type">BEARISH PUT &middot; 10/10 &middot; $82.2M premium &middot; HIGH CONVICTION SHORT</div>
-        <div class="card-price dn">NVDA &mdash; $181.98</div>
-        <div class="card-change">3 sweep puts &nbsp;|&nbsp; PUT 172.5, 177.5, 187.5 exp=3/16 &nbsp;|&nbsp; 14:1 put/call by premium &nbsp;|&nbsp; No earnings 72d</div>
-        <h3>NVDA &mdash; Institutions Sold $82M in Puts Into Yesterday&apos;s War-Relief Bounce</h3>
-        <p>Three put sweeps hit after Monday&apos;s +2.79% close: 172.5, 177.5, and 187.5 strikes all expiring March 16 (same week as GTC 2026 conference). Put premium: $82.2M. Call premium: $5.85M. The 14:1 ratio on a day when NVDA was the poster child for the relief rally means institutions used retail euphoria as a liquidity event to position short. GTC opens March 16 &mdash; the week these puts expire. The market is betting on disappointment relative to the hype.</p>
-        <p class="card-meaning">&#128204; What I&apos;m thinking: If NVDA opens higher pre-market (still drifting on Iran relief), that improves the put entry. A push toward $184-185 while puts are cheap is the setup. What confirms the thesis at open: NVDA underperforms QQQ, or any hint of a hot CPI Wednesday reprices the rate path. Risk: A surprise GTC pre-announcement pushes NVDA through $190 and squeezes the short.</p>
-      </div>
-
-      <div class="card card-open">
-        <div class="card-type">BULLISH CALL &middot; 10/10 &middot; $24.6M premium &middot; HIGH CONVICTION LONG</div>
-        <div class="card-price up">BAC &mdash; $47.76</div>
-        <div class="card-change">6 sweep calls &nbsp;|&nbsp; SWEEP CALL 28, 35, 39 exp=3/20 &nbsp;|&nbsp; Zero put pressure &nbsp;|&nbsp; Earnings 37d</div>
-        <h3>BAC &mdash; 6 Sweep Calls and Zero Puts &mdash; Deregulation Money Buying the Iran-Dip</h3>
-        <p>Six sweep calls with $24.6M in premium and literally zero put premium. SWEEP CALL 28 (1,141 contracts), SWEEP CALL 35 (15,840 contracts), and CALL 39 (625 contracts), all expiring March 20. BAC&apos;s public &ldquo;funding shift from floating to fixed&rdquo; story signals management is positioning for a specific rate trajectory. The &ldquo;One Big Beautiful Bill&rdquo; deregulation narrative is also in play &mdash; Wall Street financials have been front-running the regulatory rollback. BAC closed -1.52% yesterday despite the broad market bounce &mdash; that underperformance is the buy signal.</p>
-        <p class="card-meaning">&#128204; What I&apos;m thinking: BAC at $47.76 after -1.52% on a green day with 6 sweep calls outstanding is a textbook buy-the-dip setup. The flow says institutions accumulated on the dip. What confirms at open: BAC reclaims $48.50 on continued Iran de-escalation and rate stability. Earnings in 37 days gives room for the trade to develop. Stop: break below $47.00.</p>
-      </div>
-
-      <div class="card card-open">
-        <div class="card-type">BEARISH PUT &middot; 10/10 &middot; $111.8M premium &middot; HIGH CONVICTION SHORT</div>
-        <div class="card-price dn">PLTR &mdash; $156.77</div>
-        <div class="card-change">1 sweep put &nbsp;|&nbsp; SWEEP PUT 310 exp=3/20 (5,000 contracts) &nbsp;|&nbsp; Zero calls &nbsp;|&nbsp; Earnings 56d</div>
-        <h3>PLTR &mdash; $111.8M in Deep ITM Puts Says the Defense AI War Premium Is Being Exited</h3>
-        <p>Palantir was up 17% in one month on Iran tensions igniting the &ldquo;defense AI boom&rdquo; narrative. EOD scan: $111.8M in put premium, zero calls. SWEEP PUT 310 (5,000 contracts, exp 3/20) &mdash; deep in-the-money puts at a $310 strike against a $156 stock. Deep ITM puts of this size are not hedges &mdash; they are aggressive directional shorts by someone willing to pay significant premium to get delta exposure fast. The thesis is simple: PLTR&apos;s entire recent run is war premium. Trump&apos;s ceasefire talk is the bear catalyst they&apos;re betting on.</p>
-        <p class="card-meaning">&#128204; What I&apos;m thinking: PLTR is the most concentrated single Iran de-escalation trade in the scan. If the ceasefire narrative holds today, defense/geopolitical AI premium unwinds and PLTR underperforms. Break below $152 confirms. The risk is obvious: another Iran escalation rips PLTR back to $170+. This is a high-conviction directional bet that is binary on the geopolitical news flow.</p>
-      </div>
-
-      <div class="card card-open">
-        <div class="card-type">BULLISH CALL &middot; 10/10 &middot; $336K premium &middot; HIGH CONVICTION LONG</div>
-        <div class="card-price up">PFE &mdash; $26.76</div>
-        <div class="card-change">1 sweep call &nbsp;|&nbsp; SWEEP CALL 27.0 exp=3/27 (6,469 contracts) &nbsp;|&nbsp; Zero put pressure &nbsp;|&nbsp; Earnings 50d</div>
-        <h3>PFE &mdash; 6,469 Contracts Swept Into the Call While the Media Wrote Off the Dividend</h3>
-        <p>Pfizer has been a punching bag &mdash; payout ratio over 100%, headlines asking &ldquo;is a dividend cut inevitable?&rdquo;, Roche trial failures dragging the sector. But the EOD scan picked up a SWEEP CALL 27 (6,469 contracts, exp March 27) &mdash; a large, aggressive single sweep with zero put pressure. At $0.05 per contract notional, someone spent real premium buying near-the-money calls on a stock the market has given up on. The catalyst angle: vaccine makers including PFE have been in focus as the Iran conflict adds biodefense relevance to large pharma.</p>
-        <p class="card-meaning">&#128204; What I&apos;m thinking: The sweep call is small premium ($336K) but large contract count (6,469). This is a lottery-ticket structure &mdash; cheap options on a hated name where any positive catalyst (pipeline news, dividend confirmation, pharma deregulation) could move it. What confirms at open: PFE holds $27 and pushes toward $27.50. Stop: below $26.25.</p>
-      </div>
-
-      <div class="card card-conflict">
-        <div class="card-type">BEARISH PUT &middot; 9/10 &middot; CONFLICT FLAG &middot; $5.3M premium</div>
-        <div class="card-price neu">HIMS &mdash; $23.12</div>
-        <div class="card-change">9 put sweeps, 5 call sweeps &nbsp;|&nbsp; SWEEP CALL 21.5 exp=3/20 &nbsp;|&nbsp; 14 sweep puts + 5 sweep calls &nbsp;|&nbsp; Novo deal just closed</div>
-        <h3>HIMS &mdash; Novo Nordisk Deal Is Bullish Headlines, But 9 Sweep Puts Say Someone Is Selling the Pop</h3>
-        <p>Yesterday&apos;s Novo Nordisk deal sent HIMS soaring &mdash; Novo dropped its lawsuit, and Hims will sell branded Wegovy/Ozempic. Retail bought the headline. But the EOD scan shows 9 put sweeps vs 5 call sweeps. The bot direction: SHORT. The nuance: Hims stopping compounded semaglutide is a revenue headwind. They were printing money on the margin spread between compounded and branded GLP-1s. The Novo deal eliminates that. Calls dominate by dollar premium ($4M vs $1.2M) but the sweep count leans bearish.</p>
-        <p class="card-meaning">&#128204; What I&apos;m thinking: CONFLICT FLAG &mdash; bullish news, bearish sweeps. This is a &ldquo;sell the news&rdquo; setup. If HIMS gaps up at open, it may be a fade opportunity as the market prices in the compounded semaglutide revenue loss. What confirms: HIMS gives back at least 30-40% of yesterday&apos;s gain in the first 90 minutes. Do not chase the open gap. Wait for price to turn.</p>
+        <div class="card-type">Open &mdash; Dry Run</div>
+        <div class="card-price neu">BAC 47C &mdash; Mar 20</div>
+        <div class="card-change">Entry: $1.84 ask &nbsp;&#9679;&nbsp; Cost: $184 &nbsp;&#9679;&nbsp; Target: $3.68 &nbsp;&#9679;&nbsp; Stop: $0.92</div>
+        <h3>BAC &mdash; Long call on institutional sweep + NII upgrade thesis</h3>
+        <p>Bot entered 1 contract of the BAC $47 call expiring March 20, paying $1.84 ($184 total cost). Signal was yesterday's EOD showing 6 sweep calls vs 0 puts &mdash; strong directional conviction long. The thesis: BofA guiding first-quarter net interest income up at least 7%, with institutional money frontrunning the earnings story 36 days out.</p>
+        <p>BAC closed today at $48.56 (-0.16%), keeping the call in-the-money but barely moving. With 10 DTE remaining, theta drag is starting but the position has room. EOD flow today still showed sweep calls coming in at lower strikes &mdash; the institutional accumulation pattern appears intact. The short-side signal note in EOD was a conflict flag (put score 3.80 vs call score 3.28) but the conviction flag stayed LONG.</p>
+        <p class="card-meaning">&#128204; Lesson: A flat stock day on a 10-DTE option is noise, not a loss signal. The sweep call thesis requires BAC to push toward $50+ over the next week. CPI tomorrow could be the catalyst &mdash; financials benefit from rate stability reads.</p>
       </div>
 
     </div>
   </div>
 
-  <footer>Pavano Trades &nbsp;&#9679;&nbsp; Pre-Market Brief &nbsp;&#9679;&nbsp; March 10, 2026 &nbsp;&#9679;&nbsp; Paper account. Not financial advice. &nbsp;&#9679;&nbsp; misterpavano.github.io/pavano-trades</footer>
+  <!-- SECTION D: TOMORROW'S SETUP -->
+  <div class="zone-eod">
+    <div class="zone-label">&#9656; Tomorrow&#x27;s Setup &mdash; EOD Flow Watch</div>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-type">Flow Watch &mdash; Short &#9660;</div>
+        <div class="card-price dn">NVDA</div>
+        <div class="card-change">Score: 10 &nbsp;&#9679;&nbsp; $184.77 (+3.91% today) &nbsp;&#9679;&nbsp; Put premium: $75.6M</div>
+        <h3>NVDA: Stock Rallies +4%, Smart Money Loads Puts</h3>
+        <p>Today's NVDA pop was AI agent hype. The EOD scan shows $75.6M in put premium vs $1.2M in calls &mdash; 4 sweep puts hit at the $175, $185, and $190 strikes expiring March 18. That is 8 days out. These are not hedge books; these are directional bets against a name that just had a 4% up day. Institutions are fading this pop hard.</p>
+        <p class="card-meaning">&#128204; When a stock rips 4% and $75M in puts sweep the tape the same day, someone is positioned for a reversal. High conviction short setup &mdash; especially if CPI prints hot tomorrow and semis de-risk.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-type">Flow Watch &mdash; Short &#9660;</div>
+        <div class="card-price dn">PLTR</div>
+        <div class="card-change">Score: 10 &nbsp;&#9679;&nbsp; $151.14 (-3.83% today) &nbsp;&#9679;&nbsp; Put premium: $134.9M</div>
+        <h3>PLTR: Put Flood Continues &mdash; Bears In Control</h3>
+        <p>Palantir dropped 3.83% today and the flow says the bears are not done. EOD scan shows $134.9M in put premium vs $251K in calls &mdash; a 536:1 ratio by premium. Sweep puts at $290 and $310 strikes represent institutional tail-risk hedging at levels far above market, which reads as large longs protecting their books. If PLTR breaks $145, it could accelerate toward $130.</p>
+        <p class="card-meaning">&#128204; When sweep puts price in at $290 and $310 on a $151 stock, the institutions who own it are scared. Short thesis intact. The defense AI premium unwind has more room to run.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-type">Flow Watch &mdash; Short &#9660;</div>
+        <div class="card-price dn">NFLX</div>
+        <div class="card-change">Score: 9 &nbsp;&#9679;&nbsp; $96.94 (-2.10% today) &nbsp;&#9679;&nbsp; Put premium: $101M vs $119K calls</div>
+        <h3>NFLX: 15 Sweep Puts &mdash; 847:1 Put/Call Premium Skew</h3>
+        <p>Netflix fell 2.1% today and the EOD scan shows 15 separate sweep put orders totaling $101M in premium vs just $119K in calls. That is an 847:1 put/call premium ratio. Sweeps landed at $117.5, $118.5, and $119.5 strikes expiring March 20 &mdash; all above current price. With earnings 37 days out, this flow is frontrunning a move lower before the print.</p>
+        <p class="card-meaning">&#128204; 15 separate sweep orders is an institution sizing in across multiple tranches to avoid detection. That is a directional bet, not a hedge. Watch for a break below $93 as the next clean level.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>Pavano Trades &mdash; EOD Wrap &mdash; March 10, 2026 &nbsp;&#9679;&nbsp; Paper account &mdash; Educational only &nbsp;&#9679;&nbsp; Not financial advice &nbsp;&#9679;&nbsp; CPI tomorrow 8:30 AM ET</footer>
 
 </body>
 </html>
