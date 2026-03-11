@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavano Trades -- Morning Brief March 11, 2026</title>
+  <title>Pavano Trades -- Evening Wrap March 11, 2026</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -45,191 +45,173 @@
     .sb-item .sb-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
     .sb-item .sb-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;}
     .sb-item .sb-chg{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:2px;}
-    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#33c9f0;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
+    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5599;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
     .conflict-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5533;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
     .warn-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ffc933;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
+    .pnl-summary{font-family:'IBM Plex Mono',monospace;font-size:12px;background:#1a0000;border:1px solid #4d0000;padding:10px 14px;margin-bottom:16px;color:#ff5555;}
   </style>
 </head>
 <body>
 
   <header>
-    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; MORNING BRIEF &nbsp;&#9679;&nbsp; MARCH 11, 2026 &nbsp;&#9679;&nbsp; SPY +0.09% PRE &nbsp;&#9679;&nbsp; QQQ -0.02% PRE &nbsp;&#9679;&nbsp; CPI 8:30 AM ET &mdash; CONSENSUS 2.4% YoY &nbsp;&#9679;&nbsp; OIL STILL VOLATILE &nbsp;&#9679;&nbsp; NVDA/PLTR INSIDERS DUMP $9.6B</div>
+    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; EVENING WRAP &nbsp;&#9679;&nbsp; MARCH 11, 2026 &nbsp;&#9679;&nbsp; SPY 676.33 -0.13% &nbsp;&#9679;&nbsp; QQQ 607.69 -0.01% &nbsp;&#9679;&nbsp; DOW -289pts &nbsp;&#9679;&nbsp; OIL SURGES ON IRAN WAR &nbsp;&#9679;&nbsp; IEA 400M BBL RELEASE &nbsp;&#9679;&nbsp; ORCL +13%</div>
     <div class="header-row">
       <div>
-        <div class="edition-badge">&#9728; Morning Brief</div>
-        <h1>&#128202; Morning Brief &mdash; March 11, 2026</h1>
+        <div class="edition-badge">&#9790; Evening Wrap</div>
+        <h1>&#128202; Evening Wrap &mdash; March 11, 2026</h1>
       </div>
       <div class="header-stats">
         <div class="stat">
-          <div class="label">SPY Pre-Mkt</div>
-          <div class="val up" id="spy">$677.80 <span style="font-size:13px">+0.09%</span></div>
+          <div class="label">SPY Close</div>
+          <div class="val dn">$676.33 <span style="font-size:13px">-0.13%</span></div>
         </div>
         <div class="stat">
-          <div class="label">QQQ Pre-Mkt</div>
-          <div class="val dn" id="qqq">$607.65 <span style="font-size:13px">-0.02%</span></div>
+          <div class="label">QQQ Close</div>
+          <div class="val dn">$607.69 <span style="font-size:13px">-0.01%</span></div>
         </div>
         <div class="stat">
-          <div class="label">GME Pre-Mkt</div>
-          <div class="val neu" id="gme">~$24.57 <span style="font-size:13px">+0.8%</span></div>
+          <div class="label">GME Close</div>
+          <div class="val up">$24.46 <span style="font-size:13px">+0.37%</span></div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SCOREBOARD -->
+  <!-- SECTION A: MARKET CLOSE SCOREBOARD -->
   <div style="background:#111;border-bottom:1px solid #1e1e1e;padding:20px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Pre-Market Snapshot &mdash; March 11, 2026 &nbsp;|&nbsp; CPI DAY &nbsp;&#9679;&nbsp; IRAN WAR PREMIUM FADING &nbsp;&#9679;&nbsp; S&P REBALANCE MAR 23 &nbsp;&#9679;&nbsp; INSIDERS SELLING AI</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Market Close Scoreboard &mdash; March 11, 2026 &nbsp;|&nbsp; CPI IN-LINE &nbsp;&#9679;&nbsp; OIL +3% ON IRAN TENSIONS &nbsp;&#9679;&nbsp; ORCL +13% &nbsp;&#9679;&nbsp; STAGFLATION FEAR CREEPING IN</div>
     <div class="scoreboard">
-      <div class="sb-item"><div class="sb-label">SPY</div><div class="sb-val up">$677.80</div><div class="sb-chg up">&#8593; +0.09% pre</div></div>
-      <div class="sb-item"><div class="sb-label">QQQ</div><div class="sb-val dn">$607.65</div><div class="sb-chg dn">&#8595; -0.02% pre</div></div>
-      <div class="sb-item"><div class="sb-label">GME</div><div class="sb-val neu">~$24.57</div><div class="sb-chg neu">&#8596; +0.8% pre</div></div>
-      <div class="sb-item"><div class="sb-label">NVDA</div><div class="sb-val neu">$184.32</div><div class="sb-chg neu">&#8596; flat pre</div></div>
-      <div class="sb-item"><div class="sb-label">PLTR</div><div class="sb-val dn">$151.35</div><div class="sb-chg dn">&#8595; fading</div></div>
-      <div class="sb-item"><div class="sb-label">MU</div><div class="sb-val neu">$404.40</div><div class="sb-chg neu">&#9888; ERN 8d</div></div>
-      <div class="sb-item"><div class="sb-label">BAC</div><div class="sb-val up">$48.68</div><div class="sb-chg up">&#8593; stable</div></div>
-      <div class="sb-item"><div class="sb-label">AAL</div><div class="sb-val up">$11.17</div><div class="sb-chg up">&#8593; oil tail</div></div>
-      <div class="sb-item"><div class="sb-label">Oil (WTI)</div><div class="sb-val dn">&lt;$80</div><div class="sb-chg dn">&#8595; war prem gone</div></div>
-      <div class="sb-item"><div class="sb-label">VIX</div><div class="sb-val neu">elevated</div><div class="sb-chg neu">&#9679; CPI watch</div></div>
+      <div class="sb-item"><div class="sb-label">SPY</div><div class="sb-val dn">$676.33</div><div class="sb-chg dn">&#8595; -0.13%</div></div>
+      <div class="sb-item"><div class="sb-label">QQQ</div><div class="sb-val dn">$607.69</div><div class="sb-chg dn">&#8595; -0.01%</div></div>
+      <div class="sb-item"><div class="sb-label">DOW</div><div class="sb-val dn">47,417</div><div class="sb-chg dn">&#8595; -289 pts</div></div>
+      <div class="sb-item"><div class="sb-label">GME</div><div class="sb-val up">$24.46</div><div class="sb-chg up">&#8593; +0.37%</div></div>
+      <div class="sb-item"><div class="sb-label">NVDA</div><div class="sb-val neu">$185.42</div><div class="sb-chg neu">&#8596; held</div></div>
+      <div class="sb-item"><div class="sb-label">ORCL</div><div class="sb-val up">$161.39</div><div class="sb-chg up">&#8593; +13%</div></div>
+      <div class="sb-item"><div class="sb-label">TSLA</div><div class="sb-val dn">$406.41</div><div class="sb-chg dn">&#8595; put flow</div></div>
+      <div class="sb-item"><div class="sb-label">PLTR</div><div class="sb-val dn">$151.13</div><div class="sb-chg dn">&#8595; faltering</div></div>
+      <div class="sb-item"><div class="sb-label">Oil (WTI)</div><div class="sb-val dn">&gt;$80</div><div class="sb-chg dn">&#8593; Iran prem back</div></div>
+      <div class="sb-item"><div class="sb-label">BAC</div><div class="sb-val dn">~$48</div><div class="sb-chg dn">&#8595; banks hit</div></div>
+      <div class="sb-item"><div class="sb-label">AAL</div><div class="sb-val dn">$11.15</div><div class="sb-chg dn">&#8595; oil killed it</div></div>
     </div>
   </div>
 
-  <!-- SECTION A: WHAT'S DRIVING MARKETS -->
+  <!-- SECTION B: WHAT MOVED TODAY -->
   <div class="zone-macro">
-    <div class="zone-label">&#9660; What's Driving Markets Today</div>
+    <div class="zone-label">&#9660; What Moved Today &mdash; And Why</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">Macro Event</div>
-        <div class="card-price neu">CPI 8:30 AM</div>
-        <div class="card-change">Feb CPI &mdash; Consensus: +0.3% MoM / 2.4% YoY &mdash; Stagflation risk elevated</div>
-        <h3>All Eyes on Feb CPI &mdash; Tariff Bleed-Through Begins?</h3>
-        <p>February CPI drops at 8:30 AM ET. Consensus is 2.4% YoY (flat from January) and +0.3% MoM. The real question is whether Trump's tariff regime has started trickling into consumer prices. Jan came in at 2.4% down from 2.7% &mdash; if today's print reverses that trend, the Fed's "patient" posture gets complicated fast. Institutional positioning leaned risk-off overnight, with hedge funds cutting exposure across tech and consumer discretionary.</p>
-        <p>The oil slide from ~$120 to sub-$80 is technically deflationary, but tariff-driven goods inflation runs in the opposite direction. These two forces are colliding in this number. A hot print (2.6%+) would slam QQQ. A cool print (&lt;2.3%) would be green light to buy everything.</p>
-        <p class="card-meaning">&#128204; What This Means: This is the binary event of the week. No new positions before the print. If CPI surprises hot, the NVDA/PLTR short thesis from last night's flow gets rocket fuel. If it surprises cool, the semi rally from yesterday continues and the AAL/BAC long calls look even better.</p>
+        <div class="card-type">MACRO MOVE</div>
+        <h3>Iran War Premium Is Back &mdash; Oil Jumps, Airlines Bleed</h3>
+        <p>WTI crude surged as Iran war tensions reignited. The IEA tried to cap the damage with the largest emergency oil release in history (400 million barrels), but the move had limited effect. Oil markets are pricing in sustained supply risk. The Dow bore the brunt &mdash; down 289 points &mdash; while the S&P held relatively flat on tech's dead-weight neutral day.</p>
+        <p class="card-meaning">Why it matters: Oil-sensitive sectors (airlines, trucking, energy consumers) got slammed while oil producers caught a bid. The IEA release signals policymakers are worried &mdash; which itself is a signal worth noting.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Macro Move</div>
-        <div class="card-price dn">Oil &lt; $80</div>
-        <div class="card-change">Iran war premium fully unwound &mdash; down from $120 spike last week</div>
-        <h3>Iran War Premium Gone &mdash; Oil Chopped Back to Earth</h3>
-        <p>Oil spiked to nearly $120/barrel last week as the US-Iran conflict erupted, then cratered after Trump declared the war "very complete." WTI is now trading below $80, down more than 33% from the peak. The White House called the energy price spike "temporary," and markets are treating it that way. The Strait of Hormuz scare that caused the initial spike appears resolved for now.</p>
-        <p>The oil collapse has two effects: (1) deflationary push that helps CPI, and (2) a direct tailwind for airlines, logistics, and consumer staples. Smart money was buying AAL calls into the oil slide &mdash; the bot caught 3 sweep call orders on American Airlines yesterday with $1.87M in call premium vs just $15K in puts.</p>
-        <p class="card-meaning">&#128204; What This Means: Airlines benefit directly from cheaper fuel. AAL sweep calls at $6 and $9 (way ITM on a $11 stock) represent institutional conviction. If oil stays below $80, AAL has room to run into earnings in 44 days.</p>
+        <div class="card-type">MACRO MOVE</div>
+        <h3>CPI Came In &mdash; Market Shrugged, But Stagflation Whispers Got Louder</h3>
+        <p>Inflation data landed in-line with expectations. The headline reaction was muted &mdash; stocks barely moved off the print. But the real story is the narrative building underneath: wholesale prices are surging, consumer sentiment is at multi-year lows, and the housing market is stuck. Fed can't cut into this. That's not a short-term trade &mdash; it's a regime.</p>
+        <p class="card-meaning">Why it matters: In-line CPI is not good CPI when the Iran war is about to reprice energy. The next print could be worse. Smart money knows the Fed is boxed in, which is why you're seeing defensive put flow across the board.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price dn">$9.6B</div>
-        <div class="card-change">NVDA + PLTR insiders have dumped $9.65B in shares over 2 years</div>
-        <h3>The People Who Built the AI Boom Are Cashing Out</h3>
-        <p>New data: NVDA and PLTR insiders combined to sell $9.65 billion in shares over the past two years. Nvidia insiders were net sellers of a "sizeable" amount as the stock surged on AI demand. Palantir insiders followed the same playbook. These are the people with the most information about their own companies &mdash; when insiders are consistently selling at this scale, it is a signal worth tracking regardless of the bull narrative.</p>
-        <p>This is separate from the options flow, but it reinforces the same picture: the smart money that owns NVDA and PLTR long is hedging and reducing exposure at the same time institutional options desks are loading puts.</p>
-        <p class="card-meaning">&#128204; What This Means: Insider selling + sweep put flow on both NVDA and PLTR = two independent data streams pointing in the same direction. The insiders are not panicking &mdash; they're executing a disciplined reduction at elevated prices. Follow the exits, not the press releases.</p>
+        <div class="card-type">NEWS CATALYST</div>
+        <h3>Oracle Explodes +13% &mdash; While Smart Money Was Already Betting Against It</h3>
+        <p>ORCL ripped higher today on what looks like earnings enthusiasm or a deal catalyst. The headline reads bullish. But the EOD scan caught $45M in put premium &mdash; 8 put sweeps vs 1 call &mdash; flowing in at close, targeting the $142-143 strikes by March 20. Smart money is not impressed by today's pop. They're fading it hard into the weekend.</p>
+        <p class="card-meaning">Why it matters: A +13% day with massive put buying EOD is a classic fade setup. The institutional flow is telling a different story than the price action. This is tomorrow's highest-conviction signal.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price neu">March 23</div>
-        <div class="card-change">S&P 500 rebalance &mdash; Lumentum joins, institutional flows shift</div>
-        <h3>S&P 500 Rebalance on March 23 &mdash; Forced Buying Ahead</h3>
-        <p>S&P Dow Jones Indices announced a rebalance effective before market open on March 23. Lumentum (LITE) will be added to the benchmark. When a stock enters the S&P 500, every index fund and ETF tracking the index is forced to buy it. That creates predictable institutional buying pressure in the 1-2 weeks leading up to inclusion. Smart money front-runs this every time.</p>
-        <p>Broader rebalance flows also shift existing weights, which creates forced selling in over-weighted names (often tech that has outperformed) and forced buying in under-weighted sectors. With tech commanding outsized weights post-AI rally, rebalance flows could create a headwind for QQQ names into March 23.</p>
-        <p class="card-meaning">&#128204; What This Means: LITE is a potential front-run play before March 23. More broadly, rebalance flows explain some of the institutional positioning shifts happening now &mdash; managers are pre-positioning for end-of-quarter adjustments. Watch for unusual call flow in newly-added names and unusual put flow in QQQ heavyweights.</p>
+        <div class="card-type">SECTOR MOVE</div>
+        <h3>Tech Flat, Financials Lower &mdash; Banks Can't Win Right Now</h3>
+        <p>The Nasdaq basically closed flat (-0.01%) while the Dow dragged on financials. Bank stocks including BAC saw modest pressure &mdash; the BofA NII upgrade story from this morning wasn't enough to offset the broader macro anxiety. When rates are elevated and recession fears mount, bank earnings revisions move lower. The flow agrees: BAC call positions got squeezed today.</p>
+        <p class="card-meaning">Why it matters: The divergence between Nasdaq resilience and Dow weakness tells you institutions are rotating defensively within equities &mdash; staying in large-cap tech while trimming cyclical exposure.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION B: BOT WATCHLIST -->
+  <!-- SECTION C: BOT POSITIONS TODAY -->
   <div class="zone-bot">
-    <div class="zone-label">&#129302; Bot Watchlist &mdash; Smart Money Signals</div>
+    <div class="zone-label">&#9679; Bot Positions Today &mdash; March 11, 2026</div>
+    <div class="pnl-summary">Day P&amp;L: -$110 across 3 closed positions &nbsp;|&nbsp; NVDA: -$15 &nbsp;&#9679;&nbsp; BAC: -$40 &nbsp;&#9679;&nbsp; AAL: -$55 (stop hit)</div>
     <div class="cards">
 
-      <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 10/10 &middot; $75.6M premium</div>
-        <div class="card-price dn">NVDA</div>
-        <div class="card-change">$184.32 &nbsp;&#9679;&nbsp; HIGH CONVICTION SHORT &nbsp;&#9679;&nbsp; Earnings in 71d</div>
-        <h3>NVDA &mdash; $75.6M in Puts While the Stock Rallied 4%</h3>
-        <p>Yesterday's EOD scan: 4 sweep put orders hit the tape while NVDA was up 3.91% on the day. Put premium: $75.6M vs $1.2M in calls (63:1 ratio). Sweeps at $175, $185, and $190 strikes &mdash; all expiring March 18. That is 7 days from today. This is directional positioning, not hedging on a name with a $2.5T market cap. The "AI agents" headline that drove the move is exactly the kind of narrative cover that institutions use to fade retail-driven pops.</p>
-        <p>Insiders sold billions over 2 years. Options flow says fade the 4% rip. The setup is clean: stock squeezed on AI hype, smart money loaded puts into the strength.</p>
-        <p class="card-meaning">&#128204; What I'm Thinking: Short thesis. A hot CPI print confirms the play &mdash; semis get hit hardest on rate anxiety. Watch the open: if NVDA can't hold $185 at open, the March 18 put at $185 becomes in-the-money fast. Confirmation: open below $183 on volume expansion.</p>
+      <div class="card card-loss">
+        <div class="card-type">LOSS &mdash; CLOSED EOD</div>
+        <div class="card-price dn">NVDA PUT</div>
+        <div class="card-change">&#8595; -$15 (-9.8%) &nbsp;|&nbsp; Entry $1.51 &rarr; Exit $1.38 &nbsp;|&nbsp; Strike 175, exp Mar 18</div>
+        <h3>NVDA &mdash; Short thesis from EOD flow: heavy put sweeps targeting 175-190 range</h3>
+        <p>Signal fired on 4 put sweeps with $75M in put premium at the close Monday. The thesis: NVDA was overextended and smart money was hedging hard. NVDA closed today at $185 &mdash; roughly flat. The put premium decayed slightly as the stock refused to break. EOD close triggered per protocol with a small loss rather than letting theta erode further into an expiring week.</p>
+        <p class="card-meaning">&#128204; Lesson: With only 7 DTE, theta decay is brutal on losers. The directional thesis (NVDA short) may still be right, but the timing was tight. A longer expiration (21+ DTE) on short-term directional flow gives the trade room to breathe.</p>
       </div>
 
-      <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 10/10 &middot; $134.9M premium</div>
-        <div class="card-price dn">PLTR</div>
-        <div class="card-change">$151.35 &nbsp;&#9679;&nbsp; HIGH CONVICTION SHORT &nbsp;&#9679;&nbsp; Earnings in 55d</div>
-        <h3>PLTR &mdash; $134.9M Puts at $290/$310 Strikes on a $151 Stock</h3>
-        <p>The biggest options signal in yesterday's scan. $134.9M in put premium, 3 sweep orders, with sweeps at $290 and $310 strikes while the stock trades at $151. Deep ITM puts function as synthetic shorts &mdash; institutions long PLTR from lower levels are buying $290/$310 puts to lock in their gains and cap their downside. Volume: 3,901 contracts at $290 (vs 691 OI) and 5,000 contracts at $310 (vs 0 OI) &mdash; the zero open interest means these are fresh positions, not rolls.</p>
-        <p>Put/call premium ratio: 536:1. When institutions spend $134.9M to hedge a $151 stock with deep ITM puts, they are not confident in this price level. The Iran defense AI narrative that drove PLTR to $180+ is dead. Stock fell 3.83% yesterday and has more room.</p>
-        <p class="card-meaning">&#128204; What I'm Thinking: Short thesis. The $134.9M in protection tells you what the biggest holders think. Fresh OI at $310 puts means new money is entering this hedge today. If PLTR loses $145, the next stop is $130-135. Confirmation at open: any gap below $149 with volume.</p>
+      <div class="card card-loss">
+        <div class="card-type">LOSS &mdash; CLOSED EOD</div>
+        <div class="card-price dn">BAC CALL</div>
+        <div class="card-change">&#8595; -$40 (-32.8%) &nbsp;|&nbsp; Entry $1.24 &rarr; Exit $0.82 &nbsp;|&nbsp; Strike 49.5, exp Mar 27</div>
+        <h3>BAC &mdash; Long thesis: BofA NII upgrade + call sweep flow signaling near-term upside</h3>
+        <p>Entered at open on a score-10 signal from prior EOD: call sweeps on $27M in call premium + strong NII guidance headline. But the macro environment overrode the fundamental case today. Oil surging + stagflation fears hit financials. BAC sat below the strike at close and the call position bled. Closed at EOD per protocol rather than carrying overnight risk.</p>
+        <p class="card-meaning">&#128204; Lesson: Even strong signals get steamrolled by macro. When oil is spiking on war premium and the broader narrative shifts to stagflation, going long financials is swimming against the current. Macro context should gate signal execution.</p>
       </div>
 
-      <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 10/10 &middot; $25.1M premium <span class="warn-badge">&#9888; ERN 8d</span></div>
-        <div class="card-price dn">MU</div>
-        <div class="card-change">$404.40 &nbsp;&#9679;&nbsp; HIGH CONVICTION SHORT &nbsp;&#9679;&nbsp; Earnings March 18</div>
-        <h3>MU &mdash; Smart Money Buying Puts Ahead of Earnings</h3>
-        <p>Micron earnings land March 18 &mdash; 7 days away. The bot flagged $25.1M in put premium (vs $1.75M calls) with sweep puts at $367.5 and $385 strikes. The unusual part: one sweep call came in at $397.5 (near the money) while two sweep puts hit $367.5 and $385. This two-sided flow suggests institutions are positioning for a binary earnings move &mdash; they're buying protection AND taking a slightly bearish lean ahead of the print. DRAM prices have surged 100% ahead of the print per analyst forecasts.</p>
-        <p>Citi says buy before March 18. But the options market is pricing in a ~$20-40 move. The put-heavy flow says the institutional read is: we don't trust this rally into the print.</p>
-        <p class="card-meaning">&#128204; What I'm Thinking: Earnings in 8 days means IV crush risk is real. The flow is bearish-leaning but mixed. Best play here is to let the print happen before getting directional. Watch MU open reaction to CPI today &mdash; a hot print could accelerate the pre-earnings unwind. Bot treats as tradeable but sizing down given the earnings binary.</p>
+      <div class="card card-loss">
+        <div class="card-type">LOSS &mdash; STOP HIT (-57.3%)</div>
+        <div class="card-price dn">AAL CALL</div>
+        <div class="card-change">&#8595; -$55 (-57.3%) &nbsp;|&nbsp; Entry $0.98 &rarr; Exit $0.41 &nbsp;|&nbsp; Strike 11.5, exp Mar 27 &nbsp;|&nbsp; Stop hit 11:01 AM</div>
+        <h3>AAL &mdash; Long thesis: oil falling + call sweep flow pointed to airline recovery trade</h3>
+        <p>This one got hit hardest and fastest. The signal was built on Monday's thesis: oil was falling, airlines were catching a bid, and 3 call sweeps validated the long. Then Tuesday/Wednesday oil reversed hard on Iran tensions and the whole airline sector sold off. AAL dropped and the stop at -50% triggered at 11:01 AM &mdash; the system did its job. The thesis was invalidated by a macro event the flow didn't price in.</p>
+        <p class="card-meaning">&#128204; Lesson: Oil-sensitive longs need an oil filter. If WTI is in an uptrend or geopolitical risk is elevated, airline calls are not a clean trade regardless of options flow. Add an oil regime check to signal scoring for transport plays.</p>
       </div>
 
-      <div class="card">
-        <div class="card-type">BULLISH CALL &middot; 10/10 &middot; $27.2M premium <span class="conflict-badge">&#9888; CONFLICT</span></div>
-        <div class="card-price up">BAC</div>
-        <div class="card-change">$48.68 &nbsp;&#9679;&nbsp; HIGH CONVICTION LONG &nbsp;&#9679;&nbsp; Earnings in 36d</div>
-        <h3>BAC &mdash; Deep ITM Call Sweeps Signal Institutional Accumulation</h3>
-        <p>Conflict flag: the signal shows direction "SHORT" but conviction flag is "HIGH CONVICTION LONG." Here's what happened: 2 sweep calls at $28 and $35 strikes (deep ITM on a $48 stock) vs only $399K in puts. Total call premium: $27.2M. Deep ITM call sweeps are a synthetic long strategy &mdash; institutions selling stock and replacing with deep ITM calls to maintain upside while reducing risk exposure. BofA guided Q1 net interest income up at least 7%, which is the fundamental catalyst. Earnings in 36 days.</p>
-        <p>The put_score slightly edges call_score (3.80 vs 3.28) which flipped the direction signal, but the $27.2M in call premium vs $399K in puts is a 68:1 ratio that tells the real story. Someone is adding long exposure in size.</p>
-        <p class="card-meaning">&#128204; What I'm Thinking: Long thesis. The conflict flag here is a scoring artifact &mdash; the premium ratio heavily favors bulls. NII guidance of +7% is real fundamental support. If CPI prints in-line today, financial stocks benefit from rate stability. Watch BAC open above $49 as confirmation. Open existing BAC call position is live from yesterday.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BULLISH CALL &middot; 9/10 &middot; $1.87M premium</div>
-        <div class="card-price up">AAL</div>
-        <div class="card-change">$11.17 &nbsp;&#9679;&nbsp; HIGH CONVICTION LONG &nbsp;&#9679;&nbsp; Earnings in 44d &nbsp;&#9679;&nbsp; Oil below $80</div>
-        <h3>AAL &mdash; 3 Sweep Calls as Oil Slide Becomes Fuel Windfall</h3>
-        <p>American Airlines caught 3 sweep call orders yesterday: $6 and $9 strikes expiring March 27. $1.87M in call premium vs $15K in puts &mdash; a 120:1 ratio. On a $11 stock, sweeping calls at $6 and $9 is deep ITM accumulation. The catalyst is obvious: oil down 33% from the Iran spike high directly lowers AAL's biggest cost item. White House says the price rise was "temporary." Airlines are the most direct beneficiary when oil normalizes.</p>
-        <p>AAL has beaten earnings 3 of the last 4 quarters. With 44 days to earnings and the oil tailwind building, the institutional call sweep says smart money is positioning now before the story becomes consensus.</p>
-        <p class="card-meaning">&#128204; What I'm Thinking: Long thesis. Oil below $80 is the thesis. If WTI stays in the $70-80 range, AAL's margin picture improves materially before earnings. Confirmation at open: AAL holds above $11 on the open. The risk is a CPI hot print that spooks broader markets and overrides the individual thesis.</p>
+      <div class="card card-open" style="opacity:0.6;">
+        <div class="card-type">DRY RUN &mdash; OPEN (PAPER)</div>
+        <div class="card-price neu">BAC + AAL</div>
+        <div class="card-change">Paper positions from pre-market scan &mdash; not real capital</div>
+        <h3>Dry-run positions from EOD flow are still open and untracked for today's P&amp;L</h3>
+        <p>Two paper trades were logged at pre-market (BAC $50 call, AAL $15 call) &mdash; these are dry-run validation entries, not live Alpaca orders. They would have faced the same headwinds as the live trades today. Including for transparency.</p>
+        <p class="card-meaning">&#128204; Note: Dry-run positions confirm the live trades were directionally consistent with the signal. The loss was a market environment call, not a signal failure.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION C: MORNING SETUP -->
+  <!-- SECTION D: TOMORROW'S SETUP -->
   <div class="zone-eod">
-    <div class="zone-label">&#9656; Game Plan &mdash; This Morning</div>
+    <div class="zone-label">&#8680; Tomorrow's Setup &mdash; EOD Flow Watch</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">Pre-CPI Protocol</div>
-        <h3>Before 8:30 AM: No New Positions</h3>
-        <p>CPI at 8:30 AM is a market-wide binary event. Opening a new position before the print is gambling on the number, not trading flow signals. The smart money has already positioned &mdash; the sweep flows from yesterday are their tell. Don't front-run your own signals with noise.</p>
-        <p>Existing positions: The BAC call from yesterday is live. BAC tends to be a beneficiary of CPI in-line readings (rate stability = NII thesis holds). If CPI spikes hot, consider trimming early.</p>
-        <p class="card-meaning">&#128204; What This Means: 8:29 AM = hands in pockets. 8:31 AM = read the print, check flow, then act on the confirmed thesis. Patience is the edge.</p>
+        <div class="card-type">FLOW WATCH &mdash; HIGH CONVICTION SHORT</div>
+        <div class="card-price dn">ORCL</div>
+        <div class="card-change">Score 8 &nbsp;|&nbsp; $161.39 &nbsp;|&nbsp; $45.3M put premium &nbsp;|&nbsp; 8 put sweeps, 1 call</div>
+        <h3>Oracle &mdash; Today's +13% pop is being faded hard by institutional money</h3>
+        <p>Eight sweep puts hitting $142-143 strikes (exp Mar 20) with $45M in premium. That's not hedging &mdash; that's conviction. Someone is positioned for ORCL to give back a significant chunk of today's gain within 9 days. The headlines are bullish but the flow disagrees sharply. This is the bot's top-ranked EOD signal.</p>
+        <p class="card-meaning">&#128204; Setup: Watch for a gap fade at open or early weakness tomorrow. The $142-143 target zone is aggressive &mdash; it implies a ~12% reversal from close. Scale accordingly.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Scenario A: Hot CPI (&gt;2.5%)</div>
-        <h3>Hot Print Playbook &mdash; Short the AI Names</h3>
-        <p>If CPI comes in above 2.5%: QQQ opens down 1-2%. Tech and semis lead the selling. The NVDA short thesis from yesterday's $75.6M put flow gets immediate confirmation. PLTR continues lower. BAC call position needs monitoring &mdash; hot CPI could lift bank stocks on higher rate expectations (positive for NII) but initially may sell with the broad market.</p>
-        <p class="card-meaning">&#128204; Hot CPI activates the NVDA and PLTR short setups. Both had massive put flows yesterday. Follow the flow that was already positioned for this outcome.</p>
+        <div class="card-type">FLOW WATCH &mdash; HIGH CONVICTION SHORT</div>
+        <div class="card-price dn">TSLA</div>
+        <div class="card-change">Score 6 &nbsp;|&nbsp; $406.41 &nbsp;|&nbsp; $371M put premium &nbsp;|&nbsp; 6 put sweeps, 3 calls</div>
+        <h3>Tesla &mdash; Massive put premium dwarfs call flow as sentiment cools</h3>
+        <p>$371M in put premium is not subtle. Six sweep puts vs three calls, with the puts targeting $407.50 by March 18. TSLA is trading near all-time highs with Musk distraction risk and a serial earnings miss history (3/4 quarters missed). The flow has been bearish on TSLA for multiple sessions now. This is a crowded short idea but the flow keeps confirming it.</p>
+        <p class="card-meaning">&#128204; Setup: Watch the $407.50 level as a pivot. A close below that tomorrow with volume confirms the put flow thesis. The 41-day earnings window is clean for now.</p>
       </div>
 
       <div class="card">
-        <div class="card-type">Scenario B: Cool CPI (&lt;2.3%)</div>
-        <h3>Cool Print Playbook &mdash; Let the Rally Run</h3>
-        <p>If CPI comes in below 2.3%: risk-on resumes. QQQ pops. Semis get a bid. The oil deflation story gets credited. BAC and AAL benefit. NVDA and PLTR short theses are on pause &mdash; wait for the next sweep flow signal before re-entering. The S&P 500 rebalance flows heading into March 23 would amplify any broad rally.</p>
-        <p class="card-meaning">&#128204; Cool CPI means the BAC call and AAL long setup run. The NVDA/PLTR puts from yesterday may still play out but over a longer timeframe &mdash; insider selling doesn't reverse on one CPI print.</p>
+        <div class="card-type">FLOW WATCH &mdash; LONG</div>
+        <div class="card-price up">IREN</div>
+        <div class="card-change">Score 6 &nbsp;|&nbsp; $41.34 &nbsp;|&nbsp; $1.9M call premium &nbsp;|&nbsp; 2 call sweeps, 1 put</div>
+        <h3>Iris Energy &mdash; Crypto miner catching bids as inflation data sends crypto higher</h3>
+        <p>Today's CPI + inflation narrative sent crypto markets surging per the top headline. IREN is a bitcoin mining play that trades with crypto sentiment. Two call sweeps targeting $42.50 (Mar 20) and $47.00 (Apr 2) &mdash; someone is buying calls both near and far term. With BTC catching a bid on inflation data, the flow here is directionally clean.</p>
+        <p class="card-meaning">&#128204; Setup: A BTC continuation overnight would validate the $42.50 call. The $47 April call is a bigger swing. Crypto vol is the risk &mdash; position size accordingly.</p>
       </div>
 
     </div>
   </div>
 
-  <footer>Pavano Trades &mdash; Morning Brief &mdash; March 11, 2026 &nbsp;&#9679;&nbsp; Paper account &mdash; Educational only &nbsp;&#9679;&nbsp; Not financial advice &nbsp;&#9679;&nbsp; CPI 8:30 AM ET</footer>
+  <footer>Pavano Trades &mdash; Evening Wrap &mdash; March 11, 2026 &mdash; Paper trading. Not financial advice. Flow data via options sweeps. &mdash; misterpavano.github.io/pavano-trades</footer>
 
 </body>
 </html>
