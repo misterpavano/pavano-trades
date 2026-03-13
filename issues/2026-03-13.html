@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavano Trades -- Morning Brief March 13, 2026</title>
+  <title>Pavano Trades -- EOD Wrap March 13, 2026</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -45,155 +45,156 @@
     .sb-item .sb-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
     .sb-item .sb-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;}
     .sb-item .sb-chg{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:2px;}
-    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#33c9f0;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
+    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5599;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
     .conflict-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5533;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
     .warn-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ffc933;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
-    .pnl-summary{font-family:'IBM Plex Mono',monospace;font-size:12px;background:#1a0000;border:1px solid #4d0000;padding:10px 14px;margin-bottom:16px;color:#ff5555;}
     .open-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ffc933;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
     .hold-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#777;background:#111;border:1px solid #222;padding:8px 12px;margin-top:8px;}
     .alert-bar{background:#1a0008;border:1px solid #ff5599;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#ff5599;padding:10px 14px;margin-bottom:16px;letter-spacing:0.05em;}
+    .pnl-open{font-family:'IBM Plex Mono',monospace;font-size:12px;background:#101500;border:1px solid #ffc933;padding:10px 14px;margin-bottom:16px;color:#ffc933;}
   </style>
 </head>
 <body>
 
   <header>
-    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; MORNING BRIEF &nbsp;&#9679;&nbsp; MARCH 13, 2026 &nbsp;&#9679;&nbsp; SPY $667.83 +0.27% PRE &nbsp;&#9679;&nbsp; QQQ ~$598.50 +0.21% PRE &nbsp;&#9679;&nbsp; OIL BRENT &gt;$100 &nbsp;&#9679;&nbsp; HORMUZ STILL CLOSED DAY 14 &nbsp;&#9679;&nbsp; PCE DATA 8:30 AM &nbsp;&#9679;&nbsp; FRIDAY THE 13TH</div>
+    <div class="ticker">PAVANO TRADES &nbsp;&#9679;&nbsp; EOD WRAP &nbsp;&#9679;&nbsp; MARCH 13, 2026 &nbsp;&#9679;&nbsp; SPY $662.29 -0.57% &nbsp;&#9679;&nbsp; QQQ $593.72 -0.59% &nbsp;&#9679;&nbsp; GME $23.53 -3.68% &nbsp;&#9679;&nbsp; BRENT OIL &gt;$100 DAY 2 &nbsp;&#9679;&nbsp; IRAN WAR DAY 15 &nbsp;&#9679;&nbsp; 3RD STRAIGHT DOWN WEEK</div>
     <div class="header-row">
       <div>
-        <div class="edition-badge">&#9728; Morning Brief</div>
-        <h1>&#128202; Morning Brief &mdash; March 13, 2026</h1>
+        <div class="edition-badge">&#9790; EOD Wrap</div>
+        <h1>&#128202; EOD Wrap &mdash; March 13, 2026</h1>
       </div>
       <div class="header-stats">
         <div class="stat">
-          <div class="label">SPY Pre-Mkt</div>
-          <div class="val up" id="spy">$667.83 <span style="font-size:13px">+0.27%</span></div>
+          <div class="label">SPY Close</div>
+          <div class="val dn">$662.29 <span style="font-size:13px">-0.57%</span></div>
         </div>
         <div class="stat">
-          <div class="label">QQQ Pre-Mkt</div>
-          <div class="val up" id="qqq">~$598.50 <span style="font-size:13px">+0.21%</span></div>
+          <div class="label">QQQ Close</div>
+          <div class="val dn">$593.72 <span style="font-size:13px">-0.59%</span></div>
         </div>
         <div class="stat">
-          <div class="label">GME Pre-Mkt</div>
-          <div class="val neu" id="gme">~$24.40 <span style="font-size:13px">flat</span></div>
+          <div class="label">GME Close</div>
+          <div class="val dn">$23.53 <span style="font-size:13px">-3.68%</span></div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SECTION A: PRE-MARKET SCOREBOARD -->
+  <!-- SECTION A: MARKET CLOSE SCOREBOARD -->
   <div style="background:#111;border-bottom:1px solid #1e1e1e;padding:20px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Pre-Market &mdash; March 13, 2026 &nbsp;|&nbsp; 8:30 AM ET &nbsp;&#9679;&nbsp; FRAGILE BOUNCE AFTER 3-DAY ROUT &nbsp;&#9679;&nbsp; PCE PRINT NOW &nbsp;&#9679;&nbsp; OIL ABOVE $100 &nbsp;&#9679;&nbsp; IRAN DAY 14</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Market Close &mdash; March 13, 2026 &nbsp;|&nbsp; 4:00 PM ET &nbsp;&#9679;&nbsp; 3RD STRAIGHT DOWN WEEK &nbsp;&#9679;&nbsp; IRAN WAR DAY 15 &nbsp;&#9679;&nbsp; BRENT &gt;$100 SECOND DAY &nbsp;&#9679;&nbsp; YTD LOWS</div>
     <div class="scoreboard">
-      <div class="sb-item"><div class="sb-label">SPY</div><div class="sb-val up">$667.83</div><div class="sb-chg up">&#8593; +0.27% pre</div></div>
-      <div class="sb-item"><div class="sb-label">QQQ</div><div class="sb-val up">~$598.50</div><div class="sb-chg up">&#8593; +0.21% pre</div></div>
-      <div class="sb-item"><div class="sb-label">GME</div><div class="sb-val neu">~$24.40</div><div class="sb-chg neu">&#8212; flat pre</div></div>
-      <div class="sb-item"><div class="sb-label">SPY Close</div><div class="sb-val dn">$666.06</div><div class="sb-chg dn">&#8595; -1.52% Thu</div></div>
-      <div class="sb-item"><div class="sb-label">QQQ Close</div><div class="sb-val dn">$597.26</div><div class="sb-chg dn">&#8595; -1.72% Thu</div></div>
-      <div class="sb-item"><div class="sb-label">Brent</div><div class="sb-val dn">&gt;$100</div><div class="sb-chg dn">&#8593; Day 14</div></div>
-      <div class="sb-item"><div class="sb-label">PCE</div><div class="sb-val neu">8:30 AM</div><div class="sb-chg neu">&#9679; out now</div></div>
-      <div class="sb-item"><div class="sb-label">Streak</div><div class="sb-val dn">-3 Days</div><div class="sb-chg dn">&#8595; since Mon</div></div>
+      <div class="sb-item"><div class="sb-label">SPY</div><div class="sb-val dn">$662.29</div><div class="sb-chg dn">&#8595; -0.57% close</div></div>
+      <div class="sb-item"><div class="sb-label">QQQ</div><div class="sb-val dn">$593.72</div><div class="sb-chg dn">&#8595; -0.59% close</div></div>
+      <div class="sb-item"><div class="sb-label">GME</div><div class="sb-val dn">$23.53</div><div class="sb-chg dn">&#8595; -3.68% close</div></div>
+      <div class="sb-item"><div class="sb-label">S&amp;P 500</div><div class="sb-val dn">6,632</div><div class="sb-chg dn">&#8595; -0.61% / YTD low</div></div>
+      <div class="sb-item"><div class="sb-label">Nasdaq</div><div class="sb-val dn">22,105</div><div class="sb-chg dn">&#8595; -0.93%</div></div>
+      <div class="sb-item"><div class="sb-label">Dow Jones</div><div class="sb-val dn">46,558</div><div class="sb-chg dn">&#8595; -0.26%</div></div>
+      <div class="sb-item"><div class="sb-label">Brent Oil</div><div class="sb-val dn">&gt;$100</div><div class="sb-chg dn">&#8593; Day 2 above $100</div></div>
+      <div class="sb-item"><div class="sb-label">Week Streak</div><div class="sb-val dn">-3 Weeks</div><div class="sb-chg dn">&#8595; Worst since Nov</div></div>
     </div>
   </div>
 
-  <!-- SECTION B: WHAT'S MOVING TODAY -->
+  <!-- SECTION B: WHAT MOVED TODAY -->
   <div class="zone-macro">
-    <div class="zone-label">&#9660; What's Moving Today &mdash; March 13, 2026</div>
+    <div class="zone-label">&#9660; What Moved Today &mdash; March 13, 2026</div>
     <div class="cards">
 
       <div class="card">
         <div class="card-type">Macro Move</div>
-        <div class="card-price dn">Oil $100+</div>
-        <div class="card-change">Hormuz closed Day 14 &mdash; Khamenei doubles down</div>
-        <h3>Iran's New Supreme Leader Vows Hormuz Stays Shut &mdash; Oil Warns of $200</h3>
-        <p>Mojtaba Khamenei declared the Strait of Hormuz must remain closed as a "tool to pressure the enemy." Brent crude settled above $100/bbl yesterday for the first time since 2022, and Iran warned prices could reach $200. The US released 172M barrels from its Strategic Petroleum Reserve Thursday &mdash; markets shrugged. One-fifth of global oil supply normally flows through the Strait. The money flowing into energy producers and out of everything energy-consuming is the defining trade of this war.</p>
-        <div class="card-meaning">&#128204; What This Means: Every day Hormuz stays closed, the energy shock compounds. Airlines, cruise lines, consumer discretionary get punished. XLE and oil producers (OXY, CVX, XOM) get a bid. The SPR release tells you the White House is trying to cap the damage &mdash; it hasn't worked yet.</div>
+        <div class="card-price dn">3-Week Rout</div>
+        <div class="card-change">S&amp;P 500 hits new YTD low &mdash; third consecutive down week</div>
+        <h3>Iran Oil Shock Seals Worst 3-Week Stretch Since November</h3>
+        <p>The S&amp;P 500 closed at 6,632 Friday, a new year-to-date low, capping the third straight week of losses. The Nasdaq led declines at -0.93% while the Dow held slightly better at -0.26%. The driver is unchanged: the Iran war has kept Brent crude above $100 for a second consecutive day with no visible off-ramp. Goldman Sachs and Bank of America both revised their 2026 oil price forecasts higher this week. Rate-sensitive growth stocks were hit hardest as traders repriced the probability of a June Fed rate cut downward.</p>
+        <div class="card-meaning">&#128204; EOD Read: Three consecutive down weeks with an unresolved geopolitical oil catalyst says the path of least resistance stays lower. The S&amp;P 500 is at its worst level since November. Every bounce attempt this week failed to hold. That pattern does not reverse in a weekend.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-type">Macro Move</div>
+        <div class="card-price dn">Stagflation</div>
+        <div class="card-change">Oil above $100 + inflation fears = rate cuts repriced out</div>
+        <h3>Crude Surge Rewrites the Rate Narrative &mdash; Stagflation Risk Becomes the Base Case</h3>
+        <p>Brent crude closed above $100 for the second straight session as the Iran conflict entered week three with the Strait of Hormuz still closed. Major brokerages including Goldman Sachs revised 2026 oil price forecasts upward. The compounding problem: energy costs feed goods inflation with a lag, meaning even partial Hormuz reopening does not quickly reduce price pressure. A U.S. refueling plane crashed in Iraq today, adding another escalation datapoint. Rate futures are getting repriced in real time as June cut odds fade.</p>
+        <div class="card-meaning">&#128204; EOD Read: When oil above $100 meets an already-elevated inflation base, the Fed stays on hold longer regardless of what the economy does. That is the stagflation trap. Growth stocks reprice lower in this environment. Until Hormuz reopens and oil retreats below $90, equities face structural headwinds.</div>
       </div>
 
       <div class="card">
         <div class="card-type">News Catalyst</div>
-        <div class="card-price neu">PCE Now</div>
-        <div class="card-change">Core PCE exp. +0.3% MoM / 2.9% YoY &mdash; Fed watching</div>
-        <h3>Fed's Inflation Gauge Drops Today &mdash; Oil Passthrough Could Make It Ugly</h3>
-        <p>January PCE hits at 8:30 AM. Consensus expects core +0.3% MoM with headline around 2.9% YoY. But this print covers January &mdash; before the oil shock hit full force. The real question is whether the energy surge is already feeding into goods and services inflation. If core comes in hot, the Fed stays on hold longer. Economists still see a June rate cut but that consensus is getting shakier every day oil stays above $100. Rate futures are getting re-priced in real time.</p>
-        <div class="card-meaning">&#128204; What This Means: A hot PCE print + oil above $100 = stagflation narrative takes hold = growth stocks reprice lower. A cool print = relief rally into the weekend. This is the binary event for today's session direction. Watch the 10-year yield move on the number.</div>
+        <div class="card-price dn">ADBE -8.5%</div>
+        <div class="card-change">Beat EPS and revenue &mdash; stock sold off hard anyway</div>
+        <h3>Adobe Beats on Both Lines, Gets Punished 8.5% Anyway &mdash; Sell-the-News in Full Effect</h3>
+        <p>Adobe reported fiscal Q1 earnings of $6.06 per share on revenue of $6.40 billion, beating analyst estimates on both lines. The stock dropped more than 8.5% regardless. In a different macro environment, this would have been a 3-5% pop. Instead institutions used the earnings-driven liquidity event to exit positions. The guidance either came in soft, the bar was set too high, or macro conditions made even a legitimate beat irrelevant to sellers. This is what a deeply bearish-sentiment market does to earnings: any liquidity event becomes an exit.</p>
+        <div class="card-meaning">&#128204; EOD Read: Sell-the-news on a real beat is a psychological signal about where institutional sentiment sits. They are not buying dips right now. They are using pops as exits. Treat any upcoming earnings beats the same way until macro stabilizes. The news is not the trade. The reaction to the news is the trade.</div>
       </div>
 
       <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price dn">ORCL -2.4%</div>
-        <div class="card-change">Securities fraud lawsuit filed &mdash; $405M ITM put sweeps</div>
-        <h3>Oracle: Fraud Lawsuit Filed &mdash; Institutional Money Was Already Positioned Short</h3>
-        <p>Glancy Prongay Wolke &amp; Rotter announced investors with losses can lead a securities fraud lawsuit against Oracle yesterday. The stock fell 2.43% to $158.08 and the EOD scan caught 7 sweep put orders totaling $405M notional at $230-250 strikes. Here's the tell: those strikes are $70-90 in the money at current prices. Buying ITM puts is how institutions take large, high-delta short positions quickly without touching the short-sale tape. Someone knew &mdash; or positioned heavily &mdash; ahead of this news.</p>
-        <div class="card-meaning">&#128204; What This Means: $405M in ITM put sweeps is not a retail hedge. At those strike prices, these contracts move nearly dollar-for-dollar with the stock going down. This is a major institution betting on further ORCL downside. The fraud lawsuit is the catalyst the flow was waiting for.</div>
-      </div>
-
-      <div class="card">
-        <div class="card-type">Flow Alert</div>
-        <div class="card-price up">Fragile Bounce</div>
-        <div class="card-change">Futures up +0.27% &mdash; but selling pressure lurks</div>
-        <h3>Pre-Market Bounce Is Thin Cover &mdash; Smart Money Remains Net Short Across Tech</h3>
-        <p>Futures are edging up after yesterday's -1.52% S&P hammering and the Dow's worst day since November (down 739 points to a yearly low of 46,678). But the options flow from Thursday's EOD scan tells a different story: $55.9M in AMZN puts, $405M in ORCL ITM puts, $99M in PLTR puts, and $605M in TSLA puts are all positioned for further downside. When futures bounce but the smart money flow stays bearish, the bounce is typically used to reload short positions &mdash; not to signal a bottom.</p>
-        <div class="card-meaning">&#128204; What This Means: Don't trust a pre-market bounce in a geopolitical oil shock environment. The institutional flow from yesterday says the sell side is not done. Open action on these names matters more than the futures pre-print.</div>
+        <div class="card-type">Sector Move</div>
+        <div class="card-price up">BTC +9%</div>
+        <div class="card-change">Bitcoin clears month-high &mdash; MARA, IREN, Strategy rally hard</div>
+        <h3>Crypto Names Rip on Bitcoin Surge &mdash; Smart Money Immediately Fades the Move</h3>
+        <p>Bitcoin cleared a month-high on Friday, up 9%, dragging MARA, IREN, and Strategy sharply higher in headlines calling them leaders of a crypto stock rally. But the EOD scan tells the actual story: institutions placed HIGH_CONVICTION_SHORT put sweeps on MARA (score 7, $1.1M premium), IREN (score 6, $10.2M premium), and CIFR (score 6, $1.9M premium) throughout the session. The smart money saw the crypto rally as a gift to get short. Total put premium across the three names: approximately $13.2M. They sold the rip.</p>
+        <div class="card-meaning">&#128204; EOD Read: When a sector bounces hard on a sentiment catalyst but institutional options flow says they are shorting into the strength, that divergence is the signal. Crypto miners ran today. The EOD scan says they are being faded hard. MARA, IREN, and CIFR are set up as short candidates for next week.</div>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION C: BOT WATCHLIST -->
+  <!-- SECTION C: BOT POSITIONS TODAY -->
   <div class="zone-bot">
-    <div class="zone-label">&#9660; &#129302; Bot Watchlist &mdash; Smart Money Signals</div>
-    <div class="alert-bar">&#9888; All signals from EOD scan 3/12/2026. Tradeable signals: AMZN (10/10), PATH (9/10), PLTR (9/10), ORCL (8/10), TSLA (6/10). NVDA on cooldown (2 consecutive losses).</div>
+    <div class="zone-label">&#9660; &#129302; Bot Positions Today &mdash; March 13, 2026</div>
+    <div class="pnl-open">&#9888; 1 ACTIVE POSITION &mdash; PATH 260327C00012500 &mdash; 3 contracts @ $0.52 entry &mdash; $156 total cost &mdash; UNDERLYING +6.1% TODAY &mdash; POSITION OPEN</div>
+    <div class="cards">
+
+      <div class="card card-open">
+        <div class="card-type">Open &nbsp;&middot;&nbsp; PATH &nbsp;&middot;&nbsp; UiPath &#8212; $12.50 CALL exp 3/27 <span class="open-badge">OPEN</span></div>
+        <div class="card-price neu">PATH +6.1%</div>
+        <div class="card-change">Entry $0.52 premium &mdash; 3 contracts &mdash; $156 total &mdash; Stop $0.26 &mdash; Target $1.04</div>
+        <h3>PATH &#8212; Thesis Confirmed on Day One, Underlying +6.1%, Strike Now in Range</h3>
+        <p>The bot entered 3 contracts of the PATH $12.50 call expiring 3/27 at $0.52 each based on yesterday's EOD signal (score 9, HIGH_CONVICTION_LONG). Today UiPath surged 6.1% after the company closed fiscal 2026 with a Q4 earnings beat: EPS beat, revenue beat, buyback announcement, and margin gains. The $12.50 strike was OTM from entry at $11.47; after today's 6.1% move the underlying sits near $12.16 and the strike is now within striking distance. Did the EOD flow get it right? Yes. The sweep calls at $11.50 and $11.00 that triggered the signal were institutional positioning ahead of the earnings release.</p>
+        <p>Position remains open. The real test is whether PATH can clear $12.50 and push the call into the money. Stop stays at $0.26 premium; target remains $1.04. No exit today. The flow was early and correct.</p>
+        <div class="card-meaning">&#128204; Lesson: When the underlying gaps your direction the very next session after entry on an earnings beat, the signal was catching real front-running. This is what high-conviction EOD flow looks like in practice. The 6.1% move on an earnings catalyst confirms the sweep buyers knew the setup. Manage the stop, let the thesis develop.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION D: TOMORROW'S SETUP -->
+  <div class="zone-eod">
+    <div class="zone-label">&#9660; Tomorrow's Setup &mdash; EOD Flow Watch for Monday</div>
+    <div class="alert-bar">&#9888; EOD signals scanned 3/13 at 3:30 PM ET. Top tradeable signals for Monday open: NOK (7/10 LONG), MARA (7/10 HIGH_CONVICTION_SHORT), TSLA (6/10 SHORT lean). NVDA on cooldown (2 consecutive losses).</div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&middot;&nbsp; 10/10 &nbsp;&middot;&nbsp; $55.9M premium <span class="conflict-badge">CONFLICT</span></div>
-        <div class="card-price dn">AMZN</div>
-        <div class="card-change">$209.68 &mdash; 5 sweep puts &mdash; exp 3/20</div>
-        <h3>AMZN &mdash; $55.9M in Put Sweeps While Congress Buys Stock</h3>
-        <p>Five sweep put orders hit AMZN at $240-250 strikes (expiring 3/20): 4,252 contracts at $240, 1,550 at $245, and 4,801 at $250. Total premium: $55.9M. Simultaneously, two congressional members (David J. Taylor, Gilbert Cisneros) reported equity buys. The divergence is sharp: retail politicians are buying the stock while someone is paying $55.9M to bet on a meaningful decline from current levels. At $209.68, the $240+ puts are $30+ out of the money &mdash; which means this flow is positioned for a significant catalyst, not a 2% drift lower.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The 5-sweep cluster with $240-250 strikes says whoever bought these expects AMZN to move meaningfully lower. A hot PCE print or oil escalation at open could provide the gap. Confirmation: AMZN opens below $208 and holds lower. That's the signal to enter. Congress buying is noise &mdash; the options market doesn't lie at this premium size.</div>
+        <div class="card-type">Flow Watch &nbsp;&middot;&nbsp; Score 7/10 &nbsp;&middot;&nbsp; LONG</div>
+        <div class="card-price up">NOK</div>
+        <div class="card-change">$8.24 &mdash; Sweep calls $9.0 and $9.5 exp 3/20 &mdash; $551k premium &mdash; Morgan Stanley street-high PT</div>
+        <h3>Nokia &#8212; Morgan Stanley Sets Street-High Target + $551k Call Sweeps = Institutional Follow-Through Bet</h3>
+        <p>Nokia surged Friday after Morgan Stanley set a street-high price target. The EOD scan caught 2 sweep calls: 35,676 contracts at the $9.00 strike and 10,950 at $9.50, both expiring 3/20, totaling $551k in call premium. With the stock at $8.24, these calls are 9-15% out of the money. This is not a casual retail bet. The combination of a fresh sell-side catalyst and institutional sweep calls expiring in 5 trading days says someone is positioned for a sharp near-term continuation. Earnings are 41 days out, no binary risk. The setup is clean.</p>
+        <div class="card-meaning">&#128204; Monday Watch: Confirmation is NOK holding above $8.25 at open and building on Friday's surge. The $9.00 calls expire 3/20, which means the smart money needs the move to happen within 5 trading days. Any follow-through analyst coverage or continued Nokia news over the weekend accelerates this. Gap above $8.50 on open is the green light.</div>
       </div>
 
       <div class="card">
-        <div class="card-type">BULLISH CALL &nbsp;&middot;&nbsp; 9/10 &nbsp;&middot;&nbsp; $500k premium</div>
-        <div class="card-price up">PATH</div>
-        <div class="card-change">$11.47 &mdash; 2 sweep calls &mdash; exp 3/20 &amp; 3/27</div>
-        <h3>PATH (UiPath) &mdash; Call Sweeps Into an 8% One-Day Flush With No Catalyst</h3>
-        <p>UiPath (PATH) was one of the biggest losers yesterday, falling sharply on what appears to be sympathy selling with the broad tech selloff &mdash; no PATH-specific negative news found. Yet two sweep call orders hit: 5,573 contracts at $11.50 (exp 3/20) and 1,245 at $11.00 (exp 3/27), totaling $500k in call premium. At $11.47, the $11.50 call is essentially at the money. PATH has beaten earnings 4/4 quarters, earnings are 77 days out, and no binary risk is near. This looks like a smart bounce bet on an oversold name.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The setup here is a beaten-down quality name with ATM call sweeps signaling institutional confidence in a snapback. Confirmation: PATH holds $11.00 at open and stabilizes. A gap fill back toward $12+ from the oversold level is the thesis. 4/4 earnings beats means there's fundamental support below. The $11 floor is where the sweep buyers put their money.</div>
+        <div class="card-type">Flow Watch &nbsp;&middot;&nbsp; Score 7/10 &nbsp;&middot;&nbsp; HIGH CONVICTION SHORT</div>
+        <div class="card-price dn">MARA</div>
+        <div class="card-change">$9.38 &mdash; Sweep puts $9.5 and $8.5 exp 3/20 and 3/27 &mdash; $1.1M premium &mdash; vs BTC rally</div>
+        <h3>MARA &#8212; $1.1M in Put Sweeps Fades the Bitcoin Rally Directly</h3>
+        <p>MARA rallied with Bitcoin's 9% move and was named a leader in the crypto stock surge. The options desk disagrees: 14,744 contracts at the $9.50 put (exp 3/20, essentially ATM at $9.38 close) and 7,532 at the $8.50 put (exp 3/27), totaling $1.1M in put premium. This is a direct bet that MARA gives back the crypto-driven pop and then some. Bitcoin-led equity rallies in a broader risk-off macro environment tend to fade fast. MARA is earnings-clear (55 days out). The institutional flow is not buying the crypto headline. They are shorting into it.</p>
+        <div class="card-meaning">&#128204; Monday Watch: If Bitcoin consolidates over the weekend without another leg up, MARA opens lower Monday and the put thesis activates immediately. Even if BTC stays flat, the broader risk-off macro overhang eventually wins. The ATM put at $9.50 gives very little room before it is in the money. Watch for MARA to fade below $9.20 on Monday as confirmation.</div>
       </div>
 
       <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&middot;&nbsp; 9/10 &nbsp;&middot;&nbsp; $99M premium</div>
-        <div class="card-price dn">PLTR</div>
-        <div class="card-change">$153.82 &mdash; 3 sweep puts &mdash; exp 3/20</div>
-        <h3>PLTR &mdash; $99M Put Flow Bets Against the Stock That Defied the Selloff</h3>
-        <p>Palantir bucked the market yesterday (+1.25% while SPY fell 1.52%) on defense-AI narrative strength &mdash; the "Palantir continues using Claude AI amid Pentagon clash with Anthropic" story gave the stock a military-contract bid. But the EOD scan shows $99M in put sweeps: 6,181 contracts at $143 (exp 3/20), 5,563 at $152.50 (nearly ATM), and 7,000 at $290 (notably deep ITM). That $290 strike sweep alone represents someone using high-delta puts as a pure short vehicle. Defense stocks don't hold forever when the broader market is in an oil-driven risk-off mode.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: PLTR's 1-day defense pop is a gift to the put buyers. $99M at near-ATM strikes ($152.50 is essentially at the money with stock at $153.82) means the flow is positioned for the defense narrative to fade. Confirmation: PLTR fails to hold $153 at open and rolls under $151. That's the short-thesis entry. If defense names catch another bid on Iran escalation news, this breaks &mdash; that's the risk.</div>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&middot;&nbsp; 8/10 &nbsp;&middot;&nbsp; $405M premium</div>
-        <div class="card-price dn">ORCL</div>
-        <div class="card-change">$159.51 &mdash; 7 sweep puts &mdash; exp 3/20</div>
-        <h3>ORCL &mdash; $405M in ITM Put Sweeps Is an Institutional Short Position, Not a Hedge</h3>
-        <p>Oracle's EOD scan produced the largest notional put premium in the watchlist: $405M across 7 sweeps at $230-250 strikes (exp 3/20) when the stock is at $159.51. These puts are $70-90 in the money. At that depth, each contract has a delta near 1.0 &mdash; they move dollar-for-dollar with the stock going down. Someone accumulated the equivalent of a $400M+ synthetic short position using ITM puts to avoid the short-sale rules and margin requirements. The securities fraud lawsuit announced by Glancy Prongay is the catalyst the flow was already positioned for.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: This is the cleanest institutional short thesis in today's scan. $405M in ITM puts doesn't get placed without a conviction-level thesis. The fraud lawsuit is the news peg. Confirmation: ORCL opens below $158.00 and continues to fade. The short thesis breaks if the company issues a strong denial or the lawsuit gets dismissed early &mdash; unlikely today. This is the signal to watch at open.</div>
-      </div>
-
-      <div class="card">
-        <div class="card-type">BEARISH PUT &nbsp;&middot;&nbsp; 6/10 &nbsp;&middot;&nbsp; $605M premium <span class="warn-badge">MIXED FLOW</span></div>
+        <div class="card-type">Flow Watch &nbsp;&middot;&nbsp; Score 6/10 &nbsp;&middot;&nbsp; SHORT Lean</div>
         <div class="card-price dn">TSLA</div>
-        <div class="card-change">$397.81 &mdash; 4 sweep puts / 2 sweep calls &mdash; exp 3/20</div>
-        <h3>TSLA &mdash; $605M Net Put Overhang vs $7M Calls Is a Lopsided Bearish Bet</h3>
-        <p>Tesla's flow is technically mixed &mdash; 2 sweep calls at $397.50 ($7.2M) and 4 sweep puts at $470-480 strikes ($605M) &mdash; but the notional imbalance is 84:1 bearish. The $470-480 put strikes are deeply OTM from current $397.81 (roughly 18-20% above current price), which means the put buyers are positioned for a crash scenario, not a routine dip. TSLA has missed earnings 3 of the last 4 quarters. With oil at $100+, consumer discretionary weakness, and Musk attention risk still elevated, the thesis is clear: someone spent $605M saying TSLA breaks hard before 3/20.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The $470-480 puts are OTM bets on a black swan or accelerated selloff in TSLA. They pay off only if TSLA drops 20%+ in a week &mdash; possible in a crashing market but not the base case. The more actionable angle is the directional signal: the smart money is net short $598M in Tesla. If TSLA opens below $395 and can't recover, that's where the thesis gains traction. Watch for Musk news or macro-driven consumer selloff to be the catalyst.</div>
+        <div class="card-change">$390.95 &mdash; $385M put premium vs $49M calls &mdash; 4 sweeps puts, 3 sweeps calls</div>
+        <h3>TSLA &#8212; $385M in Put Premium vs $49M Calls Is an 8:1 Bearish Lean Into the Weekend</h3>
+        <p>Tesla closed at $390.95 and the EOD scan shows a heavily lopsided picture: $385M in put premium across 4 sweeps versus only $49M in call premium across 3 sweeps. The put/call premium ratio is nearly 8:1 bearish. Tesla has missed earnings 3 of the last 4 quarters and sits in a macro environment where oil above $100 pressures consumer spending on big-ticket discretionary items. Score is 6 with no HIGH_CONVICTION flag due to the mixed call presence, but the notional imbalance is not subtle.</p>
+        <div class="card-meaning">&#128204; Monday Watch: TSLA at the $390 level is the line. A Monday open below $390 that cannot recover is the short confirmation. If the broader market gets a relief bounce Monday morning, wait for rejection at $395 to $400 before treating the bearish flow as active. The 8:1 premium imbalance is hard to argue with, but mixed flow means patience on entry.</div>
       </div>
 
     </div>
   </div>
 
-  <footer>Pavano Trades &mdash; Morning Brief &mdash; March 13, 2026 &mdash; Paper Account &mdash; Not Investment Advice</footer>
+  <footer>Pavano Trades &mdash; EOD Wrap &mdash; March 13, 2026 &mdash; Paper Account &mdash; Not Investment Advice</footer>
 
 </body>
 </html>
