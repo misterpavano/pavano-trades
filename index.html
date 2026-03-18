@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavano Trades -- Morning Brief March 18, 2026</title>
+  <title>Pavano Trades -- Evening Wrap March 18, 2026</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
     body{background:#0d0d0d;color:#e8e8e8;font-family:'IBM Plex Sans',sans-serif;font-size:15px;padding-bottom:80px;}
     header{background:#0d0d0d;border-bottom:1px solid #2a2a2a;padding:20px 40px;}
-    .ticker{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4dff6e;border:1px solid #1a4d2a;background:#0d0d0d;padding:6px 14px;margin-bottom:14px;}
+    .ticker{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#ff5555;border:1px solid #4d1a1a;background:#0d0d0d;padding:6px 14px;margin-bottom:14px;}
     .header-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;}
     h1{font-family:'IBM Plex Mono',monospace;font-size:clamp(18px,3vw,28px);font-weight:700;color:#ffc933;letter-spacing:0.05em;}
     .header-stats{display:flex;gap:20px;}
@@ -45,190 +45,171 @@
     .sb-item .sb-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
     .sb-item .sb-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;}
     .sb-item .sb-chg{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:2px;}
-    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#33c9f0;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
+    .edition-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5555;color:#000;padding:3px 10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;}
     .conflict-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ff5533;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
     .warn-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ffc933;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
     .open-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;background:#ffc933;color:#000;padding:2px 8px;letter-spacing:0.1em;text-transform:uppercase;margin-left:8px;}
     .hold-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#777;background:#111;border:1px solid #222;padding:8px 12px;margin-top:8px;}
-    .alert-bar{background:#1a0008;border:1px solid #ff5599;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#ff5599;padding:10px 14px;margin-bottom:16px;letter-spacing:0.05em;}
+    .alert-bar{background:#1a0000;border:1px solid #ff5555;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#ff5555;padding:10px 14px;margin-bottom:16px;letter-spacing:0.05em;}
     .pnl-open{font-family:'IBM Plex Mono',monospace;font-size:12px;background:#101500;border:1px solid #ffc933;padding:10px 14px;margin-bottom:16px;color:#ffc933;}
     .no-trades{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#666;background:#0d0018;border:1px solid #2a1060;padding:24px;text-align:center;letter-spacing:0.05em;}
+    .pnl-bar{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:10px 14px;margin-bottom:16px;border:1px solid;}
+    .pnl-loss{background:#1a0000;border-color:#4d0000;color:#ff5555;}
+    .pnl-hold{background:#101500;border-color:#4d3300;color:#ffc933;}
+    .pnl-green{background:#001a00;border-color:#004d00;color:#4dff6e;}
   </style>
 </head>
 <body>
 
   <header>
-    <div class="ticker">PAVANO TRADES &#9679; MORNING BRIEF &#9679; MARCH 18, 2026 &#9679; SPY ~$673 PRE-MKT +0.48% &#9679; QQQ ~$607 PRE-MKT +0.62% &#9679; GME $23.70 +0.47% &#9679; FOMC DECISION DAY &#9679; POWELL 2:30 PM ET &#9679; OIL SLIPS OFF 3-YR HIGH &#9679; HEDGE FUNDS WORST LOSSES SINCE LIBERATION DAY</div>
+    <div class="ticker">PAVANO TRADES &#9679; EVENING WRAP &#9679; MARCH 18, 2026 &#9679; SPY ~$662 -1.36% &#9679; QQQ ~$586 -1.46% &#9679; DOW -1.63% &#9679; FED HOLDS &#9679; POWELL: IRAN WAR CLOUDS INFLATION PATH &#9679; MU EARNINGS BEAT AH &#9679; WORST DAY THIS WEEK</div>
     <div class="header-row">
       <div>
-        <div class="edition-badge">&#9650; Morning Brief</div>
-        <h1>&#128202; Morning Brief &mdash; March 18, 2026</h1>
+        <div class="edition-badge">&#9660; Evening Wrap</div>
+        <h1>&#128202; Evening Wrap &mdash; March 18, 2026</h1>
       </div>
       <div class="header-stats">
         <div class="stat">
-          <div class="label">SPY Pre-Mkt</div>
-          <div class="val up" id="spy">~$673 <span style="font-size:13px">+0.48%</span></div>
+          <div class="label">SPY Close</div>
+          <div class="val dn" id="spy">~$662 <span style="font-size:13px">-1.36%</span></div>
         </div>
         <div class="stat">
-          <div class="label">QQQ Pre-Mkt</div>
-          <div class="val up" id="qqq">~$607 <span style="font-size:13px">+0.62%</span></div>
+          <div class="label">QQQ Close</div>
+          <div class="val dn" id="qqq">~$586 <span style="font-size:13px">-1.46%</span></div>
         </div>
         <div class="stat">
-          <div class="label">GME Pre-Mkt</div>
-          <div class="val neu" id="gme">$23.70 <span style="font-size:13px">+0.47%</span></div>
+          <div class="label">DOW Close</div>
+          <div class="val dn" id="gme">46,225 <span style="font-size:13px">-1.63%</span></div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- PRE-MARKET SCOREBOARD -->
+  <!-- MARKET CLOSE SCOREBOARD -->
   <div style="background:#111;border-bottom:1px solid #1e1e1e;padding:20px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Pre-Market &mdash; March 18, 2026 &nbsp;|&nbsp; 8:30 AM ET &nbsp;&#9679;&nbsp; FOMC Decision 2:00 PM ET &nbsp;&#9679;&nbsp; Powell Press Conf 2:30 PM ET &nbsp;&#9679;&nbsp; Brent Off 3-Yr High &nbsp;&#9679;&nbsp; Nasdaq Leads Futures</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Market Close &mdash; March 18, 2026 &nbsp;|&nbsp; 4:00 PM ET &nbsp;&#9679;&nbsp; Fed Holds at 3.5%-3.75% &nbsp;&#9679;&nbsp; Powell Cites Iran War Inflation Uncertainty &nbsp;&#9679;&nbsp; Russell 2000 Worst at -1.64% &nbsp;&#9679;&nbsp; MU Beats Big After Bell</div>
     <div class="scoreboard">
-      <div class="sb-item"><div class="sb-label">SPY</div><div class="sb-val up">~$673</div><div class="sb-chg up">&#8593; +0.48% PM</div></div>
-      <div class="sb-item"><div class="sb-label">QQQ</div><div class="sb-val up">~$607</div><div class="sb-chg up">&#8593; +0.62% PM</div></div>
-      <div class="sb-item"><div class="sb-label">GME</div><div class="sb-val neu">$23.70</div><div class="sb-chg neu">&#8593; +0.47% PM</div></div>
-      <div class="sb-item"><div class="sb-label">FOMC</div><div class="sb-val neu">HOLD</div><div class="sb-chg neu">3.5%-3.75% exp.</div></div>
-      <div class="sb-item"><div class="sb-label">OIL</div><div class="sb-val dn">BRENT</div><div class="sb-chg dn">Off 3-yr high</div></div>
-      <div class="sb-item"><div class="sb-label">AAL</div><div class="sb-val up">$10.86</div><div class="sb-chg up">&#8593; FLOW WATCH</div></div>
-      <div class="sb-item"><div class="sb-label">PFE</div><div class="sb-val dn">$27.45</div><div class="sb-chg dn">&#8595; FLOW WATCH</div></div>
-      <div class="sb-item"><div class="sb-label">TSLA</div><div class="sb-val dn">$398.80</div><div class="sb-chg dn">&#8595; FLOW MIXED</div></div>
+      <div class="sb-item"><div class="sb-label">S&amp;P 500</div><div class="sb-val dn">6,624</div><div class="sb-chg dn">&#8595; -1.36%</div></div>
+      <div class="sb-item"><div class="sb-label">Nasdaq</div><div class="sb-val dn">22,152</div><div class="sb-chg dn">&#8595; -1.46%</div></div>
+      <div class="sb-item"><div class="sb-label">Dow</div><div class="sb-val dn">46,225</div><div class="sb-chg dn">&#8595; -1.63%</div></div>
+      <div class="sb-item"><div class="sb-label">Russell 2K</div><div class="sb-val dn">2,478</div><div class="sb-chg dn">&#8595; -1.64%</div></div>
+      <div class="sb-item"><div class="sb-label">Fed Rate</div><div class="sb-val neu">HOLD</div><div class="sb-chg neu">3.5%-3.75%</div></div>
+      <div class="sb-item"><div class="sb-label">Oil (Iran)</div><div class="sb-val dn">SURGE</div><div class="sb-chg dn">Hormuz closed</div></div>
+      <div class="sb-item"><div class="sb-label">MU AH</div><div class="sb-val up">BEAT</div><div class="sb-chg up">&#8593; Extraordinary Q2</div></div>
+      <div class="sb-item"><div class="sb-label">Bot P&amp;L</div><div class="sb-val dn">-$3</div><div class="sb-chg dn">1 closed / 1 open</div></div>
     </div>
   </div>
 
-  <!-- SECTION A: WHAT'S MOVING TODAY -->
+  <!-- SECTION A: WHAT MOVED TODAY -->
   <div class="zone-macro">
-    <div class="zone-label">&#9650; What's Moving Today &mdash; March 18, 2026 &mdash; Morning Brief</div>
+    <div class="zone-label">&#9660; What Moved Today &mdash; March 18, 2026 &mdash; EOD Edition</div>
     <div class="cards">
 
       <div class="card">
         <div class="card-type">Macro Move</div>
-        <div class="card-price neu">FOMC Day</div>
-        <div class="card-change">Decision 2:00 PM ET &mdash; Powell press conf 2:30 PM &mdash; Hold near-certain at 3.5%&ndash;3.75%</div>
-        <h3>Every Institutional Player Is Waiting for Powell &mdash; The Hold Is Priced In, the Words Are Not</h3>
-        <p>The Fed is universally expected to hold at 3.5%&ndash;3.75% today. The rate itself is a non-event. What isn't priced in is the language: with Brent crude at a 3-year high from the Iran war and the Strait of Hormuz disruption, Powell is walking into a stagflation optic he can't fully dismiss. A hawkish lean on inflation hits growth stocks and small-cap AI names hard. A dovish lean invites an inflation narrative from energy bulls. The pre-market green (+0.48% SPY, +0.62% QQQ) reflects cautious optimism that Powell stays neutral, not conviction either way.</p>
-        <div class="card-meaning">&#128204; What This Means: Sizing down before 2 PM is the rational institutional move. The real trade is in the reaction to the press conference, not the decision. Any forward guidance on rate cuts getting pushed out would hit the bot's LONG signals (AAL, SOUN) hardest. Confirm open flow direction at 9:45 AM open; re-check positioning at 1:45 PM before the statement drops.</div>
+        <div class="card-price dn">Fed Holds, Market Tanks</div>
+        <div class="card-change">S&amp;P 500 -1.36% &bull; Dow -1.63% &bull; Russell -1.64% &bull; Losses accelerated after Powell presser</div>
+        <h3>It Wasn't the Decision &mdash; It Was Powell's Words on Iran War Inflation That Broke the Bid</h3>
+        <p>The Fed held rates unanimously at 3.5%&ndash;3.75%, exactly as priced in. None of that mattered. What moved markets was the Summary of Economic Projections: 7 of 19 FOMC participants now expect rates to stay unchanged all year (up from December). Powell said explicitly that Iran war impacts on inflation make future rate policy harder to read. That language killed the "cuts later this year" trade. Treasury yields climbed alongside stocks selling off &mdash; the textbook stagflation signal. Worst single-session for all four major indices this week.</p>
+        <div class="card-meaning">&#128204; Lesson: The rate decision itself is almost never the trade. The forward guidance and press conference language is. The morning brief flagged exactly this risk: "A hawkish lean on inflation hits growth stocks and small-cap AI names hard." That's what happened. The bot's AAL position was killed not by airline fundamentals but by macro sentiment shift post-Powell.</div>
       </div>
 
       <div class="card">
         <div class="card-type">Macro Move</div>
-        <div class="card-price dn">Hedge Fund Carnage</div>
-        <div class="card-change">Worst losses since Liberation Day &mdash; Iran war unwinds crowded trades &mdash; EEM $4.2M put sweep yesterday</div>
-        <h3>Smart Money Got Caught Offside &mdash; Hedge Funds Unwinding Crowded Iran-War Trades</h3>
-        <p>CNBC reports hedge funds suffered their worst single-session losses since Liberation Day as the Iran war continued disrupting crowded positioning. Crowded trades that got unwound: long energy infrastructure, long defense, long shipping. The knock-on effect is forced selling across correlated positions to cover losses, which explains some of the bizarre cross-asset flows. Separately, an institutional player dropped $4.2M on EEM (emerging markets) put contracts yesterday, explicitly hedging against Iran-shock spillover into EM currencies and equities. This is institutional risk reduction in real time.</p>
-        <div class="card-meaning">&#128204; What This Means: Hedge fund deleveraging creates indiscriminate selling that has nothing to do with fundamentals. If a name you're watching drops hard at open with no news, check whether it's a known hedge fund holding. The EEM put sweep is a tell that institutions expect Iran war pain to spread into EM before it stabilizes. Don't buy into forced-liquidation dips on correlated names.</div>
-      </div>
-
-      <div class="card">
-        <div class="card-type">Smart Money</div>
-        <div class="card-price up">Oil Slips Pre-Mkt</div>
-        <div class="card-change">Brent eased off 3-yr high overnight &mdash; Hormuz closure still active &mdash; 30% diplomatic resolution probability</div>
-        <h3>Oil Eases Off the High But Smart Money Still Positioned for a Long Conflict &mdash; $63B Energy Upside If WTI Hits $100</h3>
-        <p>Brent crude pulled back slightly from its new 3-year high overnight, which is why Wall St futures turned green. But the structural bid is not gone: the Strait of Hormuz is still effectively closed, and analysts put diplomatic resolution probability at only 30%. If WTI averages $100/barrel in 2026, U.S. shale producers would capture an extra $63 billion in cash flow. The institutions who own Exxon, Occidental, Baker Hughes, and Halliburton have no incentive to exit these positions. Yesterday's 5% pop in oilfield services names was not retail; it was fund managers adding to a commodity supercycle position.</p>
-        <div class="card-meaning">&#128204; What This Means: Oil is off its high today, but that does not kill the energy trade. It just reduces the urgency of chasing it at the open. Energy names that ripped 4-7% yesterday (XOM, OXY, BKR, HAL) are now places where patient buyers will step in on any dip. The airline trade (AAL LONG) runs in the opposite direction: any oil spike is a headwind to the call thesis, so today's oil pullback is actually constructive for the AAL position.</div>
+        <div class="card-price dn">Bonds &amp; Stocks Both Fell</div>
+        <div class="card-change">Yields climbed while equities sold off &bull; Stagflation optic playing out &bull; Oil still elevated on Hormuz</div>
+        <h3>The Double Selloff Is the Story &mdash; When Both Bonds and Stocks Fall, There's Nowhere to Hide</h3>
+        <p>Normally rate holds are bond-neutral. Today bonds sold off alongside stocks, with Treasury yields climbing. The mechanism: oil prices remain elevated due to the ongoing Hormuz closure, which keeps inflation expectations elevated. If the Fed can't cut (Iran war inflation) and growth slows (consumer sentiment hit by high energy), neither bonds nor stocks are attractive. The hedge fund positioning thesis from this morning played out: forced deleveraging across correlated longs continued throughout the session. Volume was heavy into the close on every index.</p>
+        <div class="card-meaning">&#128204; Lesson: When bonds and stocks sell off together, institutions are liquidating risk wholesale, not rotating. The morning brief warned: "Hedge fund deleveraging creates indiscriminate selling that has nothing to do with fundamentals." Today validated that entirely. Any names down big today without news should be reviewed &mdash; the selloff may have been mechanical, not fundamental.</div>
       </div>
 
       <div class="card">
         <div class="card-type">News Catalyst</div>
-        <div class="card-price up">AI Infrastructure Bid</div>
-        <div class="card-change">Nasdaq leads pre-mkt (+0.62% QQQ vs +0.48% SPY) &mdash; AMZN $26M institutional call sweep Mar 16 &mdash; Tech selective</div>
-        <h3>Institutions Rotated Into AI Infrastructure All Week &mdash; $26M Amazon Call Sweep Shows Where the Money Landed</h3>
-        <p>QQQ is outperforming SPY in pre-market for the third consecutive session. The catalyst is not broad tech buying; it is targeted AI infrastructure positioning. On March 16, an institutional player dropped $26M on Amazon May 2026 $210 call options in two rapid-fire sweeps totaling nearly 19,500 contracts, explicitly betting on an "AI recovery" thesis. Uber also jumped 5% on NVIDIA and Amazon robotaxi partnerships. The market narrative has shifted: rather than broad AI hype, institutions are now flowing into specific infrastructure plays (AWS capacity, robotaxi, AI compute). NBIS (Nebius, AI compute infrastructure) fits this theme &mdash; but the bond offering created a dilution overhang that is pulling smart money in two directions simultaneously.</p>
-        <div class="card-meaning">&#128204; What This Means: The QQQ beat is selective AI infrastructure money, not a macro Nasdaq rally. The names catching bids are compute-adjacent (AMZN, NBIS on the bull side) and voice AI (SOUN). The names not catching bids despite the AI theme: NVDA (no unusual flow, 2026 funk narrative intact), PATH (no flow). Follow the sweep flow, not the index move.</div>
+        <div class="card-price up">Micron Crushes Q2 After Bell</div>
+        <div class="card-change">Revenue nearly tripled &bull; Results topped LSEG consensus &bull; Stock UP in AH &bull; Record results called AI-era inflection</div>
+        <h3>MU Was the Right Trade &mdash; But Bot's Rules Correctly Blocked It Due to Earnings IV Risk</h3>
+        <p>Micron reported "extraordinary" Q2 2026 results after the close. Revenue nearly tripled. The company called it a "record" quarter and cited "strategic value of memory in the AI era." Stock was flagged as a score-9, HIGH_CONVICTION_LONG in this morning's EOD signals &mdash; but correctly blocked as untradeable due to earnings risk (IV crush). The irony: MU crushed earnings and is moving higher AH, but buying the call pre-earnings into IV at all-time highs would have been a coin flip regardless of the outcome. The rule held. This is what good risk management looks like even when it means missing a winner.</p>
+        <div class="card-meaning">&#128204; Lesson: MU score-9 with earnings today was never the trade. The bot's earnings filter existed for exactly this reason: even when you're right about direction, elevated IV at earnings means you can lose money on a beat if the move undershoots what options were pricing. The real MU trade is post-earnings: a fresh EOD scan tomorrow on MU with IV deflated may generate a cleaner signal. Watch for it.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-type">Sector Move</div>
+        <div class="card-price dn">Airlines Got Wrecked</div>
+        <div class="card-change">AAL closed ~$10.81, down on the day &bull; 11% below $12 call strike &bull; Oil re-spiked intraday &bull; FOMC killed the travel thesis</div>
+        <h3>AAL's Morning Momentum Evaporated &mdash; Oil Re-Spiked Intraday and Powell Killed the Discretionary Trade</h3>
+        <p>American Airlines opened in line but couldn't sustain the bullish flow signal from the morning. Oil re-spiked intraday (Hormuz closure news), directly hurting airline margins. Then Powell's press conference hit and the macro risk-off move took down the entire consumer discretionary trade. AAL closed around $10.81, 11% below the $12 call strike the bot entered. The sweep call buyers who set up that bullish thesis yesterday may have been covering losses by this afternoon. Net result: the institutional flow signal was correct in direction but wrong in timing &mdash; the macro override (FOMC + oil) was the stronger force today.</p>
+        <div class="card-meaning">&#128204; Lesson: FOMC days are the highest macro override risk for sector-specific trades. The bot correctly entered on yesterday's legitimate flow signal, but FOMC day creates conditions where even strong institutional positioning gets overwhelmed by macro sentiment shifts. On future FOMC days, consider sizing down or waiting until 3:00 PM to see how Powell's language lands before adding sector-specific exposure.</div>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION B: BOT WATCHLIST -->
+  <!-- SECTION B: BOT POSITIONS TODAY -->
   <div class="zone-bot">
-    <div class="zone-label">&#9632; &#129302; Bot Watchlist &mdash; Smart Money Signals</div>
-    <div class="alert-bar">&#9888; Signals from EOD scan 3:30 PM ET March 17. All directions are flow-derived, not predictive. FOMC 2 PM ET today is the primary event risk for every position below. MU earnings today (IV crush risk &mdash; skip).</div>
+    <div class="zone-label">&#9632; &#129302; Bot Positions Today &mdash; March 18 Actuals</div>
+    <div class="alert-bar">&#9888; 2 positions entered today at 9:45 AM ET. 1 closed intraday (thesis broken). 1 held into close (ITM, monitoring). Paper account / dry run. Not investment advice.</div>
     <div class="cards">
 
-      <!-- PFE -->
-      <div class="card">
-        <div class="card-type">BEARISH PUT &middot; 9/10 &middot; $210K premium <span class="conflict-badge">HIGH CONVICTION</span></div>
-        <div class="card-price dn">PFE &mdash; $27.45</div>
-        <div class="card-change">2 sweep puts at $27.50 &mdash; 4,163 total contracts &mdash; Zero call hedges</div>
-        <h3>PFE &mdash; Someone Sold the +3% Rip Aggressively &mdash; Back-to-Back At-the-Money Put Sweeps</h3>
-        <p>SWEEP PUT 27.5 exp 3/27 (2,349 contracts, OI 181, 13x OI) plus SWEEP PUT 27.5 exp 4/2 (1,814 contracts, OI 149, 12x OI). Zero offsetting calls. Both sweeps target exactly yesterday's closing price on consecutive expiry dates. This is a structured short position, not a hedge. The tell: whoever placed these wasn't trying to balance a portfolio; they bought naked at-the-money puts into a +3% up day. Pfizer is in the middle of an oncology comparison narrative (PFE vs BMY), has earnings 42 days out, and has been a consistent beat. None of that explains why smart money loaded puts into a rip. Earnings in 42 days gives the puts time to work.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The entry signal is a gap-down or flat open after yesterday's +3% move. If PFE opens below $27.25, the put sweepers are immediately in the money and likely to add. If it gaps up above $27.80, the thesis needs reassessment. No FOMC conflict here: rate holds are generally neutral for pharma. The bear case is purely flow-driven with no news catalyst explanation &mdash; which is the most interesting kind of signal. Open confirmation: close below $27.10 in the first 30 minutes.</div>
+      <!-- AAL CALL -- LOSS -->
+      <div class="card card-loss">
+        <div class="card-type">LOSS &middot; Closed 3:45 PM &middot; Thesis Broken</div>
+        <div class="card-price dn">AAL CALL 12.0 &mdash; exp 4/2</div>
+        <div class="card-change">Entry: $0.14 (3 contracts, $42 total) &bull; Exit: $0.15 &bull; P&amp;L: -$3.00 (-6.25%)</div>
+        <h3>AAL &mdash; Bullish Sweep Call Thesis Crushed by Oil Spike + Powell Macro Override</h3>
+        <p>Bot entered 3 AAL CALL 12.0 contracts at $0.14 each ($42 total) based on yesterday's triple sweep call signal (score 8, HIGH_CONVICTION_LONG, airline CEO bullish at JPMorgan Conference). FOMC day oil re-spike + Powell's hawkish inflation language drove AAL to $10.81 by close &mdash; 11% below the $12 strike with 15 DTE remaining. The bot's risk management correctly identified thesis breakdown (stock deeply OTM, directional thesis not supported by price action) and closed at 3:45 PM for $0.15 exit. Net loss $3.00. The flow signal was legitimate; the macro timing was wrong.</p>
+        <div class="card-meaning">&#128204; Lesson: Strong institutional sweep signals can still get overridden by macro events (FOMC, oil shocks). A score-8 flow signal is not a guarantee against macro headwinds. On FOMC days specifically, sector-specific longs in rate-sensitive or oil-exposed names (airlines = both) carry higher baseline risk. The bot's exit was clean and rule-based. Protecting capital on a small loss is the right outcome here.</div>
       </div>
 
-      <!-- AAL -->
-      <div class="card">
-        <div class="card-type">BULLISH CALL &middot; 8/10 &middot; $477K premium <span class="conflict-badge">HIGH CONVICTION</span></div>
-        <div class="card-price up">AAL &mdash; $10.86</div>
-        <div class="card-change">3 sweep calls stacking 11.5 / 12.0 / 12.5 &mdash; 26,994 total contracts &mdash; Zero puts</div>
-        <h3>AAL &mdash; Three Institutions Loaded the Same Bullish Thesis Across Three Strike Prices</h3>
-        <p>SWEEP CALL 11.5 exp 4/2 (6,354 vol, OI 586, 11x OI) + SWEEP CALL 12.0 exp 4/2 (11,379 vol, OI 746, 15x OI) + SWEEP CALL 12.5 exp 4/2 (9,261 vol, OI 857, 11x OI). Zero puts. Three separate sweep buyers stacking strikes at $11.50, $12.00, and $12.50 all expiring April 2. This is ladder positioning: the first strike is aggressive entry, the $12 is the core conviction, and the $12.50 is the upside kicker. All three targets are 6&ndash;15% above yesterday's close. The catalyst is confirmed: American Airlines CEO said at JPMorgan Conference that revenue growth is outpacing fuel cost increases from the Iran war. Oil slipping pre-market today is an additional tailwind. Earnings are 37 days out with 3/4 beat history.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: AAL is the cleanest institutional long in the scan. Three sweep calls with zero hedge puts means these buyers have no offsetting view. The near-term catalyst (oil easing pre-market) is constructive today. FOMC risk: a dovish hold is neutral-to-bullish for airlines (lower rates eventually benefit corporate travel spend). A hawkish surprise would be the main headwind. Open confirmation: gap above $11.00 with volume on the open, signaling continuation of yesterday's +3.53%. This is the signal to watch the bot lean into most today.</div>
-      </div>
-
-      <!-- SOUN -->
-      <div class="card">
-        <div class="card-type">BULLISH CALL &middot; 8/10 &middot; $293K premium <span class="conflict-badge">HIGH CONVICTION</span></div>
-        <div class="card-price up">SOUN &mdash; $7.85</div>
-        <div class="card-change">2 sweep calls at $8.00 and $9.00 &mdash; 8,170 total contracts &mdash; Zero puts</div>
-        <h3>SOUN &mdash; Two Legs of a Structured Call Position Targeting 15% Move Despite "Down 66%" Headlines</h3>
-        <p>SWEEP CALL 8.0 exp 4/2 (4,799 contracts, OI 567, 8.5x OI) + SWEEP CALL 9.0 exp 4/10 (3,371 contracts, OI 278, 12x OI). Zero puts. The $8 call is at-the-money entry and the $9 on April 10 is the follow-through leg, targeting $9+ by mid-April. Whoever placed this sized the trade so the April 10 expiry gives five extra days of runway if the ATM leg plays out first. SoundHound is down 66% from its highs, which is exactly the kind of narrative that makes retail avoid it while institutions use the dip as a low-cost entry point. The tech rotation into software and AI-adjacent mid-caps that's been driving QQQ outperformance all week is SOUN's primary fuel. Earnings 51 days out, clean runway, no near-term IV risk.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The two-leg structure (ATM + 15% OTM) is a deliberate institutional play, not a one-day punt. The FOMC is the key risk: a hawkish Powell kneecaps small-cap growth names like SOUN hardest. If FOMC is neutral, SOUN is in position to run with the ongoing software ETF recovery. Open confirmation: gap or hold above $7.60 at open, with volume. Watch the $8.00 strike closely at open &mdash; the sweep call buyers' entry cost is near there, so they'll defend it.</div>
-      </div>
-
-      <!-- NBIS -->
-      <div class="card">
-        <div class="card-type">MIXED / SHORT LEAN &middot; 7/10 &middot; $788K put vs $396K call <span class="warn-badge">WATCH CONFLICT</span></div>
-        <div class="card-price dn">NBIS &mdash; $113.99</div>
-        <div class="card-change">3 put sweeps / 1 call sweep &mdash; $788K put premium vs $396K calls &mdash; Bond offering catalyst</div>
-        <h3>NBIS &mdash; $3.75 Billion Bond Offering Spooked Longs &mdash; But Some Buyers Think It's Cheap Infrastructure Financing</h3>
-        <p>SWEEP PUT 95.0 exp 3/27 (546 vol) + SWEEP PUT 105.0 exp 3/27 (979 vol) + net puts dominate at $788K premium vs one SWEEP CALL 117.0 exp 3/27 ($396K). Nebius dropped 10&ndash;12% when it announced a $3.75 billion convertible notes offering, citing it as dilution. The offering followed two landmark deals worth $29 billion cumulative (Meta and NVIDIA partnerships), which had driven the stock 32% higher in the prior two weeks. Citi called the selloff a buying opportunity, rating it a buy and saying NBIS is "positioned to gain share within an AI compute market." The put sweep buyers are betting the post-offering hangover continues; the call sweep buyer is betting Citi is right and the dip is temporary. Net flow leans bearish.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The conflict here is real &mdash; $788K in puts vs $396K in calls on a stock that fell 10-12% is a dilution overhang trade, not a fundamental short. The puts expire March 27, which gives 9 days for the offering overhang to work. The $117 call buyer is likely a Citi-thesis buyer positioning for a recovery after the overhang clears. Net lean: short the pop if NBIS rallies at open. But the single CALL 117 sweep is a legitimate bull signal that deserves respect. FOMC risk: AI infrastructure names are rate-sensitive. A dovish Fed is bullish NBIS, complicating the short thesis.</div>
-      </div>
-
-      <!-- TSLA -->
-      <div class="card">
-        <div class="card-type">MIXED / SHORT LEAN &middot; 6/10 &middot; $8.4M total flow <span class="conflict-badge">CONFLICT SIGNAL</span></div>
-        <div class="card-price dn">TSLA &mdash; $398.80</div>
-        <div class="card-change">2 call sweeps + 3 put sweeps &mdash; $6.1M call est vs $2.3M put &mdash; Terafab hype catalyst</div>
-        <h3>TSLA &mdash; $8.4M in Total Flow Is Contradictory &mdash; Bulls Loaded at ATM Calls While Bears Bought Puts into the Same Expiry</h3>
-        <p>SWEEP CALL 397.5 exp 3/25 (1,295 vol) + SWEEP PUT 395.0 exp 3/25 (676 vol) + SWEEP PUT 405.0 exp 3/25 (1,233 vol). Same expiry date (March 25) for all three. This is rare: call buyers and put buyers both swept the same name into the same expiry window. The call sweep captured $6.1M in premium (higher premium because 397.5 ATM call has high delta); the put sweeps total $2.3M. By contract count, puts win (2 vs 1). By direction score, puts win (put score 4.02 vs call score 2.37). The news is Musk's Terafab AI chip platform tease; the bear thesis is that Terafab hype is already priced into the stock after a 0.94% rally yesterday. Both sides of this trade expire in 7 days. Earnings 35 days out; TSLA has missed 3 of last 4 quarters.</p>
-        <div class="card-meaning">&#128204; What I'm thinking: The $405 put sweep is the most interesting &mdash; someone bought puts ABOVE the current price, meaning they're betting TSLA fails to hold $405 within 7 days. That's an aggressive directional bet, not a hedge. The Terafab launch is Musk's only near-term catalyst; if it doesn't materialize this week, the 3/25 calls expire worthless. Watch for any Terafab announcement pre-market today. If nothing by 10 AM, the call thesis decays fast. FOMC is an additional risk factor: Tesla is highly correlated to rate sentiment. A hawkish Powell on a day with no Terafab news would be the double catalyst that validates the put flow.</div>
+      <!-- PFE PUT -- OPEN -->
+      <div class="card card-open">
+        <div class="card-type">OPEN &middot; Held &middot; EOD P&amp;L -37.2% <span class="open-badge">MONITORING</span></div>
+        <div class="card-price neu">PFE PUT 27.5 &mdash; exp 3/27</div>
+        <div class="card-change">Entry: $0.96 (1 contract, $96 total) &bull; Current est: ~$0.60 &bull; 9 DTE remaining &bull; Stock: $27.25</div>
+        <h3>PFE &mdash; ITM Put Showing Unrealized Loss Despite Stock Being Below Strike &mdash; Time Value Decay at Work</h3>
+        <p>Bot entered PFE PUT 27.5 at $0.96 based on a pair of double sweep puts (score 9, HIGH_CONVICTION_SHORT). PFE closed at $27.25 &mdash; below the $27.50 strike, meaning the put is in-the-money. Despite being ITM, P&L sits at -37.2% ($0.60 estimated current value vs $0.96 entry). The explanation: PFE recovered from a bigger intraday dip, and IV compression plus the distance to expiry moved against the position even as direction held. EOD signals now rate PFE as LONG (score 3, recovery narrative building). The original SHORT flow signal still has 9 days to play out. Stop at $0.48 has not been triggered. Bot is holding per rules.</p>
+        <div class="card-meaning">&#128204; Lesson: Being in-the-money doesn't automatically mean you're winning on options. If you paid rich IV at entry and the stock moves slowly in your direction, theta and IV compression can still eat your premium. The signal held directionally (PFE below strike) but not in P&L terms yet. With 9 DTE and ITM, the position still has real recovery path. Watch $27.25 as the key level &mdash; if PFE closes above $27.50 two days in a row, the SHORT thesis is broken and the exit rule activates.</div>
       </div>
 
     </div>
   </div>
 
-  <!-- SECTION C: OPEN POSITIONS CHECK-IN -->
+  <!-- SECTION C: TOMORROW'S SETUP -->
   <div class="zone-eod">
-    <div class="zone-label">&#9660; Open Positions Into Today &mdash; From March 17 Entry</div>
-    <div class="pnl-open">&#9632; 2 OPEN POSITIONS ENTERING TODAY &mdash; Both live into FOMC decision day. Today's FOMC result changes the calculus for both. Paper account, dry run mode.</div>
+    <div class="zone-label">&#9658; Tomorrow's Setup &mdash; EOD Flow Watch &mdash; March 19, 2026</div>
+    <div class="pnl-open">&#9632; EOD scan at 3:30 PM ET identified 3 top-scoring tradeable signals for tomorrow. NVDA leads at score 9. All directions derived from options flow, not TA. MU earnings beat may create residual AI infrastructure tailwind overnight.</div>
     <div class="cards">
 
-      <div class="card card-open">
-        <div class="card-type">Open &mdash; Dry Run <span class="open-badge">FOMC RISK DAY</span></div>
-        <div class="card-price neu">BMNR CALL 24C &mdash; exp 4/2</div>
-        <div class="card-change">Underlying: $23.23 yesterday &mdash; Strike OTM by 3.3% &mdash; 15 DTE remaining &mdash; Entry cost $156</div>
-        <h3>BMNR &mdash; ETH Proxy Into FOMC &mdash; Hawkish Surprise Is the Kill Switch</h3>
-        <p>BMNR is a crypto-proxy equity; it tracks ETH more than its own fundamentals. ETH is near 6-week highs, which keeps the directional thesis intact. The FOMC decision today is the primary binary risk: a hawkish statement hits crypto sentiment immediately, and BMNR follows ETH down. A neutral or dovish hold keeps ETH bid and BMNR's $24 strike within range. 15 DTE (April 2) provides runway through the FOMC event. Stop at $0.78 premium; target at $3.12. The position survived yesterday's quiet session with no stop trigger.</p>
-        <div class="hold-note">Position: BMNR $23.23 vs $24 strike (3.3% OTM). ETH proxy. FOMC = primary risk today. Stop $0.78. Target $3.12. Hold through FOMC unless Powell explicitly turns hawkish on inflation.</div>
-        <div class="card-meaning">&#128204; What I'm thinking: If Powell is neutral today (most likely), ETH holds and BMNR has a runway. If Powell signals rate hikes are back on the table due to oil-driven inflation, exit this position immediately after the press conference. The stop should be checked at 2:45 PM ET, 15 minutes after the initial market reaction to the FOMC statement.</div>
+      <div class="card">
+        <div class="card-type">Flow Watch &middot; Score 9/10 &middot; HIGH CONVICTION LONG</div>
+        <div class="card-price up">NVDA &mdash; $181.25</div>
+        <div class="card-change">BofA reset price target after CFO meeting &bull; CALL 182.5 (2,147 vol) + CALL 185 (6,267 vol) exp 3/25 &bull; $1.86M call premium &bull; Zero puts</div>
+        <h3>NVDA &mdash; BofA Met With the CFO Today and Reset the Target &mdash; Smart Money Loaded 3/25 Calls Before That Was Public</h3>
+        <p>Bank of America reset Nvidia's stock forecast after a direct meeting with the CFO &mdash; and the options market had already positioned for this. Two call blocks on 3/25 expiry (CALL 182.5: 2,147 contracts; CALL 185: 6,267 contracts) with $1.86M estimated call premium and zero offsetting puts. The 185 call alone drew 6,267 contracts vs 1,890 OI (3.3x OI). 63 days to earnings with a 4/4 quarterly beat streak. MU's post-market earnings beat tonight adds AI memory tailwind to the NVDA narrative overnight. This is the cleanest high-conviction setup in the scan.</p>
+        <div class="card-meaning">&#128204; Tomorrow's read: Pre-market behavior on NVDA is the entry signal. If NVDA gaps above $182 on the MU earnings tailwind + BofA catalyst, the 3/25 CALL 182.5 buyers are immediately ITM. Open gap confirmation above $183 = flow alignment. Watch for any additional BofA note or analyst upgrade in the pre-market session to confirm the momentum holds into tomorrow's open.</div>
       </div>
 
-      <div class="card card-open">
-        <div class="card-type">Open &mdash; Dry Run <span class="conflict-badge">FRESH FLOW CONFLICT</span></div>
-        <div class="card-price neu">TSLA CALL 420C &mdash; exp 3/25</div>
-        <div class="card-change">Underlying: $399.27 yesterday &mdash; Strike OTM by 5.2% &mdash; 7 DTE remaining &mdash; Entry cost $183</div>
-        <h3>TSLA 420C Fighting Against Fresh Bearish Flow &mdash; Terafab Is the Only Lifeline With 7 DTE</h3>
-        <p>This position entered on a LONG signal from March 16. Yesterday's fresh EOD scan flipped TSLA's net direction to SHORT (3 put sweeps vs 2 call sweeps, same expiry). The live LONG call now runs against the day's freshest institutional flow. TSLA moved +0.94% in the right direction yesterday on Terafab tease news, but the $420 strike still requires a 5.2% further move in 7 days. No Terafab launch announcement has been made as of pre-market today. Stop at $0.92 premium.</p>
-        <div class="hold-note">Position: TSLA $398.80 vs $420 strike (5.2% OTM). 7 DTE. Fresh flow is bearish. Terafab is the only remaining catalyst. Stop $0.92. No announcement = accelerating time decay. Check at 10 AM.</div>
-        <div class="card-meaning">&#128204; What I'm thinking: This is a position the bot is holding but the fresh signal has flipped. The risk management move is to check at 10 AM whether Terafab was announced overnight or pre-market. No announcement by 10 AM with 7 DTE = the time decay argument for closing the position strengthens sharply. FOMC hawkish surprise today = stop out immediately. This is the position with the highest chance of stop-out today.</div>
+      <div class="card">
+        <div class="card-type">Flow Watch &middot; Score 8/10 &middot; SHORT</div>
+        <div class="card-price dn">INTC &mdash; $45.19</div>
+        <div class="card-change">2x SWEEP PUT: 45.5 exp 3/27 (1,279 vol) + 44.0 exp 4/10 (1,050 vol) &bull; $475K put premium &bull; No news catalyst</div>
+        <h3>INTC &mdash; Two Sweep Puts With No News = Pure Flow-Driven Short &mdash; The Quiet Ones Hit Hardest</h3>
+        <p>Two consecutive SWEEP PUTs with no news catalyst, no analyst event, no earnings proximity (36 days out). SWEEP PUT 45.5 exp 3/27 (1,279 contracts vs 199 OI = 6.4x OI) and SWEEP PUT 44.0 exp 4/10 (1,050 contracts vs 203 OI = 5.2x OI). The staggered expiry (one near, one mid-term) is a structure that suggests the sweep buyer expects continued downward pressure for at least 3 weeks. No corresponding call flow. Intel has been structurally weak all cycle &mdash; this flow pattern says institutions are not done taking chips off the table. The AI compute theme benefits NVDA and AMD, not Intel, which amplifies the directional case.</p>
+        <div class="card-meaning">&#128204; Tomorrow's read: If NVDA gaps up on MU beat tailwind and INTC does NOT follow (which is likely given the structural narrative divergence), the PUT thesis gains confirmation. Key watch: INTC vs NVDA spread at the open. INTC lagging a tech-positive open = the put buyers' thesis is right. INTC below $44.80 tomorrow would put the 3/27 PUT 45.5 in the money and signal acceleration of the short trade.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-type">Flow Watch &middot; Score 5/10 &middot; LONG</div>
+        <div class="card-price neu">TSLA &mdash; $394.75</div>
+        <div class="card-change">3x SWEEP CALL: 395-400 range exp 3/25 &bull; $9.27M call premium vs $6.19M puts &bull; Terafab still unnamed catalyst</div>
+        <h3>TSLA &mdash; $9.27M in Call Premium vs $6.19M in Puts &mdash; Net Long But Conviction Is Split</h3>
+        <p>Three sweep calls (395C, 397.5C, 400C all exp 3/25) totaling $9.27M in estimated call premium. One sweep put ($6.19M puts overall). Net flow is long but $6.19M in opposing puts keeps this at score 5, not high conviction. The Terafab AI chip platform is the alleged catalyst, but as of market close no formal announcement has dropped. 3/25 expiry gives 7 days. Earnings in 34 days with a 3/4 quarterly miss streak. The call buyers need Terafab news by end of week or the 3/25 contracts die. Tomorrow is effectively day one of the decision window.</p>
+        <div class="card-meaning">&#128204; Tomorrow's read: Check pre-market for any Terafab announcement. If no announcement by 10 AM tomorrow, the 3/25 call buyers have 6 days of declining time value with no catalyst. That's the risk. If Terafab drops pre-market as a headline, the sweep call buyers get their catalyst and the $400 strike becomes the target. This is a binary news-event trade, not a flow-based conviction play. Size accordingly.</div>
       </div>
 
     </div>
   </div>
 
-  <footer>Pavano Trades &mdash; Morning Brief &mdash; March 18, 2026 &mdash; Paper Account &mdash; Not Investment Advice &mdash; EOD Flow Scan 3:30 PM ET 3/17 &mdash; Published 8:30 AM ET 3/18</footer>
+  <footer>Pavano Trades &mdash; Evening Wrap &mdash; March 18, 2026 &mdash; Paper Account &mdash; Not Investment Advice &mdash; EOD Flow Scan 3:30 PM ET 3/18 &mdash; Published 6:00 PM ET 3/18</footer>
 
 </body>
 </html>
